@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/troncales",
+      "handler": "troncales.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/troncales/count",
+      "handler": "troncales.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/troncales/:id",
+      "handler": "troncales.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/troncales",
+      "handler": "troncales.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/troncales/:id",
+      "handler": "troncales.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/troncales/:id",
+      "handler": "troncales.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

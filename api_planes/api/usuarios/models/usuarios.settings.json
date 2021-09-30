@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "name": "Usuarios",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "papellido": {
+      "type": "string"
+    },
+    "sapellido": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "private": true,
+      "unique": true,
+      "required": true
+    },
+    "password": {
+      "type": "password",
+      "required": true,
+      "private": true,
+      "minLength": 8
+    },
+    "matriculas": {
+      "via": "usuario",
+      "collection": "matriculas"
+    }
+  }
+}

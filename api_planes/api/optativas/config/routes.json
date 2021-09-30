@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/optativas",
+      "handler": "optativas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/optativas/count",
+      "handler": "optativas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/optativas/:id",
+      "handler": "optativas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/optativas",
+      "handler": "optativas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/optativas/:id",
+      "handler": "optativas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/optativas/:id",
+      "handler": "optativas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

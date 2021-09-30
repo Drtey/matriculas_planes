@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "modalidades",
+  "info": {
+    "name": "Modalidades"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "curso": {
+      "via": "modalidades",
+      "model": "cursos"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matriculas",
+  "info": {
+    "name": "matriculas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fecha": {
+      "type": "date"
+    },
+    "usuario": {
+      "model": "usuarios",
+      "via": "matriculas"
+    },
+    "curso": {
+      "via": "matricula",
+      "model": "cursos"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/matriculas",
+      "handler": "matriculas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/matriculas/count",
+      "handler": "matriculas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/matriculas/:id",
+      "handler": "matriculas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/matriculas",
+      "handler": "matriculas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/matriculas/:id",
+      "handler": "matriculas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/matriculas/:id",
+      "handler": "matriculas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

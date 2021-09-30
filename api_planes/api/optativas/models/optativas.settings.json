@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "optativas",
+  "info": {
+    "name": "Optativas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "optativa_cod": {
+      "type": "string"
+    },
+    "curso": {
+      "via": "optativas",
+      "model": "cursos"
+    }
+  }
+}

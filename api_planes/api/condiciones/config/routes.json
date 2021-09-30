@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/condiciones",
+      "handler": "condiciones.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/condiciones/count",
+      "handler": "condiciones.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/condiciones/:id",
+      "handler": "condiciones.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/condiciones",
+      "handler": "condiciones.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/condiciones/:id",
+      "handler": "condiciones.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/condiciones/:id",
+      "handler": "condiciones.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

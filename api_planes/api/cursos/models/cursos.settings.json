@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cursos",
+  "info": {
+    "name": "Cursos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "curso_cod": {
+      "type": "string"
+    },
+    "matricula": {
+      "via": "curso",
+      "model": "matriculas"
+    },
+    "troncales": {
+      "collection": "troncales",
+      "via": "curso"
+    },
+    "modalidades": {
+      "collection": "modalidades",
+      "via": "curso"
+    },
+    "optativas": {
+      "collection": "optativas",
+      "via": "curso"
+    },
+    "condiciones": {
+      "collection": "condiciones",
+      "via": "cursos",
+      "dominant": true
+    }
+  }
+}
