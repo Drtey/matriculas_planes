@@ -15,6 +15,8 @@ import { DatosAcademicosComponent } from './matricula/datos-academicos/datos-aca
 import { AutorizacionImagenComponent } from './matricula/autorizacion-imagen/autorizacion-imagen.component';
 import { EnfermedadesComponent } from './matricula/enfermedades/enfermedades.component';
 import { AutorizacionDatosPersonalesComponent } from './matricula/autorizacion-datos-personales/autorizacion-datos-personales.component';
+import { MainComponent } from './main/main.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { AutorizacionDatosPersonalesComponent } from './matricula/autorizacion-d
     DatosAcademicosComponent,
     AutorizacionImagenComponent,
     EnfermedadesComponent,
-    AutorizacionDatosPersonalesComponent
+    AutorizacionDatosPersonalesComponent,
+    MainComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
