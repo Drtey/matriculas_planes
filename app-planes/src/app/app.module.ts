@@ -20,8 +20,6 @@ import { MainComponent } from './main/main.component';
 import { UserComponent } from './user/user.component';
 import { SigninComponent } from './login/signin/signin.component';
 import { SignupComponent } from './login/signup/signup.component';
-import { AuthComponent } from './guard/auth/auth.component';
-import { RoleComponent } from './guard/role/role.component';
 
 const rutas = [ 
   { path: '', redirectTo: '/signin', pathMatch: 'full'},
@@ -57,9 +55,7 @@ const rutas = [
     MainComponent,
     UserComponent,
     SigninComponent,
-    SignupComponent,
-    AuthComponent,
-    RoleComponent
+    SignupComponent
   ],
   imports: [
     BrowserModule,
