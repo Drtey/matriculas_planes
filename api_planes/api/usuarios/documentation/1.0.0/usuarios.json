@@ -516,53 +516,11 @@
     "schemas": {
       "Usuarios": {
         "required": [
-          "id",
-          "email",
-          "password"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "nombre": {
-            "type": "string"
-          },
-          "papellido": {
-            "type": "string"
-          },
-          "sapellido": {
-            "type": "string"
-          },
-          "matriculas": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "fecha": {
-                  "type": "string"
-                },
-                "usuario": {
-                  "type": "string"
-                },
-                "curso": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
           },
           "published_at": {
             "type": "string",
@@ -571,34 +529,7 @@
         }
       },
       "NewUsuarios": {
-        "required": [
-          "email",
-          "password"
-        ],
         "properties": {
-          "nombre": {
-            "type": "string"
-          },
-          "papellido": {
-            "type": "string"
-          },
-          "sapellido": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "password": {
-            "type": "string",
-            "format": "password",
-            "minLength": 8
-          },
-          "matriculas": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"

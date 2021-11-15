@@ -539,10 +539,10 @@
               "fecha": {
                 "type": "string"
               },
-              "usuario": {
+              "curso": {
                 "type": "string"
               },
-              "curso": {
+              "user": {
                 "type": "string"
               },
               "published_at": {

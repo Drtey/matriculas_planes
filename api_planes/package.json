@@ -11,6 +11,8 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "install": "^0.13.0",
+    "jsonwebtoken": "^8.5.1",
     "knex": "0.21.18",
     "mysql": "2.18.1",
     "strapi": "3.6.8",

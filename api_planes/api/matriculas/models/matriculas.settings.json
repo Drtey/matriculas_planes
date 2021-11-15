@@ -15,13 +15,14 @@
     "fecha": {
       "type": "date"
     },
-    "usuario": {
-      "model": "usuarios",
-      "via": "matriculas"
-    },
     "curso": {
       "via": "matricula",
       "model": "cursos"
+    },
+    "user": {
+      "via": "matriculas",
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

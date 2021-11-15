@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/30/2021 11:33:54 AM"
+    "x-generation-date": "11/15/2021 7:49:17 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5977,10 +5977,10 @@
               "fecha": {
                 "type": "string"
               },
-              "usuario": {
+              "curso": {
                 "type": "string"
               },
-              "curso": {
+              "user": {
                 "type": "string"
               },
               "published_at": {
@@ -6183,48 +6183,6 @@
             "type": "string",
             "format": "date"
           },
-          "usuario": {
-            "required": [
-              "id",
-              "email",
-              "password"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nombre": {
-                "type": "string"
-              },
-              "papellido": {
-                "type": "string"
-              },
-              "sapellido": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "matriculas": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "curso": {
             "required": [
               "id"
@@ -6277,6 +6235,57 @@
               }
             }
           },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "matriculas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -6289,10 +6298,10 @@
             "type": "string",
             "format": "date"
           },
-          "usuario": {
+          "curso": {
             "type": "string"
           },
-          "curso": {
+          "user": {
             "type": "string"
           },
           "published_at": {
@@ -6588,53 +6597,11 @@
       },
       "Usuarios": {
         "required": [
-          "id",
-          "email",
-          "password"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "nombre": {
-            "type": "string"
-          },
-          "papellido": {
-            "type": "string"
-          },
-          "sapellido": {
-            "type": "string"
-          },
-          "matriculas": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "fecha": {
-                  "type": "string"
-                },
-                "usuario": {
-                  "type": "string"
-                },
-                "curso": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
           },
           "published_at": {
             "type": "string",
@@ -6643,34 +6610,7 @@
         }
       },
       "NewUsuarios": {
-        "required": [
-          "email",
-          "password"
-        ],
         "properties": {
-          "nombre": {
-            "type": "string"
-          },
-          "papellido": {
-            "type": "string"
-          },
-          "sapellido": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "password": {
-            "type": "string",
-            "format": "password",
-            "minLength": 8
-          },
-          "matriculas": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -6781,6 +6721,12 @@
                 },
                 "role": {
                   "type": "string"
+                },
+                "matriculas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
@@ -6894,6 +6840,37 @@
                 "type": "string"
               }
             }
+          },
+          "matriculas": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "fecha": {
+                  "type": "string"
+                },
+                "curso": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -6935,6 +6912,12 @@
           },
           "role": {
             "type": "string"
+          },
+          "matriculas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

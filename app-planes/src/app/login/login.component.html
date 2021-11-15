@@ -1,13 +1,7 @@
-<form action="/action_page.php" class="login">
-    <h1>Iniciar sesión</h1>
-    <div class="login__container">
-        <hr/>
-        <div class="login__container__inputs">
-            <label for="email"><strong>Email</strong></label>
-            <input type="text" name="email" id="email" required>
-            <label for="psw"><strong>Contraseña</strong></label>
-            <input type="password" name="psw" required>
-        </div>
-        <button type="submit">Entrar</button>
+<div class="wrapper" id="fondo">
+    <div id="formContent">
+      <h2 class="underlineHover"  routerLink="/signin"  routerLinkActive="active">Iniciar sesión</h2>
+      <h2 class="underlineHover"  routerLink="/signup"  routerLinkActive="active">Registrarse</h2>
+      <router-outlet></router-outlet>
     </div>
-</form>
+</div>

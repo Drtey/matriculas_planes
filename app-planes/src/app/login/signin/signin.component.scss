@@ -153,11 +153,11 @@ input[type=text]:placeholder {
 }
 
 input[type=text].invalid-textbox,input[type=password].invalid-textbox{
-border-bottom: 2px solid #f09697;
+border-bottom: 2px solid #e9787a;
 }
 
 label.validation-message{
-  color:#e98486;
+  color:#e9787a;
 }
 
 
@@ -283,7 +283,7 @@ label.validation-message{
 
 .alert {
   padding: 20px;
-  background-color: #f44336; /* Red */
+  background-color: #e9787a; /* Red */
   color: white;
   margin-bottom: 15px;
 }

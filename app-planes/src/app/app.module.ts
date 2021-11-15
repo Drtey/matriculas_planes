@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,26 @@ import { EnfermedadesComponent } from './matricula/enfermedades/enfermedades.com
 import { AutorizacionDatosPersonalesComponent } from './matricula/autorizacion-datos-personales/autorizacion-datos-personales.component';
 import { MainComponent } from './main/main.component';
 import { UserComponent } from './user/user.component';
+import { SigninComponent } from './login/signin/signin.component';
+import { SignupComponent } from './login/signup/signup.component';
+import { AuthComponent } from './guard/auth/auth.component';
+import { RoleComponent } from './guard/role/role.component';
+
+const rutas = [ 
+  { path: '', redirectTo: '/signin', pathMatch: 'full'},
+  {
+    path: 'signup', component: LoginComponent,
+    children: [{ path: '', component: SignupComponent }]
+  },
+  {
+    path: 'signin', component: LoginComponent,
+    children: [{ path: '', component: SigninComponent }]
+  },
+    { path: 'login', component: LoginComponent},
+    { path: 'register', component: RegisterComponent},
+    { path: 'main', component: MainComponent},
+    { path: 'user', component: UserComponent}
+  ];
 
 @NgModule({
   declarations: [
@@ -34,10 +55,16 @@ import { UserComponent } from './user/user.component';
     EnfermedadesComponent,
     AutorizacionDatosPersonalesComponent,
     MainComponent,
-    UserComponent
+    UserComponent,
+    SigninComponent,
+    SignupComponent,
+    AuthComponent,
+    RoleComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot(rutas),
     AppRoutingModule
   ],
   providers: [],
