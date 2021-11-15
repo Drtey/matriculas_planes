@@ -21,6 +21,13 @@ import { UserComponent } from './user/user.component';
 import { SigninComponent } from './login/signin/signin.component';
 import { SignupComponent } from './login/signup/signup.component';
 
+import { JwtHelperService, JWT_OPTIONS }  from '@auth0/angular-jwt';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptorService } from './services/token-interceptor.service';
+
+import { RoleGuard } from './guard/role.guard';
+import { AuthGuard } from './guard/auth.guard';
+
 const rutas = [ 
   { path: '', redirectTo: '/signin', pathMatch: 'full'},
   {
@@ -33,7 +40,7 @@ const rutas = [
   },
     { path: 'login', component: LoginComponent},
     { path: 'register', component: RegisterComponent},
-    { path: 'main', component: MainComponent},
+    { path: 'main', component: MainComponent, canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'admin' }},
     { path: 'user', component: UserComponent}
   ];
 
@@ -63,7 +70,13 @@ const rutas = [
     RouterModule.forRoot(rutas),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+     // JWT
+     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
+     JwtHelperService,
+     // Token interceptor
+     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

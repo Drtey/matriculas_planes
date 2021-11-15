@@ -20,5 +20,13 @@ export class SigninComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  logIn(){
+    console.log(this.usuario);
+    this.authService.singin(this.usuario).subscribe( (res:any) => {
+      console.log(res);
+      localStorage.setItem('token',res.token);
+      this.router.navigate(['main']);
+    })
+  }
 
 }
