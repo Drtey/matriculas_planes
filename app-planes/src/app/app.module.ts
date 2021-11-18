@@ -27,14 +27,11 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 import { AuthGuard } from './guard/auth.guard'; */
 
 const rutas = [ 
-  {
-    path: 'signin', component: SigninComponent,
-  },
-  {
-    path: 'signup', component: SignupComponent,
-  },
-    { path: 'main', component: MainComponent,/*  canActivate:[RoleGuard, AuthGuard], */ data: { expectedRole: 'admin' }},
-    { path: 'user', component: UserComponent}
+  { path: 'main', component: MainComponent/* , canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'admin' } */},
+  { path: 'user', component: UserComponent},
+  { path: 'signup', component: SignupComponent},
+  { path: 'signin', component: SigninComponent},
+    
   ];
 
 @NgModule({

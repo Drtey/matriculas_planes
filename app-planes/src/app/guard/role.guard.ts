@@ -1,9 +1,8 @@
-import { Injectable } from '@angular/core';
+/* import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
-/* import decode from 'jwt-decode'; */
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +18,7 @@ export class RoleGuard implements CanActivate {
 
     const expectedRole = route.data.expectedRole;
     const token = localStorage.getItem('token');
-    /* const role = decode(token); */
+    
     const data = this.decode(token);
     
     console.log(data.role)
@@ -35,15 +34,15 @@ export class RoleGuard implements CanActivate {
         return false;
       }
     }
-   
-  decode(token) {
+    */
+  /* decode(token) {
     try {
-      // Get Token Header
+      
       const base64HeaderUrl = token.split('.')[0];
       const base64Header = base64HeaderUrl.replace('-', '+').replace('_', '/');
       const headerData = JSON.parse(window.atob(base64Header));
   
-      // Get Token payload and date's
+      
       const base64Url = token.split('.')[1];
       const base64 = base64Url.replace('-', '+').replace('_', '/');
       const dataJWT = JSON.parse(window.atob(base64));
@@ -57,4 +56,4 @@ export class RoleGuard implements CanActivate {
   }
   
   
-}
+} */
