@@ -4,8 +4,6 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DarkModeComponent } from './header/dark-mode/dark-mode.component';
@@ -18,37 +16,31 @@ import { EnfermedadesComponent } from './matricula/enfermedades/enfermedades.com
 import { AutorizacionDatosPersonalesComponent } from './matricula/autorizacion-datos-personales/autorizacion-datos-personales.component';
 import { MainComponent } from './main/main.component';
 import { UserComponent } from './user/user.component';
-import { SigninComponent } from './login/signin/signin.component';
-import { SignupComponent } from './login/signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
 
 import { JwtHelperService, JWT_OPTIONS }  from '@auth0/angular-jwt';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 
-import { RoleGuard } from './guard/role.guard';
-import { AuthGuard } from './guard/auth.guard';
+/* import { RoleGuard } from './guard/role.guard';
+import { AuthGuard } from './guard/auth.guard'; */
 
 const rutas = [ 
-  { path: '', redirectTo: '/signin', pathMatch: 'full'},
   {
-    path: 'signup', component: LoginComponent,
-    children: [{ path: '', component: SignupComponent }]
+    path: 'signin', component: SigninComponent,
   },
   {
-    path: 'signin', component: LoginComponent,
-    children: [{ path: '', component: SigninComponent }]
+    path: 'signup', component: SignupComponent,
   },
-    { path: 'login', component: LoginComponent},
-    { path: 'register', component: RegisterComponent},
-    { path: 'main', component: MainComponent, canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'admin' }},
+    { path: 'main', component: MainComponent,/*  canActivate:[RoleGuard, AuthGuard], */ data: { expectedRole: 'admin' }},
     { path: 'user', component: UserComponent}
   ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
+
     HeaderComponent,
     FooterComponent,
     DarkModeComponent,
