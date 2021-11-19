@@ -49,7 +49,8 @@ html, body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-input[type=text] {
+input[type=text],
+input[type=password] {
     width: 100%;
     display: block;
     border-radius: var(--border-radius);
@@ -62,7 +63,8 @@ input[type=text] {
     padding-right: var(--spacer-1);
 }
 
-input[type=text]:focus {
+input[type=text]:focus,
+input[type=password]:focus {
     background-color: var(--color-primary-background);
     outline: none;
 }
