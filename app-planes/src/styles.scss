@@ -70,7 +70,8 @@ input[type=password]:focus {
 }
 
 input[type=radio] {
-    width: 30px; height: 30px;
+    $widthCheck: 22px;
+    width: $widthCheck; height: $widthCheck;
     border-radius: var(--border-radius);
     appearance: none;
     -moz-appearance: none;
@@ -107,8 +108,15 @@ input[type=radio] {
     align-items: center;
     width: auto;
     float: left;
+    input {
+        &:checked {
+            background-color: var(--color-primary);
+            border: none;
+        }
+    }
     label {
-        margin-top: var(--spacer-1);
+        margin: 0;
+        margin-left: var(--spacer-1);
         margin-right: var(--spacer-2);
     }
 }

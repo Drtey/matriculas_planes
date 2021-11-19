@@ -2,5 +2,6 @@
     clear: both;
     position: relative;
     height: 20vh;
-    background-color: rgb(185, 185, 185);
+    background-color: var(--color-primary);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
