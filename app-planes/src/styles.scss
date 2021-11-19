@@ -1,6 +1,116 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+
+    // COLORES
+    --color-primary: #37A8EC;
+    --color-primary-hover: #209deb;
+    --color-primary-background: #d0edff;
+    --color-light: #fff;
+    --color-dark: #1E1E1E;
+    --color-font-dark: #000;
+    --color-font-light: #fff;
+
+    // ESPACIADOS
+    --spacer-1: 8px;
+    --spacer-2: 16px;
+    --spacer-3: 24px;
+    --spacer-4: 32px;
+    --spacer-5: 40px;
+    --spacer-6: 48px;
+    --spacer-7: 56px;
+    --spacer-8: 64px;
+    --spacer-9: 80px;
+    --spacer-10: 100px;
+
+    // BORDER RADIUS
+    --border-radius: 48px;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(assets/fonts/SourceSansPro.woff);
+  }
+
+@font-face {
+font-family: 'Source Sans Pro';
+src: url(assets/fonts/SourceSansPro.woff2);
+}
+
+*::selection {
+    background-color: var(--color-primary);
+    color: var(--color-font-light);
+}
+
 html, body {
     margin: auto;
     padding: 0;
-    background-color: #56baed;
+    background-color: var(--color-primary-background);
+    font-family: 'Source Sans Pro', sans-serif;
 }
+
+input[type=text] {
+    width: 100%;
+    display: block;
+    border-radius: var(--border-radius);
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border: 1px solid var(--color-font-dark);
+    padding-left: var(--spacer-1);
+    padding-right: var(--spacer-1);
+}
+
+input[type=text]:focus {
+    background-color: var(--color-primary-background);
+    outline: none;
+}
+
+input[type=radio] {
+    width: 30px; height: 30px;
+    border-radius: var(--border-radius);
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border: 1px solid var(--color-font-dark);
+}
+
+.bloque {
+    background-color: var(--color-light);
+    margin: var(--spacer-8);
+    padding: var(--spacer-8);
+    padding-bottom: var(--spacer-10);
+    border-radius: var(--border-radius);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    label {   
+        margin: var(--spacer-1);
+        margin-bottom: 5px;
+        margin-top: var(--spacer-2);
+    }
+    h1 {
+        text-transform: uppercase;
+        margin-bottom: var(--spacer-3);
+    }
+}
+
+.campo {
+    display: block;
+}
+
+.radio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    float: left;
+    label {
+        margin-top: var(--spacer-1);
+        margin-right: var(--spacer-2);
+    }
+}
+
+@media (min-width: 700px) { 
+    
+ }

@@ -1,0 +1,53 @@
+.sign {
+    &__container {
+        background-color: #fff;
+        color: #000;
+        padding: 50px;
+        width: 25%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 25px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        h2 {
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        label {
+            display: block;
+            margin: 10px;
+            margin-bottom: 5px;
+        }
+
+        &__boton {
+            border: none;
+            background-color: var(--color-primary);
+            border-radius: 25px;
+            color:#fff;
+            padding: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-top: 30px;
+        }
+
+        &__boton:hover {
+            background-color: var(--color-primary-hover);
+        }
+
+        &__sign-link {
+            width: 60%;
+            float:right;
+            margin-top: 30px;
+            &__link {
+                color: var(--color-primary);
+            }
+            span {
+                display:block;
+            }
+        }
+    }
+}

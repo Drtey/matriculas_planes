@@ -1,0 +1,13 @@
+.datos-academicos {
+    &__contenedor-materias {
+        margin-top: var(--spacer-5);
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        &__half {
+        }
+    }
+    h3 {
+        margin-top: var(--spacer-8);
+    }
+}

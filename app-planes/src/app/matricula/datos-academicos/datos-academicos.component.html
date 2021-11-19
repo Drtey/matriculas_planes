@@ -1,31 +1,68 @@
 
 <div class="bloque datos-academicos">
 
-    <label class="campo datos-academicos__label" for="centroProced"><strong>Centro de procedencia*</strong></label>
+    <h1>Datos académicos</h1>
+
+    <label class="campo datos-academicos__label" for="centroProced"><strong>Centro de procedencia</strong></label>
     <input class="campo datos-academicos__input" type="text" name="centroProced" id="centroProced" required>
 
-    <label class="campo datos-academicos__label"><strong>Repite:*</strong></label>
-    <input type="radio" id="siRepite" name="repite" value="siRepite">
-    <label for="siRepite">Sí</label>
-    <input type="radio" id="noRepite" name="repite" value="noRepite">
-    <label for="noRepite">No</label><br>
+
+    <label class="campo datos-academicos__label"><strong>Repite:</strong></label>
+    <div class="radio">
+        <input type="radio" id="siRepite" name="repite" value="siRepite">
+        <label for="siRepite">Sí</label>
+    </div>
+    <div class="radio">
+        <input type="radio" id="noRepite" name="repite" value="noRepite">
+        <label for="noRepite">No</label>
+    </div>
 
     <h3>Expreso mi deseo de que mi hijo, hija curse enseñanzas de:</h3>
+    <div class="radio">
+        <input type="radio" id="religion" name="optativaEnse" value="religion">
+        <label for="religion">Religión</label>
+    </div>
+    <div class="radio">
+        <input type="radio" id="valores" name="optativaEnse" value="valores">
+        <label for="valores">Valores Éticos</label>
+    </div>
+    <div class="radio">
+        <input type="radio" id="religionEvang" name="optativaEnse" value="religionEvang">
+        <label for="religionEvang">Religión Evangélica</label>
+    </div>
+    <div class="radio">
+        <input type="radio" id="religionIslam" name="optativaEnse" value="religionIslam">
+        <label for="religionIslam">Religión Islámica</label>
+    </div>
 
-    <input type="radio" id="religion" name="optativaEnse" value="religion">
-    <label for="religion">Religión</label><br>
-    <input type="radio" id="valores" name="optativaEnse" value="valores">
-    <label for="valores">Valores Éticos</label><br>
-    <input type="radio" id="religionEvang" name="optativaEnse" value="religionEvang">
-    <label for="religionEvang">Religión Evangélica</label><br>
-    <input type="radio" id="religionIslam" name="optativaEnse" value="religionIslam">
-    <label for="religionIslam">Religión Islámica</label><br>
-
-    <label>Autorizan:</label><br>
-    <input type="radio" id="tutor1Autoriza" name="autorizaOptativa" value="tutor1Autoriza">
-    <label for="tutor1Autoriza">Religión Islámica</label><br>
-    <input type="radio" id="tutor2Autoriza" name="autorizaOptativa" value="tutor2Autoriza">
-    <label for="tutor2Autoriza">Religión Islámica</label><br>
+    <label>Autorizan:</label>
+    <div class="radio">    
+        <input type="radio" id="tutor1Autoriza" name="autorizaOptativa" value="tutor1Autoriza">
+        <label for="tutor1Autoriza">Tutor 1</label>
+    </div>
+    <div class="radio">    
+        <input type="radio" id="tutor2Autoriza" name="autorizaOptativa" value="tutor2Autoriza">
+        <label for="tutor2Autoriza">Tutor 2</label>
+    </div>
     
+    <div class="datos-academicos__contenedor-materias">
+        <div class="datos-academicos__contenedor-materias__half">
+            <h4>Materias que cursan</h4>
+            <ul>
+                <li>Matemáticas</li>
+                <li>Matemáticas</li>
+                <li>Matemáticas</li>
+                <li>Matemáticas</li>
+                <li>Matemáticas</li>
+                <li>Matemáticas</li>
+                <li>Matemáticas</li>
+                <li>Matemáticas</li>
+            </ul>
+        </div>
+        <div class="datos-academicos__contenedor-materias__half">
+            DRAG AND DROP
+        </div>
+    </div>
+
 
 </div> 

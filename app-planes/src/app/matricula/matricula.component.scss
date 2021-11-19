@@ -1,3 +1,10 @@
 div {
-    background-color: white;
+    margin: auto;
+    width: 100%;
+}
+
+@media (min-width: 700px) { 
+    div {
+        width: 70%;
+    }
 }
