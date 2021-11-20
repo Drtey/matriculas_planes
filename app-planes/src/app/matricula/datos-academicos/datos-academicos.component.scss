@@ -4,7 +4,34 @@
         width: 100%;
         display: grid;
         grid-template-columns: 50% 50%;
-        &__half {
+        &__half{
+            &__sorter-icon {
+                width: 20px;
+                float: right;
+            }
+        }
+        .sorter {
+            display: flex;
+            flex-direction: column;
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+            .sortable-bulk {
+                cursor: move; /* Usamos grab si "move" no lo soporta el navegador */
+                cursor: grab;
+                display:flex;
+                justify-content: space-between;
+                padding:10px;
+                background:white;
+                max-width: 50%;
+                border:solid 1px var(--color-dark);
+                border-end-end-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            .sortable-bulk:active{
+                cursor: grabbing;
+            }
         }
     }
     h3 {
