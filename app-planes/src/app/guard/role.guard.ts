@@ -1,12 +1,15 @@
-/* import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
 
+/* import decode from 'jwt-decode'; */
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class RoleGuard implements CanActivate {
   
 
@@ -17,14 +20,14 @@ export class RoleGuard implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot):boolean{
 
     const expectedRole = route.data.expectedRole;
-    const token = localStorage.getItem('token');
-    
-    const data = this.decode(token);
+    const jwt = localStorage.getItem('jwt');
+    /* const role = decode(token); */
+    const data = this.decode(jwt);
     
     console.log(data.role)
     if (data.role === expectedRole) {
       if( !this.authService.isAuth()) {
-        this.router.navigate(['login']);
+        this.router.navigate(['signin']);
         return false;
       }
       return true;
@@ -34,16 +37,16 @@ export class RoleGuard implements CanActivate {
         return false;
       }
     }
-    */
-  /* decode(token) {
+   
+  decode(jwt) {
     try {
-      
-      const base64HeaderUrl = token.split('.')[0];
+      // Get Token Header
+      const base64HeaderUrl = jwt.split('.')[0];
       const base64Header = base64HeaderUrl.replace('-', '+').replace('_', '/');
       const headerData = JSON.parse(window.atob(base64Header));
   
-      
-      const base64Url = token.split('.')[1];
+      // Get Token payload and date's
+      const base64Url = jwt.split('.')[1];
       const base64 = base64Url.replace('-', '+').replace('_', '/');
       const dataJWT = JSON.parse(window.atob(base64));
       dataJWT.header = headerData;
@@ -56,4 +59,4 @@ export class RoleGuard implements CanActivate {
   }
   
   
-} */
+}

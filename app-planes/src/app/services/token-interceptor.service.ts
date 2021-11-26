@@ -7,10 +7,10 @@ import { HttpInterceptor } from '@angular/common/http';
 export class TokenInterceptorService {
 
   intercept(req, next) {
-    const token = localStorage.getItem('token');
+    const jwt = localStorage.getItem('jwt');
     const tokenHeader = req.clone({
       setHeaders: {
-        Authorization: `Bearer ${token}`
+        Authorization: `Bearer ${jwt}`
       }
     });
     return next.handle(tokenHeader);

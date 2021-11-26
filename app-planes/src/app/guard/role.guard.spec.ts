@@ -1,4 +1,4 @@
-/* import { TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
 import { RoleGuard } from './role.guard';
 
@@ -14,4 +14,3 @@ describe('RoleGuard', () => {
     expect(guard).toBeTruthy();
   });
 });
- */

@@ -1,7 +1,8 @@
-/* import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +16,10 @@ export class AuthGuard implements CanActivate {
 
     if(!this.authService.isAuth()){
       console.log('Token no es válido o ya expiró');
-      this.router.navigate(['login']);
+      this.router.navigate(['signin']);
       return false;
     }
     return true;
   }
   
 }
- */

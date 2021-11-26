@@ -8,26 +8,26 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  readonly url = "http://localhost:1337";
+  private url = "http://localhost:1337";
 
-  constructor(private http: HttpClient, private jwtHelper: JwtHelperService, public router: Router) { }
+  constructor(private http: HttpClient, private jwtHelper: JwtHelperService, private router: Router) { }
 
   singin(usuario:any) {
+    console.log(usuario);
     return this.http.post(`${this.url}/auth/local`, usuario);
   }
 
   isAuth():boolean {
-    const token = localStorage.getItem('token');
-    if(this.jwtHelper.isTokenExpired(token) || !localStorage.getItem('token')) {
+    const jwt = localStorage.getItem('jwt');
+    if(this.jwtHelper.isTokenExpired(jwt) || !localStorage.getItem('jwt')) {
       return false;
     }
     return true;
   }
 
   logout(){
-    localStorage.removeItem('token');
-    this.router.navigate(['login']);
+    localStorage.removeItem('jwt');
+    this.router.navigate(['signin']);
   }
 
 }
-

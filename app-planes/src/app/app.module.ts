@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,21 +24,22 @@ import { JwtHelperService, JWT_OPTIONS }  from '@auth0/angular-jwt';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 
-/* import { RoleGuard } from './guard/role.guard';
-import { AuthGuard } from './guard/auth.guard'; */
+import { AuthGuard } from './guard/auth.guard';
+import { RoleGuard } from './guard/role.guard';
 
 const rutas = [ 
-  { path: 'main', component: MainComponent/* , canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'admin' } */},
-  { path: 'user', component: UserComponent},
-  { path: 'signup', component: SignupComponent},
+
   { path: 'signin', component: SigninComponent},
-    
+  { path: 'signup', component: SignupComponent},
+  { path: '', component: SigninComponent},
+  { path: 'main', component: MainComponent, canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'admin' }, 
+      children: [{ path: 'user', component: UserComponent}, { path: 'matricula', component: MatriculaComponent},]
+  },
   ];
 
 @NgModule({
   declarations: [
     AppComponent,
-
     HeaderComponent,
     FooterComponent,
     DarkModeComponent,
@@ -51,13 +53,15 @@ const rutas = [
     MainComponent,
     UserComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(rutas),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
      // JWT
