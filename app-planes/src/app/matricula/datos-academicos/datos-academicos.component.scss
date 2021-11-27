@@ -1,4 +1,8 @@
 .datos-academicos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     &__contenedor-materias {
         margin-top: var(--spacer-5);
         width: 100%;
@@ -33,6 +37,10 @@
                 cursor: grabbing;
             }
         }
+    }
+
+    &__radio {
+        margin-top: var(--spacer-1);
     }
     h3 {
         margin-top: var(--spacer-8);

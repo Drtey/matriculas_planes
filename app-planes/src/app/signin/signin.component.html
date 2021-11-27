@@ -1,21 +1,23 @@
 <div class="sign">
 
     <div class="sign__container">
+        <div class="sign__content">
+            <h2>Inicio de sesión</h2>
 
-        <h2>Inicio de sesión</h2>
-
-        <label for="email" id="email">Correo electrónico</label>
-        <input type="text" [(ngModel)]="usuario.identifier">
-
-        <label for="password" id="password">Contraseña</label>
-        <input type="password" [(ngModel)]="usuario.password">
-
-        <button (click)="logIn()" class="sign__container__boton" id="signin-button">Entrar</button>
-
-        <div class="sign__container__sign-link">
-            <span>¿Has olvidado tu contraseña?</span>
-            <span>Haz click <a class="sign__container__sign-link__link" href="/signup">aquí</a> para recuperarla</span>
+            <label for="email" id="email">Correo electrónico</label>
+            <input type="text" [(ngModel)]="usuario.identifier">
+    
+            <label for="password" id="password">Contraseña</label>
+            <input type="password" [(ngModel)]="usuario.password">
+    
+            <button (click)="logIn()" class="sign__container__boton boton" id="signin-button">Entrar</button>
+    
+            <div class="sign__container__sign-link">
+                <span>¿Has olvidado tu contraseña?</span>
+                <span>Haz click <a class="sign__container__sign-link__link" href="/signup">aquí</a> para recuperarla</span>
+            </div>
         </div>
+        
         
     </div>
 

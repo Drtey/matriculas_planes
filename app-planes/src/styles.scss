@@ -3,11 +3,13 @@
 :root {
 
     // COLORES
-    --color-primary: #37A8EC;
+    --color-primary: #3195d1;
     --color-primary-hover: #209deb;
     --color-primary-background: #d0edff;
     --color-light: #fff;
     --color-dark: #1E1E1E;
+    --color-grey-1: #4c4c4c4c;
+    --color-grey-2: #8e8e8e8e;
     --color-font-dark: #000;
     --color-font-light: #fff;
 
@@ -38,7 +40,7 @@ src: url(assets/fonts/SourceSansPro.woff2);
 }
 
 *::selection {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-hover);
     color: var(--color-font-light);
 }
 
@@ -47,10 +49,39 @@ html, body {
     padding: 0;
     background-color: var(--color-primary-background);
     font-family: 'Source Sans Pro', sans-serif;
+    transition: 0.2s linear;
+}
+
+body.dark {
+    background-color: var(--color-dark);
+}
+.bloque.dark {
+    background-color: var(--color-grey-1);
+    color: var(--color-font-light);
+    input {
+        background-color: var(--color-grey-1);
+        color: var(--color-font-light);
+        border: 1px solid var(--color-grey-2);
+        &:focus {
+            background-color: var(--color-grey-2);
+            box-shadow: 0 0 0 2px var(--color-grey-2);
+        }
+        &::-webkit-calendar-picker-indicator {
+            background: transparent;
+        }
+        &[type=radio], &[type=checkbox]:not(.dark-mode__input) {
+            background-color: var(--color-grey-1);
+        }
+    }
+}
+
+input {
+    transition: all 0.4s ease;
 }
 
 input[type=text],
-input[type=password] {
+input[type=password],
+input[type=date] {
     width: 100%;
     display: block;
     border-radius: var(--border-radius);
@@ -59,25 +90,67 @@ input[type=password] {
     -webkit-appearance: none;
     border: none;
     border: 1px solid var(--color-font-dark);
-    padding-left: var(--spacer-1);
-    padding-right: var(--spacer-1);
+    padding-left: var(--spacer-2);
+    padding-right: var(--spacer-2);
+}
+
+input[type=date] {
+    padding-left: var(--spacer-2);
+    padding-right: var(--spacer-2);
+    height: var(--spacer-4);
 }
 
 input[type=text]:focus,
-input[type=password]:focus {
+input[type=password]:focus, 
+input[type=date]:focus {
     background-color: var(--color-primary-background);
     outline: none;
+    transform: scale(1.03);
+    box-shadow: 0 0 0 2px rgba(21, 156, 228, 0.4);
 }
 
 input[type=radio] {
-    $widthCheck: 22px;
-    width: $widthCheck; height: $widthCheck;
+    $widthRadio: 22px;
+    width: $widthRadio; height: $widthRadio;
     border-radius: var(--border-radius);
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
     border: none;
     border: 1px solid var(--color-font-dark);
+}
+
+input[type=checkbox]:not(.dark-mode__input) {
+    $widthCheck: 22px;
+    width: $widthCheck; height: $widthCheck;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border: 1px solid var(--color-font-dark);
+}
+
+input[type=submit] {
+    width: 25%;
+    height: var(--spacer-8);
+    border-radius: 50px;
+    margin: var(--spacer-8);
+    margin-top: 0;
+    border: none;
+    background-color: var(--color-primary-hover);
+    color: var(--color-font-light);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    &:hover {
+        border: none;
+        background-color: var(--color-font-light);
+        color: var(--color-font-dark);
+    }
+    &:focus {
+        border: none;
+        background-color: var(--color-font-light);
+        color: var(--color-font-dark);
+        box-shadow: inset rgba(0, 0, 0, 0.10) 0px 5px 15px;
+    }
 }
 
 .bloque {
@@ -111,7 +184,8 @@ input[type=radio] {
     input {
         &:checked {
             background-color: var(--color-primary);
-            border: none;
+            border: 5px solid white;
+            outline: 1px solid black;
         }
     }
     label {
@@ -121,6 +195,55 @@ input[type=radio] {
     }
 }
 
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    float: left;
+    margin-top: var(--spacer-1);
+    input {
+        &:checked {
+            background-color: var(--color-primary);
+            border: 5px solid white;
+            outline: 1px solid black;
+        }
+    }
+    label {
+        margin: 0;
+        margin-left: var(--spacer-1);
+        margin-right: var(--spacer-2);
+    }
+}
+
+.boton {
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-light);
+    border-radius: 25px;
+    color: var(--color-primary);
+    padding: 10px;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+.boton:hover {
+    background-color: var(--color-primary-hover);
+    border: 2px solid var(--color-primary-hover);
+    color: var(--color-light);
+}
+
+
+
+.campo-25 {
+    width: 25% !important;
+}
+.campo-50 {
+    width: 50% !important;
+}
+.campo-75 {
+    width: 75% !important;
+}
+
 @media (min-width: 700px) { 
     
- }
+}

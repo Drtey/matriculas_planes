@@ -32,7 +32,7 @@ const rutas = [
   { path: 'signin', component: SigninComponent},
   { path: 'signup', component: SignupComponent},
   { path: '', component: SigninComponent},
-  { path: 'main', component: MainComponent, canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'admin' }, 
+  { path: 'main', component: MainComponent, canActivate:[], data: { expectedRole: 'admin' }, 
       children: [{ path: 'user', component: UserComponent}, { path: 'matricula', component: MatriculaComponent},]
   },
   ];

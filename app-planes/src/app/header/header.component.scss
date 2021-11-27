@@ -5,25 +5,41 @@
     height: 10vh;
     background-color: var(--color-primary);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 5%;
 
     &__dark-mode {
-        float: right;
         margin: 35px;
     }
     
-    &__logo-svg {
-        width: 120px;
-        margin: 0 auto;
-        padding: 0;
+    &__logo {
+        height: 100%;
+        margin-right: auto;
+    }
 
+    &__logo-svg {
+        height: 100%;
     }
 
     &__nav {
-        float: right;
         margin: 25px;
         li {
             list-style-type: none;
-
+            display: inline-block;
+            margin-left: var(--spacer-1);
+            margin-right: var(--spacer-1);
+            text-transform: uppercase;
         }
+
+        li a {
+            color: var(--color-font-light);
+            text-decoration: none;
+            transition: all 0.3s ease 0s;
+        }
+        
+        
+
     }
 }
