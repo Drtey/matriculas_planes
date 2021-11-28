@@ -26,6 +26,7 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 
 import { AuthGuard } from './guard/auth.guard';
 import { RoleGuard } from './guard/role.guard';
+import { AutorizacionSalidaComponent } from './matricula/autorizacion-salida/autorizacion-salida.component';
 
 const rutas = [ 
 
@@ -54,6 +55,7 @@ const rutas = [
     UserComponent,
     SigninComponent,
     SignupComponent,
+    AutorizacionSalidaComponent,
   ],
   imports: [
     BrowserModule,

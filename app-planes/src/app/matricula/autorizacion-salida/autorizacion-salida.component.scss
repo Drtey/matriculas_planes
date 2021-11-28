@@ -1,0 +1,10 @@
+.autorizacion-salida {
+    &__bloque {
+        label {
+            display:block;
+        }
+    }
+    &__bloque + &__bloque {
+        margin-top: var(--spacer-7);
+    }
+}
