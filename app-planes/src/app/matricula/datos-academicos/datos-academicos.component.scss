@@ -8,6 +8,9 @@
         width: 100%;
         display: grid;
         grid-template-columns: 50% 50%;
+        display:block;
+        overflow:auto;
+        height: 100%;
         &__half{
             &__sorter-icon {
                 width: 20px;
@@ -24,7 +27,7 @@
             .sortable-bulk {
                 cursor: move; /* Usamos grab si "move" no lo soporta el navegador */
                 cursor: grab;
-                display:flex;
+                display: flex;
                 justify-content: space-between;
                 padding:10px;
                 background:white;
@@ -44,5 +47,11 @@
     }
     h3 {
         margin-top: var(--spacer-8);
+    }
+    @media (max-width: 970px) { 
+        &__contenedor-materias {
+            grid-template-rows: 50% 50%;
+            grid-template-columns: unset;
+        }
     }
 }

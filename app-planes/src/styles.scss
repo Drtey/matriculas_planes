@@ -151,6 +151,9 @@ input[type=submit] {
         color: var(--color-font-dark);
         box-shadow: inset rgba(0, 0, 0, 0.10) 0px 5px 15px;
     }
+    @media (max-width: 970px) {
+        margin-left: var(--spacer-2);
+    }
 }
 
 .bloque {
@@ -244,6 +247,23 @@ input[type=submit] {
     width: 75% !important;
 }
 
+@media (max-width: 970px) { 
+    .bloque {
+        padding: var(--spacer-4);
+        padding-bottom: var(--spacer-7);
+        margin-left: var(--spacer-2);
+        margin-right: var(--spacer-2);
+    }
+    .campo-25 {
+        width: 100% !important;
+    }
+    .campo-50 {
+        width: 100% !important;
+    }
+    .campo-75 {
+        width: 100% !important;
+    }
+}
+
 @media (min-width: 700px) { 
-    
 }

@@ -25,12 +25,17 @@
 
     &__nav {
         margin: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         li {
             list-style-type: none;
-            display: inline-block;
             margin-left: var(--spacer-1);
             margin-right: var(--spacer-1);
             text-transform: uppercase;
+            @media (max-width: 970px) { 
+                font-size: 0.9em;
+            }
         }
 
         li a {

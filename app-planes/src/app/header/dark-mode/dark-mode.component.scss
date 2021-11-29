@@ -2,6 +2,7 @@
     &__label {
         background-color: var(--color-dark);
         display: flex;
+        justify-content: space-between;
         border-radius: 50px;
         height: 26px;
         width: 50px;
@@ -26,7 +27,13 @@
         &:checked + .dark-mode__label .dark-mode__ball {
             transform: translateX(24px);
         }
-    }
+    }   
+}
 
-    
+.sol {
+    color: #f1c40f;
+}
+
+.luna {
+    color: #e4e4e4; 
 }

@@ -8,3 +8,9 @@
         margin-top: var(--spacer-7);
     }
 }
+
+.subir-archivo {
+    @media (max-width: 680px) {
+        font-size: 0.8em;
+    }
+}
