@@ -4,7 +4,8 @@
 
     // COLORES
     --color-primary: #3195d1;
-    --color-primary-hover: #209deb;
+/*     --color-primary-hover: #209deb; */
+    --color-primary-hover: var(--color-primary);
     --color-primary-background: #d0edff;
     --color-light: #fff;
     --color-dark: #1E1E1E;
@@ -12,6 +13,7 @@
     --color-grey-2: #8e8e8e8e;
     --color-font-dark: #000;
     --color-font-light: #fff;
+    --color-warning: #D83F3F;
 
     // ESPACIADOS
     --spacer-1: 8px;
@@ -221,12 +223,30 @@ input[type=submit] {
 
 .boton {
     border: 2px solid var(--color-primary);
-    background-color: var(--color-light);
+    background-color: transparent;
     border-radius: 25px;
     color: var(--color-primary);
     padding: 10px;
     font-weight: bold;
     transition: all 0.4s ease;
+}
+
+.boton.eliminar {
+    color: var(--color-warning);
+    border-color: var(--color-warning);
+    &:hover {
+        background-color: var(--color-warning);
+        border-color: var(--color-warning);
+    }
+}
+
+.boton.enviar {
+    color: var(--color-font-light);
+    background-color: var(--color-primary);
+    &:hover {
+        background-color: transparent;
+        color: var(--color-primary);
+    }
 }
 
 .boton:hover {
