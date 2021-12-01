@@ -22,12 +22,13 @@ export class SigninComponent implements OnInit {
   }
 
   logIn(){
-    console.log(this.usuario);
+    /* console.log(this.usuario);
     this.authService.singin(this.usuario).subscribe( (res:any) => {
       console.log(res);
       localStorage.setItem('jwt',res.jwt);
       this.router.navigate(['main']);
-    })
+    }) */
+    this.authService.login(this.usuario.identifier, this.usuario.password);
   }
 
 }

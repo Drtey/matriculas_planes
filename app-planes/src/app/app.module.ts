@@ -34,7 +34,7 @@ const rutas = [
   { path: 'signin', component: SigninComponent},
   { path: 'signup', component: SignupComponent},
   { path: '', component: SigninComponent},
-  { path: 'main', component: MainComponent, 
+  { path: 'main', component: MainComponent, canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'publico' }, 
       children: [
       { path: 'user', component: UserComponent},
       { path: 'matricula', component: MatriculaComponent},

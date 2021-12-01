@@ -3,8 +3,7 @@ import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Rout
 import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
-
-/* import decode from 'jwt-decode'; */
+import decode from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
@@ -21,11 +20,11 @@ export class RoleGuard implements CanActivate {
 
     const expectedRole = route.data.expectedRole;
     const jwt = localStorage.getItem('jwt');
-    /* const role = decode(token); */
+    console.log(jwt);
     const data = this.decode(jwt);
+    console.log(data);
     
-    console.log(data.role)
-    if (data.role === expectedRole) {
+    if (data === expectedRole) {
       if( !this.authService.isAuth()) {
         this.router.navigate(['signin']);
         return false;
