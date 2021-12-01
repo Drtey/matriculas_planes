@@ -11,6 +11,7 @@
     --color-dark: #1E1E1E;
     --color-grey-1: #4c4c4c4c;
     --color-grey-2: #8e8e8e8e;
+    --color-grey-3: #d8d8d88e;
     --color-font-dark: #000;
     --color-font-light: #fff;
     --color-warning: #D83F3F;
@@ -255,6 +256,17 @@ input[type=submit] {
     color: var(--color-light);
 }
 
+
+.boton.apagado {
+    color: var(--color-font-light) !important;
+    border: none !important;
+    background-color: var(--color-grey-1) !important;
+    &:hover {
+        color: var(--color-font-light) !important;
+        border: none !important;
+        background-color: var(--color-grey-1) !important;
+    }
+}
 
 
 .campo-25 {

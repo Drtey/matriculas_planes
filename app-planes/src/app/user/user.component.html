@@ -1,3 +1,24 @@
-<div>
-    <app-matricula-item></app-matricula-item>
+<div class="user">
+    <div class="user__lista-matriculas">
+        <app-matricula-item></app-matricula-item>
+        <app-matricula-item></app-matricula-item>
+        <app-matricula-item></app-matricula-item>
+        <app-matricula-item></app-matricula-item>
+        <app-matricula-item></app-matricula-item>
+        <app-matricula-item></app-matricula-item>
+    </div>
+    <div class="user__datos bloque">
+        <div class="user__datos__contenedor-campos">
+            <label class="campo user__datos__label" for="email"><strong>Email</strong></label>
+            <input class="campo user__datos__input campo-75" type="text" name="email" id="email" value="correo@gmail.com" required disabled>
+
+            <label class="campo user__datos__label" for="telef_user"><strong>Teléfono</strong></label>
+            <input class="campo user__datos__input campo-50" type="text" name="telef_user" id="telef_user" disabled>
+        </div>
+        <div class="user__datos__contenedor-botones">
+            <button class="boton enviar">Guardar</button>
+            <button class="boton">Editar</button>
+        </div>
+       
+    </div>
 </div>

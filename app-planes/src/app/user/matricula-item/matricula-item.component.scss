@@ -1,9 +1,9 @@
 .matricula-item {
     padding: var(--spacer-4);
+    position: relative;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    width: 40%;
     dt {
         margin: 0;
         font-size: 0.9em;
@@ -20,5 +20,12 @@
         button {
             width: 10rem;
         }
+    }
+    &__id {
+        color: var(--color-grey-2);
+        position: absolute;
+        top: var(--spacer-3);
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
