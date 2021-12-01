@@ -34,7 +34,6 @@ const rutas = [
   { path: 'signin', component: SigninComponent},
   { path: 'signup', component: SignupComponent},
   { path: '', redirectTo: '/signin', pathMatch:'full'},
-  { path: '**', redirectTo: '/signin', pathMatch:'full'},
   { path: 'main', component: MainComponent, canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'public' }, 
       children: [
       { path: 'user', component: UserComponent},
