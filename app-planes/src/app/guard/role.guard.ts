@@ -21,10 +21,10 @@ export class RoleGuard implements CanActivate {
     const expectedRole = route.data.expectedRole;
     const jwt = localStorage.getItem('jwt');
     console.log(jwt);
-    const data = this.decode(jwt);
-    console.log(data);
+    console.log(this.authService.data);
+    console.log(this.authService.data.role.type);
     
-    if (data === expectedRole) {
+    if (this.authService.data.role.type === expectedRole) {
       if( !this.authService.isAuth()) {
         this.router.navigate(['signin']);
         return false;
@@ -37,25 +37,6 @@ export class RoleGuard implements CanActivate {
       }
     }
    
-  decode(jwt) {
-    try {
-      // Get Token Header
-      const base64HeaderUrl = jwt.split('.')[0];
-      const base64Header = base64HeaderUrl.replace('-', '+').replace('_', '/');
-      const headerData = JSON.parse(window.atob(base64Header));
-  
-      // Get Token payload and date's
-      const base64Url = jwt.split('.')[1];
-      const base64 = base64Url.replace('-', '+').replace('_', '/');
-      const dataJWT = JSON.parse(window.atob(base64));
-      dataJWT.header = headerData;
-  
-  
-      return dataJWT;
-    } catch (err) {
-      return false;
-    }
-  }
   
   
 }

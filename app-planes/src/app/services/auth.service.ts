@@ -9,14 +9,11 @@ import axios from 'axios';
 })
 export class AuthService {
 
+  data;
+
   private url = "http://localhost:1337";
 
   constructor(private http: HttpClient, private jwtHelper: JwtHelperService, private router: Router) { }
-
-  singin(usuario:any) {
-    console.log(usuario);
-    return this.http.post(`${this.url}/auth/local`, usuario);
-  }
 
   login(identifier, password) {
     axios
@@ -27,8 +24,7 @@ export class AuthService {
       .then(response => {
         // Handle success.
         console.log('Well done!');
-        console.log('User profile', response.data.user);
-        console.log('User token', response.data.jwt);
+        this.data = response.data.user;
         localStorage.setItem('jwt',response.data.jwt);
         this.router.navigate(['main']);
         
