@@ -35,7 +35,11 @@ const rutas = [
   { path: 'signup', component: SignupComponent},
   { path: '', component: SigninComponent},
   { path: 'main', component: MainComponent, 
-      children: [{ path: 'user', component: UserComponent}, { path: 'matricula', component: MatriculaComponent},]
+      children: [
+      { path: 'user', component: UserComponent},
+      { path: 'matricula', component: MatriculaComponent},
+      { path: '', component: MatriculaComponent}
+    ]
   },
   ];
 
