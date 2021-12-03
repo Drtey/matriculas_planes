@@ -5,16 +5,18 @@
             <h2>Inicio de sesión</h2>
 
             <label for="email" id="email">Correo electrónico</label>
-            <input type="text" [(ngModel)]="usuario.identifier">
+            <input (keyup.enter)="logIn()" type="text" [(ngModel)]="usuario.identifier">
     
             <label for="password" id="password">Contraseña</label>
-            <input type="password" [(ngModel)]="usuario.password">
+            <input (keyup.enter)="logIn()" type="password" [(ngModel)]="usuario.password">
     
-            <button (click)="logIn()" class="sign__container__boton boton" id="signin-button">Entrar</button>
+            <div id="forgotten-password" class="sign__container__forgotten-password"></div>
+
+            <button (click)="logIn()"  class="sign__container__boton boton" id="signin-button">Entrar</button>
     
             <div class="sign__container__sign-link">
-                <span>¿Has olvidado tu contraseña?</span>
-                <span>Haz click <a class="sign__container__sign-link__link" href="/signup">aquí</a> para recuperarla</span>
+                <span>¿Aún no tienes cuenta?</span>
+                <span>Haz click <a class="sign__container__sign-link__link" href="/signup">aquí</a> para registrarte</span>
             </div>
         </div>
         

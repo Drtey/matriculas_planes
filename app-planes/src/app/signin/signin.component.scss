@@ -42,6 +42,17 @@
                 display:block;
             }
         }
+
+        &__forgotten-password {
+            font-size: 0.9em;
+            span {
+                display:block;
+                a {
+                    color: var(--color-primary);
+                    font-weight: bold;
+                }
+            }
+        }
     }
     @media (max-width: 700px) { 
         &__container {
@@ -70,4 +81,9 @@
             flex-direction: column;
         }
     }
+}
+
+.link {
+    color: var(--color-primary);
+    font-weight: bold;
 }
