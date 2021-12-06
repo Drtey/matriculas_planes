@@ -77,9 +77,6 @@ body.dark {
         }
     }
 }
-.bloque.blanco {
-    background-color: var(--color-light);
-}
 
 input {
     transition: all 0.4s ease;
@@ -159,6 +156,14 @@ input[type=submit] {
     }
     @media (max-width: 970px) {
         margin-left: var(--spacer-2);
+    }
+}
+
+.titulo {
+    margin-top: var(--spacer-8);
+    text-align: center;
+    @media (min-width: 1100px) {
+        display: none;
     }
 }
 

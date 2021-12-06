@@ -1,14 +1,15 @@
 .user {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "matriculas datos";
     &__lista-matriculas {
-        flex-basis: 50%
+        grid-area: matriculas;
     }
     &__datos {
+        grid-area: datos;
         padding: var(--spacer-6);
-        flex-basis: 40%;
         height: min-content;
         display: flex;
         justify-content: space-between;
@@ -23,5 +24,10 @@
         button {
             width: 8rem;
         }
+    }
+    @media (max-width: 1100px) {
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "datos" "matriculas";
     }
 }

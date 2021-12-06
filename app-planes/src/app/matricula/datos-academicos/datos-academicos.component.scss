@@ -17,30 +17,9 @@
                 float: right;
             }
         }
-        .sorter {
-            display: flex;
-            flex-direction: column;
-            ul {
-                margin: 0;
-                padding: 0;
-            }
-            .sortable-bulk {
-                cursor: move; /* Usamos grab si "move" no lo soporta el navegador */
-                cursor: grab;
-                display: flex;
-                justify-content: space-between;
-                padding:10px;
-                background:white;
-                max-width: 50%;
-                border:solid 1px var(--color-dark);
-                border-end-end-radius: 10px;
-                border-top-right-radius: 10px;
-            }
-            .sortable-bulk:active{
-                cursor: grabbing;
-            }
-        }
+        
     }
+    
 
     &__radio {
         margin-top: var(--spacer-1);
@@ -55,3 +34,41 @@
         }
     }
 }
+/* 
+.draggable-list {
+    border: 1px solid var(--color-dark);
+    color: var(--color-font-dark);
+    padding: 0;
+    list-style-type: none;
+
+}
+.draggable-list li {
+    background-color: var(--color-light);
+    display: flex;
+    flex: 1;
+}
+.draggable-list li:not(:last-of-type) {
+    border-bottom: 1px solid var(--color-dark);
+}
+.numero-materia {
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    font-size: 28px;
+}
+
+.draggable-list .nombre-materia {
+    margin: 0 20px 0 0;
+}
+
+.draggable {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex: 1;
+} */
