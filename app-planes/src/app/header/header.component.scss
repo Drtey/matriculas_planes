@@ -11,7 +11,7 @@
     padding: 10px 5%;
 
     &__dark-mode {
-        margin: 35px;
+ 
     }
     
     &__logo {
@@ -33,9 +33,7 @@
             margin-left: var(--spacer-1);
             margin-right: var(--spacer-1);
             text-transform: uppercase;
-            @media (max-width: 970px) { 
-                font-size: 0.9em;
-            }
+
         }
 
         li a {
@@ -44,7 +42,32 @@
             transition: all 0.3s ease 0s;
         }
         
-        
+        @media (max-width: 970px) { 
+            display: none;
+        }
+
+    }
+
+    &__nav-mobile {
+        margin: 25px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        li {
+            list-style-type: none;
+            margin-left: var(--spacer-1);
+            margin-right: var(--spacer-1);
+            font-size: 1.7em;
+        }
+        li a {
+            color: var(--color-font-light);
+            text-decoration: none;
+            transition: all 0.3s ease 0s;
+        }
+
+        @media (min-width: 970px) { 
+            display: none;
+        }
 
     }
 }

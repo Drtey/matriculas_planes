@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    overflow: hidden;
     dt {
         margin: 0;
         font-size: 0.9em;
@@ -28,4 +29,19 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+}
+
+.enviado-mensaje {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 60px;
+    background-color: var(--color-grey-2);
+    opacity: .5;
+    transform: translateX(-50%) translateY(-50%) rotate(-15deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

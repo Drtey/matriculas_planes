@@ -11,15 +11,27 @@ export class DarkModeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const darkMode = document.getElementById('dark-mode');
-    const bloques = document.querySelectorAll('.bloque');
-    console.log(bloques);
+    const darkMode = <HTMLInputElement> document.getElementById('dark-mode');
 
+    darkMode.removeEventListener;
     darkMode.addEventListener('change', () => {
-      document.body.classList.toggle('dark');
-      bloques.forEach(element => {
-        element.classList.toggle('dark');
-      });
+      if(darkMode.checked) {
+        let bloques = document.querySelectorAll('.bloque');
+        document.body.classList.add('dark');
+        bloques.forEach(element => {
+          element.classList.add('dark');
+        });
+      } else {
+        let bloques = document.querySelectorAll('.bloque');
+        document.body.classList.remove('dark');
+         bloques.forEach(e => {
+          e.classList.remove('dark');
+        }); 
+/*         while(bloques.length) {
+          bloques[0].classList.remove("dark");
+        } */
+      }
+
     })
 
   }

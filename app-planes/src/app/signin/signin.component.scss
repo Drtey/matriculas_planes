@@ -45,6 +45,7 @@
 
         &__forgotten-password {
             font-size: 0.9em;
+            margin-top: var(--spacer-1);
             span {
                 display:block;
                 a {
@@ -81,9 +82,4 @@
             flex-direction: column;
         }
     }
-}
-
-.link {
-    color: var(--color-primary);
-    font-weight: bold;
 }

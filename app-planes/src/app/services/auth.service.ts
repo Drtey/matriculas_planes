@@ -34,8 +34,8 @@ export class AuthService {
         console.log('An error occurred:', error.response);
         const fp = document.getElementById('forgotten-password');
         fp.innerHTML = `
-            <span>¿Has olvidado tu contraseña?</span>
-            <span>Haz click <a href="https://google.es" class="link">aquí</a> para recuperarla</span>
+            <a href="https://google.es" style="color: #3195d1;
+            font-weight: bold;">Recuperar contraseña</a>
         `
       });
   }
