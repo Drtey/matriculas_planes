@@ -25,9 +25,29 @@
             width: 8rem;
         }
     }
+    &__crear-matricula {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        &__boton {
+            width: 60%;
+            margin-left: 0;
+            margin-right: 0;
+
+            @media (max-width: 1100px) {
+                margin-bottom: 0;
+            }
+        }
+    }
     @media (max-width: 1100px) {
         grid-auto-columns: 1fr;
         grid-template-columns: 1fr;
         grid-template-areas: "datos" "matriculas";
+    }
+}
+
+.crear-matricula-boton {
+    @media (max-width: 1100px) {
+        
     }
 }

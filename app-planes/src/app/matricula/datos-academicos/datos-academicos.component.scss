@@ -12,6 +12,8 @@
         overflow:auto;
         height: 100%;
         &__half{
+            
+
             &__sorter-icon {
                 width: 20px;
                 float: right;
@@ -33,6 +35,10 @@
             grid-template-columns: unset;
         }
     }
+}
+
+.sorter {
+    margin-top: var(--spacer-8);
 }
 /* 
 .draggable-list {

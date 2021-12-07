@@ -1,22 +1,29 @@
 <div class="user">
+    <div>
+        <div class="user__datos bloque">
 
-    <div class="user__datos bloque">
-
-        <h1>Datos de usuario</h1>
-
-        <div class="user__datos__contenedor-campos">
-            <label class="campo user__datos__label" for="email"><strong>Email</strong></label>
-            <input class="campo user__datos__input campo-75 usuario" type="text" name="email" id="email" value="correo@gmail.com" required disabled>
-
-            <label class="campo user__datos__label" for="telef_user"><strong>Teléfono</strong></label>
-            <input class="campo user__datos__input campo-50 usuario" type="text" name="telef_user" id="telef_user" disabled>
+            <h1>Datos de usuario</h1>
+    
+            <div class="user__datos__contenedor-campos">
+                <label class="campo user__datos__label" for="email"><strong>Email</strong></label>
+                <input class="campo user__datos__input campo-75 usuario" type="text" name="email" id="email" value="correo@gmail.com" required disabled>
+    
+                <label class="campo user__datos__label" for="telef_user"><strong>Teléfono</strong></label>
+                <input class="campo user__datos__input campo-50 usuario" type="text" name="telef_user" id="telef_user" disabled>
+            </div>
+            <div class="user__datos__contenedor-botones">
+                <button class="boton enviar apagado" id="guardarUser">Guardar</button>
+                <button class="boton" id="editarUser">Editar</button>
+            </div>
+           
         </div>
-        <div class="user__datos__contenedor-botones">
-            <button class="boton enviar apagado" id="guardarUser">Guardar</button>
-            <button class="boton" id="editarUser">Editar</button>
+        <div class="user__crear-matricula">
+            <input type="submit" value="Crear matrícula" class="boton user__crear-matricula__boton">
         </div>
-       
     </div>
+   
+    
+
     <div class="user__lista-matriculas">
         <h1 class="titulo">TUS MATRÍCULAS</h1>
         <app-matricula-item></app-matricula-item>
