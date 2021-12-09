@@ -29,6 +29,9 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const modal = document.getElementById('modal-usuario');
+    modal.style.display = "none";
+
     const editarBoton = document.getElementById('editarUser');
     const guardarBoton = document.getElementById('guardarUser');
     let campos = document.querySelectorAll('.usuario');
@@ -47,6 +50,18 @@ export class UserComponent implements OnInit {
       editarBoton.classList.remove('apagado');
       guardarBoton.classList.add('apagado');
     });
+  }
+
+  abrirModal() {
+    const modal = document.getElementById('modal-usuario');
+    modal.style.display = "flex";
+    document.body.classList.add('stop-scrolling')
+  }
+
+  cerrarModal() {
+    const modal = document.getElementById('modal-usuario');
+    modal.style.display = "none";
+    document.body.classList.remove('stop-scrolling')
   }
 
 }

@@ -1,3 +1,14 @@
+<div class="modal-usuario" id="modal-usuario">
+    <div class="modal-usuario__contenedor">
+        <h3>¿Seguro que quieres enviar la matrícula?</h3>
+        <p>Una vez enviada no podrás editarla ni eliminarla</p>
+        <div class="modal-usuario__contenedor__botones">
+            <button (click)="cerrarModal()" class="boton enviar">Aceptar</button>
+            <button (click)="cerrarModal()" class="boton eliminar">Cancelar</button>
+        </div>
+
+    </div>
+</div>
 <div class="user">
     <div>
         <div class="user__datos bloque">
@@ -18,7 +29,7 @@
            
         </div>
         <div class="user__crear-matricula">
-            <input type="submit" value="Crear matrícula" class="boton user__crear-matricula__boton">
+            <input (click)="abrirModal()" type="submit" value="Crear matrícula" class="boton user__crear-matricula__boton">
         </div>
     </div>
    
@@ -26,6 +37,15 @@
 
     <div class="user__lista-matriculas">
         <h1 class="titulo">TUS MATRÍCULAS</h1>
+        <app-matricula-item></app-matricula-item>
+        <app-matricula-item></app-matricula-item>
+        <app-matricula-item></app-matricula-item>
+        <app-matricula-item></app-matricula-item>
+        <app-matricula-item></app-matricula-item>
+        <app-matricula-item></app-matricula-item>
+        <app-matricula-item></app-matricula-item>
+        <app-matricula-item></app-matricula-item>
+        <app-matricula-item></app-matricula-item>
         <app-matricula-item></app-matricula-item>
 
     </div>

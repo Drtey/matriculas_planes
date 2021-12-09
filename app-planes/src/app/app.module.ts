@@ -28,6 +28,8 @@ import { AuthGuard } from './guard/auth.guard';
 import { RoleGuard } from './guard/role.guard';
 import { AutorizacionSalidaComponent } from './matricula/autorizacion-salida/autorizacion-salida.component';
 import { MatriculaItemComponent } from './user/matricula-item/matricula-item.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalComponent } from './modal/modal.component';
 
 const rutas = [ 
 
@@ -62,6 +64,7 @@ const rutas = [
     SignupComponent,
     AutorizacionSalidaComponent,
     MatriculaItemComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,7 +72,8 @@ const rutas = [
     RouterModule.forRoot(rutas),
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
      // JWT
@@ -78,6 +82,7 @@ const rutas = [
      // Token interceptor
      { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalComponent]
 })
 export class AppModule { }

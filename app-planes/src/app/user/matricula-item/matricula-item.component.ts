@@ -12,4 +12,8 @@ export class MatriculaItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openModal() {
+    
+  }
+
 }
