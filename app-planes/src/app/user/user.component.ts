@@ -15,7 +15,11 @@ export class UserComponent implements OnInit {
   ngAfterViewInit() {
     const darkMode = <HTMLInputElement> document.getElementById('dark-mode');
     const bloques = document.querySelectorAll('.bloque');
+    const modal = document.querySelectorAll('.modal-planes');
     bloques.forEach(element => {
+      element.classList.remove('dark');
+    });
+    modal.forEach(element => {
       element.classList.remove('dark');
     });
     
@@ -23,7 +27,9 @@ export class UserComponent implements OnInit {
       document.body.classList.add('dark');
       bloques.forEach(element => {
         element.classList.add('dark');
-        console.log('bloque')
+      });
+      modal.forEach(element => {
+        element.classList.add('dark');
       });
     }
   }
@@ -62,6 +68,11 @@ export class UserComponent implements OnInit {
     const modal = document.getElementById('modal-usuario');
     modal.style.display = "none";
     document.body.classList.remove('stop-scrolling')
+  }
+
+  quitarFocus() {
+    const select = document.getElementById('elegir-curso');
+    select.blur();
   }
 
 }

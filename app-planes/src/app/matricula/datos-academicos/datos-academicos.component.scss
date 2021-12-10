@@ -9,7 +9,7 @@
         display: grid;
         grid-template-columns: 50% 50%;
         display:block;
-        overflow:auto;
+
         height: 100%;
         &__half{
             
@@ -22,7 +22,9 @@
         
     }
     
-
+    &__separator {
+        margin-top: var(--spacer-4);
+    }
     &__radio {
         margin-top: var(--spacer-1);
     }
@@ -36,9 +38,25 @@
         }
     }
 }
-
 .sorter {
     margin-top: var(--spacer-8);
+}
+.order-input {
+    width: 30px;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+}
+.materias-optativas {
+    li {
+        list-style: none;
+    }
+}
+
+.materias-cursa {
+    margin-bottom: var(--spacer-6);
 }
 /* 
 .draggable-list {
