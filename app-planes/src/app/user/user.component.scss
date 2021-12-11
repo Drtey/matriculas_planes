@@ -43,14 +43,8 @@
             width: 45%;
             margin: 0;
             box-shadow: none;
-            border: 2px solid var(--color-primary);
-
             @media (max-width: 1100px) {
                 margin-bottom: 0;
-            }
-            &:hover {
-                border: 2px solid var(--color-primary);
-                color: var(--color-primary)
             }
         }
         &__select {
@@ -145,7 +139,7 @@ option {
             bottom: 0;
             left: 0;
             width: 100%;
-            min-height: 50%;
+            min-height: 30%;
             border-radius: var(--border-radius) var(--border-radius) 0 0;
             p {
                 margin-bottom: auto;

@@ -40,7 +40,7 @@ $app-planes-theme: mat.define-light-theme((
     // COLORES
     --color-primary: #3195d1;
 /*     --color-primary-hover: #209deb; */
-    --color-primary-hover: var(--color-primary);
+    --color-primary-hover: #2882b9;
     --color-primary-background: #d0edff;
     --color-light: #fff;
     --color-dark: #1E1E1E;
@@ -112,12 +112,16 @@ body::-webkit-scrollbar-thumb
 body.stop-scrolling {
   height: 100%;
   overflow: hidden;
+
 }
 
 
 
 input {
     transition: all 0.4s ease;
+    &:disabled {
+        background-color: var(--color-grey-3);
+    }
 }
 
 input[type=text],
@@ -178,13 +182,13 @@ input[type=submit] {
     margin: var(--spacer-8);
     margin-top: 0;
     border: none;
-    background-color: var(--color-primary-hover);
+    background-color: var(--color-primary);
     color: var(--color-font-light);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     &:hover {
         border: none;
-        background-color: var(--color-font-light);
-        color: var(--color-font-dark);
+        background-color: var(--color-primary-hover);
+        color: var(--color-font-light);
     }
     &:focus {
         border: none;
@@ -362,9 +366,9 @@ body.dark {
     background-color: var(--color-grey-1);
     color: var(--color-font-light);
     input {
-        background-color: var(--color-grey-1);
+        background-color: var(--color-dark);
         color: var(--color-font-light);
-        border: 1px solid var(--color-grey-2);
+        border: 1px solid var(--color-grey-3);
         &:focus {
             background-color: var(--color-grey-2);
             box-shadow: 0 0 0 2px var(--color-grey-2);
@@ -373,9 +377,33 @@ body.dark {
             background: transparent;
         }
         &[type=radio], &[type=checkbox]:not(.dark-mode__input) {
+            background-color: var(--color-dark);
+            outline: 1px solid var(--color-grey-3) !important; 
+        }
+        &[type=radio]:checked,
+        &[type=checkbox]:checked {
+            border: 5px solid white !important;
+        }
+        &[type=submit] {
+            background-color: #3195d1;
+            border: none;
+        }
+        &[type=submit]:hover {
+            background-color: var(--color-primary-hover);
+            color: var(--color-font-light);
+        }
+        &:disabled {
             background-color: var(--color-grey-1);
+            border: 1px solid var(--color-grey-2);
         }
     }
+    button {
+        color: var(--color-font-light);
+    }
+    select {
+        color: var(--color-font-light);
+    }
+    
 }
 .modal-planes.dark {
     background: rgb(37, 37, 37) !important;
