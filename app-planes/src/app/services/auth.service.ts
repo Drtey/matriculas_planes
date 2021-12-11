@@ -45,11 +45,11 @@ export class AuthService {
       });
   }
 
-  register(identifier, password) {
+  register(email, username, password) {
     axios 
       .post(`${this.url}/auth/local/register`, {
-        email: identifier,
-        user: identifier,
+        email: email,
+        user: username,
         password: password,
       })
       .then(response => {

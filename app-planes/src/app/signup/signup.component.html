@@ -5,7 +5,10 @@
             <h2>Registro</h2>
 
             <label for="email" id="email">Correo electrónico</label>
-            <input (click)="register()" type="text" [(ngModel)]="usuario.identifier">
+            <input (click)="register()" type="text" [(ngModel)]="usuario.email">
+
+            <label for="usuario" id="usuario">Usuario</label>
+            <input (click)="register()" type="text" [(ngModel)]="usuario.username">
     
             <label for="password" id="password">Contraseña</label>
             <input (click)="register()" type="password" [(ngModel)]="usuario.password">
