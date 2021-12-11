@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import axios from 'axios';
+import { getLocaleFirstDayOfWeek } from '@angular/common';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-user',
@@ -15,6 +17,7 @@ export class UserComponent implements OnInit {
   response;
 
   constructor(private authService: AuthService) { 
+  constructor(private cookie: CookieService,private authService: AuthService) { 
 
   }
 
@@ -63,7 +66,6 @@ export class UserComponent implements OnInit {
       guardarBoton.classList.add('apagado');
     });
 
-
     this.getMatricula();
   }
 
@@ -82,8 +84,11 @@ export class UserComponent implements OnInit {
 
   async getMatricula() {
     /* console.log(this.authService.data.id); */
+  getMatricula() {
+    console.log(this.cookie.get('id'));
+    const id = this.cookie.get('id');
     axios
-      .get(`${this.authService.url}/matriculas?user=${this.authService.data.id}`)
+      .get(`${this.authService.url}/matriculas?user=${id}`)
       .then(response => {
         response
         console.log(response)

@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
 import decode from 'jwt-decode';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,18 +14,17 @@ export class RoleGuard implements CanActivate {
   
 
   constructor(
+    private cookie: CookieService,
     private authService: AuthService,
     public router: Router
   ){ }
   canActivate(route: ActivatedRouteSnapshot):boolean{
 
     const expectedRole = route.data.expectedRole;
-    const jwt = localStorage.getItem('jwt');
+    const jwt = this.cookie.get('jwt');
     console.log(jwt);
-    console.log(this.authService.data);
-    console.log(this.authService.data.role.type);
     
-    if (this.authService.data.role.type === expectedRole) {
+    if (this.cookie.get('role') === expectedRole) {
       if( !this.authService.isAuth()) {
         this.router.navigate(['signin']);
         return false;
