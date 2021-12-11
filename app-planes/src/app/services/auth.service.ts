@@ -62,6 +62,11 @@ export class AuthService {
       });
   }
 
+  editUser(email, telefono) { 
+    axios 
+      .put(`${this.url}/users/:id`)
+  }
+
   emailValidation(identifier) {
     axios
     .post(`http://localhost:1337/auth/send-email-confirmation`, {

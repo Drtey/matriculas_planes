@@ -12,7 +12,13 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class UserComponent implements OnInit {
 
+
   matriculaUser;
+  
+  user = {
+    email: "",
+    tel: ""
+  }
 
   constructor(private cookie: CookieService,private authService: AuthService) { 
 
@@ -64,6 +70,7 @@ export class UserComponent implements OnInit {
     });
 
     this.getMatricula();
+    this.getUser();
   }
 
   abrirModal() {
@@ -91,6 +98,38 @@ export class UserComponent implements OnInit {
         console.log(error);
       })
   }
+
+  putDatos() {
+    const id = this.cookie.get('id');
+    axios
+      .put(`${this.authService.url}/users/${id}`, {
+        email: this.user.email,
+        tel: this.user.tel
+      })
+      .then(response => {
+        // Handle success.
+        console.log('User updated');
+      })
+      .catch(error => {
+        // Handle error.
+        console.log('An error occurred:', error.response);
+      });
+  }
+
+  getUser() {
+    console.log(this.cookie.get('id'));
+    const id = this.cookie.get('id');
+    axios
+      .get(`${this.authService.url}/users/${id}`)
+      .then(response => {
+        this.user = response.data;
+        console.log(this.user.email);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
+
   quitarFocus() {
     const select = document.getElementById('elegir-curso');
     select.blur();
