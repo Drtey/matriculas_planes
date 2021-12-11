@@ -1,12 +1,24 @@
+
 <div class="header">
     <div class="header__logo"><a routerLink="/main/matricula" routerLinkActive="active"><img src="../../assets/img/svg/logo_planes_blanco.svg" class="header__logo-svg" draggable="false"/></a></div>
     <app-dark-mode class="header__dark-mode"></app-dark-mode> 
     <ul class="header__nav">
         <li><a routerLink="/main/user" routerLinkActive="active">Perfil</a></li>
-        <li><a routerLink="/signin" routerLinkActive="active">Cerrar Sesión</a></li>
+        <li><a (click)="abrirModal()">Cerrar Sesión</a></li>
     </ul>
     <ul class="header__nav-mobile">
         <li><a routerLink="/main/user" routerLinkActive="active"><i class="fas fa-user"></i></a></li>
-        <li><a routerLink="/signin" routerLinkActive="active"><i class="fas fa-sign-out-alt"></i></a></li>
+        <li><a (click)="abrirModal()"><i class="fas fa-sign-out-alt"></i></a></li>
     </ul>
+</div>
+
+<div class="modal-logout" id="modal-logout">
+    <div class="modal-logout__contenedor modal-planes">
+        <h3>¿Seguro que quieres cerrar sesión?</h3>
+        <div class="modal-logout__contenedor__botones">
+            <button (click)="aceptarLogout()" class="boton enviar">Aceptar</button>
+            <button (click)="cancelarLogout()" class="boton eliminar">Cancelar</button>
+        </div>
+
+    </div>
 </div>

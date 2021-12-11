@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-
 import {
   Router,
   Event as RouterEvent,
@@ -9,6 +8,7 @@ import {
   NavigationCancel,
   NavigationError
 } from '@angular/router'
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,7 @@ import {
 export class AppComponent {
   title = 'app-planes';
 
-  public showOverlay = true;
+  showOverlay = false;
 
   constructor(private router: Router) {
 

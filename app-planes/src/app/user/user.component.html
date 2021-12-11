@@ -1,14 +1,4 @@
-<div class="modal-usuario" id="modal-usuario">
-    <div class="modal-usuario__contenedor">
-        <h3>¿Seguro que quieres enviar la matrícula?</h3>
-        <p>Una vez enviada no podrás editarla ni eliminarla</p>
-        <div class="modal-usuario__contenedor__botones">
-            <button (click)="cerrarModal()" class="boton enviar">Aceptar</button>
-            <button (click)="cerrarModal()" class="boton eliminar">Cancelar</button>
-        </div>
 
-    </div>
-</div>
 <div class="user">
     <div>
         <div class="user__datos bloque">
@@ -19,7 +9,7 @@
                 <label class="campo user__datos__label" for="email"><strong>Email</strong></label>
                 <input class="campo user__datos__input campo-75 usuario" type="text" name="email" id="email" value="correo@gmail.com" required disabled>
     
-                <label class="campo user__datos__label" for="telef_user"><strong>Teléfono</strong></label>
+                <label class="campo user__datos__label" for="telef_user"><strong>Teléfono <i class="fas fa-question-circle" data-toggle="tooltip" title="Para contacto en caso de problemas con el proceso de matriculación"></i></strong></label>
                 <input class="campo user__datos__input campo-50 usuario" type="text" name="telef_user" id="telef_user" disabled>
             </div>
             <div class="user__datos__contenedor-botones">
@@ -28,8 +18,17 @@
             </div>
            
         </div>
-        <div class="user__crear-matricula">
-            <input (click)="abrirModal()" type="submit" value="Crear matrícula" class="boton user__crear-matricula__boton">
+        <div class="user__crear-matricula bloque">   
+            <select name="curso" class="user__crear-matricula__select" id="elegir-curso" (change)="quitarFocus()" required>
+                <option value="" disabled selected hidden>Elige curso</option>
+                <option value="1eso">1º ESO</option>
+                <option value="2eso">2º ESO</option>
+                <option value="3eso">3º ESO</option>
+                <option value="4eso">4º ESO</option>
+                <option value="1bach">1º BACHILLER</option>
+                <option value="2bach">2º BACHILLER</option>
+              </select>
+              <input (click)="abrirModal()" type="submit" value="Crear matrícula" class="boton user__crear-matricula__boton">
         </div>
     </div>
    
@@ -38,15 +37,19 @@
     <div class="user__lista-matriculas">
         <h1 class="titulo">TUS MATRÍCULAS</h1>
         <app-matricula-item></app-matricula-item>
-        <app-matricula-item></app-matricula-item>
-        <app-matricula-item></app-matricula-item>
-        <app-matricula-item></app-matricula-item>
-        <app-matricula-item></app-matricula-item>
-        <app-matricula-item></app-matricula-item>
-        <app-matricula-item></app-matricula-item>
-        <app-matricula-item></app-matricula-item>
-        <app-matricula-item></app-matricula-item>
-        <app-matricula-item></app-matricula-item>
+        
+
+    </div>
+</div>
+
+<div class="modal-usuario" id="modal-usuario">
+    <div class="modal-usuario__contenedor modal-planes">
+        <h3>¿Seguro que quieres enviar la matrícula?</h3>
+        <p>Una vez enviada no podrás editarla ni eliminarla</p>
+        <div class="modal-usuario__contenedor__botones">
+            <button (click)="cerrarModal()" class="boton enviar">Aceptar</button>
+            <button (click)="cerrarModal()" class="boton eliminar">Cancelar</button>
+        </div>
 
     </div>
 </div>

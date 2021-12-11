@@ -44,6 +44,8 @@
         }
 
         &__forgotten-password {
+            display: flex;
+            justify-content: space-between;
             font-size: 0.9em;
             margin-top: var(--spacer-1);
             span {

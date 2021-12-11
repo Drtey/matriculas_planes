@@ -14,17 +14,24 @@ export class MatriculaComponent implements OnInit {
   }
   ngAfterViewInit() {
      const darkMode = <HTMLInputElement> document.getElementById('dark-mode');
-        const bloques = document.querySelectorAll('.bloque');
+      const bloques = document.querySelectorAll('.bloque');
+      const modal = document.querySelectorAll('.modal-planes');
+      bloques.forEach(element => {
+        element.classList.remove('dark');
+      });
+      modal.forEach(element => {
+        element.classList.remove('dark');
+      });
+      
+      if (darkMode.checked) {
+        document.body.classList.add('dark');
         bloques.forEach(element => {
-          element.classList.remove('dark');
+          element.classList.add('dark');
         });
-        
-        if (darkMode.checked) {
-          document.body.classList.add('dark');
-          bloques.forEach(element => {
-            element.classList.add('dark');
-          });
-        }
+        modal.forEach(element => {
+          element.classList.add('dark');
+        });
+      }
   }
 
   ngOnInit(): void {

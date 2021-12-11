@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatriculaItemComponent implements OnInit {
 
+  enviada = true
+
   constructor() { }
 
   ngOnInit(): void {
