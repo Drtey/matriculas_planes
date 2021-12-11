@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  usuario = {
+    identifier: "",
+    password: "",
+    password2: ""
+  }
+
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
+  register() {
+    if(this.usuario.password == this.usuario.password2) {
+      this.authService.register(this.usuario.identifier, this.usuario.password2);
+/*       this.authService.emailValidation(this.usuario.identifier);
+ */    }
+    else {
+      console.log("Password doesn´t match.")
+    }
+  }
 }

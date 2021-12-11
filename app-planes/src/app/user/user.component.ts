@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import axios from 'axios';
 
 @Component({
   selector: 'app-user',
@@ -8,7 +10,9 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { 
+  matriculaUser;
+
+  constructor(private authService: AuthService) { 
 
   }
 
@@ -64,6 +68,23 @@ export class UserComponent implements OnInit {
     document.body.classList.remove('stop-scrolling')
   }
 
+  getMatricula() {
+    console.log(this.authService.data.id);
+    axios
+      .get(`${this.authService.url}/matriculas?user=${this.authService.data.id}`)
+      .then(response => {
+        this.matriculaUser = response.data;
+        console.log(this.matriculaUser);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
 }
+
+
+
+
+
 
 
