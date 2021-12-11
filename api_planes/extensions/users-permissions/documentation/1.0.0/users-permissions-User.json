@@ -1281,6 +1281,23 @@
                 }
               }
             }
+          },
+          "tel": {
+            "type": "integer"
+          },
+          "DNI": {
+            "type": "string",
+            "maxLength": 9,
+            "minLength": 9
+          },
+          "Nombre": {
+            "type": "string"
+          },
+          "Papellido": {
+            "type": "string"
+          },
+          "Sapellido": {
+            "type": "string"
           }
         }
       },
@@ -1328,6 +1345,23 @@
             "items": {
               "type": "string"
             }
+          },
+          "tel": {
+            "type": "integer"
+          },
+          "DNI": {
+            "type": "string",
+            "maxLength": 9,
+            "minLength": 9
+          },
+          "Nombre": {
+            "type": "string"
+          },
+          "Papellido": {
+            "type": "string"
+          },
+          "Sapellido": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
