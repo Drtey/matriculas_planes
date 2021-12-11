@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import axios, { Axios } from 'axios';
 
 
 
@@ -8,12 +9,15 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class DbService {
-  private url = 'APILOCA URL';
+  url = "http://localhost:1337";
 
   constructor(private http: HttpClient) {}
 
+  
+  
+
   getData() {
-    return this.http.get('APILOCA URL');
+    return this.http.get(this.url);
   }
   getDataByUsername(username) {
     return this.http.get(`${this.url}?username=${username}`);
@@ -57,6 +61,7 @@ export class DbService {
   getDataByAddress(address) {
     return this.http.get(`${this.url}?address=${address}`);
   }
+  
 
 
 }

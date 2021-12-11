@@ -30,12 +30,14 @@ import { AutorizacionSalidaComponent } from './matricula/autorizacion-salida/aut
 import { MatriculaItemComponent } from './user/matricula-item/matricula-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalComponent } from './modal/modal.component';
+import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 
 const rutas = [ 
 
   { path: 'signin', component: SigninComponent},
   { path: 'signup', component: SignupComponent},
   { path: '', redirectTo: '/signin', pathMatch:'full'},
+  { path: 'adminpanel', component: AdminpanelComponent, canActivate: [AuthGuard, RoleGuard], data: {expectedRole: 'public'}},
   { path: 'main', component: MainComponent, canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'public' }, 
       children: [
       { path: 'user', component: UserComponent},
@@ -65,6 +67,7 @@ const rutas = [
     AutorizacionSalidaComponent,
     MatriculaItemComponent,
     ModalComponent,
+    AdminpanelComponent,
   ],
   imports: [
     BrowserModule,
