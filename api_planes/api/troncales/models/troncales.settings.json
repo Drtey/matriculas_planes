@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "troncales",
   "info": {
-    "name": "Troncales"
+    "name": "Troncales",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -17,9 +18,25 @@
     "asignatura_cod": {
       "type": "string"
     },
-    "curso": {
+    "cursos": {
+      "collection": "cursos",
       "via": "troncales",
-      "model": "cursos"
+      "dominant": true
+    },
+    "modalidades": {
+      "via": "troncales",
+      "collection": "modalidades"
+    },
+    "Eleccion": {
+      "type": "boolean"
+    },
+    "Tipo": {
+      "type": "enumeration",
+      "enum": [
+        "general",
+        "especifica",
+        "de_opcion"
+      ]
     }
   }
 }

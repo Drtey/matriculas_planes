@@ -528,57 +528,111 @@
           "asignatura_cod": {
             "type": "string"
           },
-          "curso": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nombre": {
-                "type": "string"
-              },
-              "curso_cod": {
-                "type": "string"
-              },
-              "matricula": {
-                "type": "string"
-              },
-              "troncales": {
-                "type": "array",
-                "items": {
+          "cursos": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "curso_cod": {
+                  "type": "string"
+                },
+                "matricula": {
+                  "type": "string"
+                },
+                "modalidades": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "condiciones": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "troncales": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "optativas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "modalidades": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "optativas": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "condiciones": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
+          },
+          "modalidades": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "curso": {
+                  "type": "string"
+                },
+                "optativas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "troncales": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "Eleccion": {
+            "type": "boolean"
+          },
+          "Tipo": {
+            "type": "string",
+            "enum": [
+              "general",
+              "especifica",
+              "de_opcion"
+            ]
           },
           "published_at": {
             "type": "string",
@@ -594,8 +648,28 @@
           "asignatura_cod": {
             "type": "string"
           },
-          "curso": {
-            "type": "string"
+          "cursos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "modalidades": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Eleccion": {
+            "type": "boolean"
+          },
+          "Tipo": {
+            "type": "string",
+            "enum": [
+              "general",
+              "especifica",
+              "de_opcion"
+            ]
           },
           "published_at": {
             "type": "string",

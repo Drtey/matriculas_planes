@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-11-2021 a las 20:03:39
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.11
+-- Tiempo de generación: 11-12-2021 a las 16:15:19
+-- Versión del servidor: 10.4.20-MariaDB
+-- Versión de PHP: 8.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -95,19 +95,19 @@ INSERT INTO `core_store` (`id`, `key`, `value`, `type`, `environment`, `tag`) VA
 (23, 'plugin_users-permissions_advanced', '{\"unique_email\":true,\"allow_register\":true,\"email_confirmation\":true,\"email_reset_password\":null,\"email_confirmation_redirection\":null,\"default_role\":\"public\"}', 'object', '', ''),
 (24, 'core_admin_auth', '{\"providers\":{\"autoRegister\":false,\"defaultRole\":null}}', 'object', '', ''),
 (25, 'plugin_documentation_config', '{\"restrictedAccess\":false}', 'object', '', ''),
-(26, 'model_def_application::cursos.cursos', '{\"uid\":\"application::cursos.cursos\",\"collectionName\":\"cursos\",\"kind\":\"collectionType\",\"info\":{\"name\":\"Cursos\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{},\"attributes\":{\"nombre\":{\"type\":\"string\"},\"curso_cod\":{\"type\":\"string\"},\"matricula\":{\"via\":\"curso\",\"model\":\"matriculas\"},\"troncales\":{\"collection\":\"troncales\",\"via\":\"curso\",\"isVirtual\":true},\"modalidades\":{\"collection\":\"modalidades\",\"via\":\"curso\",\"isVirtual\":true},\"optativas\":{\"collection\":\"optativas\",\"via\":\"curso\",\"isVirtual\":true},\"condiciones\":{\"collection\":\"condiciones\",\"via\":\"cursos\",\"dominant\":true,\"attribute\":\"condicione\",\"column\":\"id\",\"isVirtual\":true},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
+(26, 'model_def_application::cursos.cursos', '{\"uid\":\"application::cursos.cursos\",\"collectionName\":\"cursos\",\"kind\":\"collectionType\",\"info\":{\"name\":\"Cursos\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{},\"attributes\":{\"nombre\":{\"type\":\"string\"},\"curso_cod\":{\"type\":\"string\"},\"matricula\":{\"via\":\"curso\",\"model\":\"matriculas\"},\"modalidades\":{\"via\":\"curso\",\"collection\":\"modalidades\",\"isVirtual\":true},\"condiciones\":{\"collection\":\"condiciones\",\"via\":\"cursos\",\"dominant\":true,\"attribute\":\"condicione\",\"column\":\"id\",\"isVirtual\":true},\"troncales\":{\"via\":\"cursos\",\"collection\":\"troncales\",\"attribute\":\"troncale\",\"column\":\"id\",\"isVirtual\":true},\"optativas\":{\"via\":\"cursos\",\"collection\":\"optativas\",\"attribute\":\"optativa\",\"column\":\"id\",\"isVirtual\":true},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
 (27, 'plugin_content_manager_configuration_content_types::application::cursos.cursos', '{\"uid\":\"application::cursos.cursos\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"nombre\",\"defaultSortBy\":\"nombre\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"nombre\":{\"edit\":{\"label\":\"Nombre\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Nombre\",\"searchable\":true,\"sortable\":true}},\"curso_cod\":{\"edit\":{\"label\":\"Curso_cod\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Curso_cod\",\"searchable\":true,\"sortable\":true}},\"matricula\":{\"edit\":{\"label\":\"Matricula\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"id\"},\"list\":{\"label\":\"Matricula\",\"searchable\":true,\"sortable\":true}},\"troncales\":{\"edit\":{\"label\":\"Troncales\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Troncales\",\"searchable\":false,\"sortable\":false}},\"modalidades\":{\"edit\":{\"label\":\"Modalidades\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Modalidades\",\"searchable\":false,\"sortable\":false}},\"optativas\":{\"edit\":{\"label\":\"Optativas\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Optativas\",\"searchable\":false,\"sortable\":false}},\"condiciones\":{\"edit\":{\"label\":\"Condiciones\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Condiciones\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"nombre\",\"curso_cod\",\"created_at\"],\"edit\":[[{\"name\":\"nombre\",\"size\":6},{\"name\":\"curso_cod\",\"size\":6}]],\"editRelations\":[\"matricula\",\"troncales\",\"modalidades\",\"optativas\",\"condiciones\"]}}', 'object', '', ''),
 (28, 'model_def_application::matriculas.matriculas', '{\"uid\":\"application::matriculas.matriculas\",\"collectionName\":\"matriculas\",\"kind\":\"collectionType\",\"info\":{\"name\":\"matriculas\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{},\"attributes\":{\"fecha\":{\"type\":\"date\"},\"curso\":{\"via\":\"matricula\",\"model\":\"cursos\"},\"user\":{\"via\":\"matriculas\",\"plugin\":\"users-permissions\",\"model\":\"user\"},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
 (29, 'plugin_content_manager_configuration_content_types::application::matriculas.matriculas', '{\"uid\":\"application::matriculas.matriculas\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"id\",\"defaultSortBy\":\"id\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"fecha\":{\"edit\":{\"label\":\"Fecha\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Fecha\",\"searchable\":true,\"sortable\":true}},\"curso\":{\"edit\":{\"label\":\"Curso\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Curso\",\"searchable\":true,\"sortable\":true}},\"user\":{\"edit\":{\"label\":\"User\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"username\"},\"list\":{\"label\":\"User\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"fecha\",\"created_at\",\"updated_at\"],\"edit\":[[{\"name\":\"fecha\",\"size\":4}]],\"editRelations\":[\"curso\",\"user\"]}}', 'object', '', ''),
 (30, 'model_def_application::usuarios.usuarios', '{\"uid\":\"application::usuarios.usuarios\",\"collectionName\":\"usuarios\",\"kind\":\"collectionType\",\"info\":{\"name\":\"Usuarios\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{},\"attributes\":{\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
 (31, 'plugin_content_manager_configuration_content_types::application::usuarios.usuarios', '{\"uid\":\"application::usuarios.usuarios\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"id\",\"defaultSortBy\":\"id\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\"],\"edit\":[],\"editRelations\":[]}}', 'object', '', ''),
-(32, 'model_def_application::troncales.troncales', '{\"uid\":\"application::troncales.troncales\",\"collectionName\":\"troncales\",\"kind\":\"collectionType\",\"info\":{\"name\":\"Troncales\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{},\"attributes\":{\"nombre\":{\"type\":\"string\"},\"asignatura_cod\":{\"type\":\"string\"},\"curso\":{\"via\":\"troncales\",\"model\":\"cursos\"},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
-(33, 'plugin_content_manager_configuration_content_types::application::troncales.troncales', '{\"uid\":\"application::troncales.troncales\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"nombre\",\"defaultSortBy\":\"nombre\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"nombre\":{\"edit\":{\"label\":\"Nombre\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Nombre\",\"searchable\":true,\"sortable\":true}},\"asignatura_cod\":{\"edit\":{\"label\":\"Asignatura_cod\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Asignatura_cod\",\"searchable\":true,\"sortable\":true}},\"curso\":{\"edit\":{\"label\":\"Curso\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Curso\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"nombre\",\"asignatura_cod\",\"created_at\"],\"edit\":[[{\"name\":\"nombre\",\"size\":6},{\"name\":\"asignatura_cod\",\"size\":6}]],\"editRelations\":[\"curso\"]}}', 'object', '', ''),
-(34, 'model_def_application::modalidades.modalidades', '{\"uid\":\"application::modalidades.modalidades\",\"collectionName\":\"modalidades\",\"kind\":\"collectionType\",\"info\":{\"name\":\"Modalidades\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{},\"attributes\":{\"nombre\":{\"type\":\"string\"},\"curso\":{\"via\":\"modalidades\",\"model\":\"cursos\"},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
-(35, 'plugin_content_manager_configuration_content_types::application::modalidades.modalidades', '{\"uid\":\"application::modalidades.modalidades\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"nombre\",\"defaultSortBy\":\"nombre\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"nombre\":{\"edit\":{\"label\":\"Nombre\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Nombre\",\"searchable\":true,\"sortable\":true}},\"curso\":{\"edit\":{\"label\":\"Curso\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Curso\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"nombre\",\"created_at\",\"updated_at\"],\"edit\":[[{\"name\":\"nombre\",\"size\":6}]],\"editRelations\":[\"curso\"]}}', 'object', '', ''),
-(36, 'model_def_application::optativas.optativas', '{\"uid\":\"application::optativas.optativas\",\"collectionName\":\"optativas\",\"kind\":\"collectionType\",\"info\":{\"name\":\"Optativas\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{},\"attributes\":{\"nombre\":{\"type\":\"string\"},\"optativa_cod\":{\"type\":\"string\"},\"curso\":{\"via\":\"optativas\",\"model\":\"cursos\"},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
-(37, 'plugin_content_manager_configuration_content_types::application::optativas.optativas', '{\"uid\":\"application::optativas.optativas\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"nombre\",\"defaultSortBy\":\"nombre\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"nombre\":{\"edit\":{\"label\":\"Nombre\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Nombre\",\"searchable\":true,\"sortable\":true}},\"optativa_cod\":{\"edit\":{\"label\":\"Optativa_cod\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Optativa_cod\",\"searchable\":true,\"sortable\":true}},\"curso\":{\"edit\":{\"label\":\"Curso\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Curso\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"nombre\",\"optativa_cod\",\"created_at\"],\"edit\":[[{\"name\":\"nombre\",\"size\":6},{\"name\":\"optativa_cod\",\"size\":6}]],\"editRelations\":[\"curso\"]}}', 'object', '', '');
+(32, 'model_def_application::troncales.troncales', '{\"uid\":\"application::troncales.troncales\",\"collectionName\":\"troncales\",\"kind\":\"collectionType\",\"info\":{\"name\":\"Troncales\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{},\"attributes\":{\"nombre\":{\"type\":\"string\"},\"asignatura_cod\":{\"type\":\"string\"},\"cursos\":{\"collection\":\"cursos\",\"via\":\"troncales\",\"dominant\":true,\"attribute\":\"curso\",\"column\":\"id\",\"isVirtual\":true},\"modalidades\":{\"via\":\"troncales\",\"collection\":\"modalidades\",\"attribute\":\"modalidade\",\"column\":\"id\",\"isVirtual\":true},\"Eleccion\":{\"type\":\"boolean\"},\"Tipo\":{\"type\":\"enumeration\",\"enum\":[\"general\",\"especifica\",\"de_opcion\"]},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
+(33, 'plugin_content_manager_configuration_content_types::application::troncales.troncales', '{\"uid\":\"application::troncales.troncales\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"nombre\",\"defaultSortBy\":\"nombre\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"nombre\":{\"edit\":{\"label\":\"Nombre\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Nombre\",\"searchable\":true,\"sortable\":true}},\"asignatura_cod\":{\"edit\":{\"label\":\"Asignatura_cod\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Asignatura_cod\",\"searchable\":true,\"sortable\":true}},\"cursos\":{\"edit\":{\"label\":\"Cursos\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Cursos\",\"searchable\":false,\"sortable\":false}},\"modalidades\":{\"edit\":{\"label\":\"Modalidades\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Modalidades\",\"searchable\":false,\"sortable\":false}},\"Eleccion\":{\"edit\":{\"label\":\"Eleccion\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Eleccion\",\"searchable\":true,\"sortable\":true}},\"Tipo\":{\"edit\":{\"label\":\"Tipo\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Tipo\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"nombre\",\"asignatura_cod\",\"created_at\"],\"edit\":[[{\"name\":\"nombre\",\"size\":6},{\"name\":\"asignatura_cod\",\"size\":6}],[{\"name\":\"Eleccion\",\"size\":4},{\"name\":\"Tipo\",\"size\":6}]],\"editRelations\":[\"cursos\",\"modalidades\"]}}', 'object', '', ''),
+(34, 'model_def_application::modalidades.modalidades', '{\"uid\":\"application::modalidades.modalidades\",\"collectionName\":\"modalidades\",\"kind\":\"collectionType\",\"info\":{\"name\":\"Modalidades\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{},\"attributes\":{\"nombre\":{\"type\":\"string\"},\"curso\":{\"via\":\"modalidades\",\"model\":\"cursos\"},\"optativas\":{\"collection\":\"optativas\",\"via\":\"modalidades\",\"dominant\":true,\"attribute\":\"optativa\",\"column\":\"id\",\"isVirtual\":true},\"troncales\":{\"via\":\"modalidades\",\"collection\":\"troncales\",\"dominant\":true,\"attribute\":\"troncale\",\"column\":\"id\",\"isVirtual\":true},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
+(35, 'plugin_content_manager_configuration_content_types::application::modalidades.modalidades', '{\"uid\":\"application::modalidades.modalidades\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"nombre\",\"defaultSortBy\":\"nombre\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"nombre\":{\"edit\":{\"label\":\"Nombre\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Nombre\",\"searchable\":true,\"sortable\":true}},\"curso\":{\"edit\":{\"label\":\"Curso\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Curso\",\"searchable\":true,\"sortable\":true}},\"optativas\":{\"edit\":{\"label\":\"Optativas\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Optativas\",\"searchable\":false,\"sortable\":false}},\"troncales\":{\"edit\":{\"label\":\"Troncales\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Troncales\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"nombre\",\"created_at\",\"updated_at\"],\"edit\":[[{\"name\":\"nombre\",\"size\":6}]],\"editRelations\":[\"curso\",\"optativas\",\"troncales\"]}}', 'object', '', '');
 INSERT INTO `core_store` (`id`, `key`, `value`, `type`, `environment`, `tag`) VALUES
+(36, 'model_def_application::optativas.optativas', '{\"uid\":\"application::optativas.optativas\",\"collectionName\":\"optativas\",\"kind\":\"collectionType\",\"info\":{\"name\":\"Optativas\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{},\"attributes\":{\"nombre\":{\"type\":\"string\"},\"optativa_cod\":{\"type\":\"string\"},\"cursos\":{\"collection\":\"cursos\",\"via\":\"optativas\",\"dominant\":true,\"attribute\":\"curso\",\"column\":\"id\",\"isVirtual\":true},\"Horas\":{\"type\":\"string\"},\"Religion\":{\"type\":\"boolean\"},\"LenguaExtranjera\":{\"type\":\"boolean\"},\"modalidades\":{\"via\":\"optativas\",\"collection\":\"modalidades\",\"attribute\":\"modalidade\",\"column\":\"id\",\"isVirtual\":true},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
+(37, 'plugin_content_manager_configuration_content_types::application::optativas.optativas', '{\"uid\":\"application::optativas.optativas\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"nombre\",\"defaultSortBy\":\"nombre\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"nombre\":{\"edit\":{\"label\":\"Nombre\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Nombre\",\"searchable\":true,\"sortable\":true}},\"optativa_cod\":{\"edit\":{\"label\":\"Optativa_cod\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Optativa_cod\",\"searchable\":true,\"sortable\":true}},\"cursos\":{\"edit\":{\"label\":\"Cursos\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Cursos\",\"searchable\":false,\"sortable\":false}},\"Horas\":{\"edit\":{\"label\":\"Horas\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Horas\",\"searchable\":true,\"sortable\":true}},\"Religion\":{\"edit\":{\"label\":\"Religion\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Religion\",\"searchable\":true,\"sortable\":true}},\"LenguaExtranjera\":{\"edit\":{\"label\":\"LenguaExtranjera\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"LenguaExtranjera\",\"searchable\":true,\"sortable\":true}},\"modalidades\":{\"edit\":{\"label\":\"Modalidades\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Modalidades\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"nombre\",\"optativa_cod\",\"created_at\"],\"edit\":[[{\"name\":\"nombre\",\"size\":6},{\"name\":\"optativa_cod\",\"size\":6}],[{\"name\":\"Horas\",\"size\":6},{\"name\":\"Religion\",\"size\":4}],[{\"name\":\"LenguaExtranjera\",\"size\":4}]],\"editRelations\":[\"cursos\",\"modalidades\"]}}', 'object', '', ''),
 (38, 'model_def_application::condiciones.condiciones', '{\"uid\":\"application::condiciones.condiciones\",\"collectionName\":\"condiciones\",\"kind\":\"collectionType\",\"info\":{\"name\":\"Condiciones\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{},\"attributes\":{\"nombre\":{\"type\":\"string\"},\"validar\":{\"type\":\"boolean\"},\"cursos\":{\"via\":\"condiciones\",\"collection\":\"cursos\",\"attribute\":\"curso\",\"column\":\"id\",\"isVirtual\":true},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
 (39, 'plugin_content_manager_configuration_content_types::application::condiciones.condiciones', '{\"uid\":\"application::condiciones.condiciones\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"nombre\",\"defaultSortBy\":\"nombre\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"nombre\":{\"edit\":{\"label\":\"Nombre\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Nombre\",\"searchable\":true,\"sortable\":true}},\"validar\":{\"edit\":{\"label\":\"Validar\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Validar\",\"searchable\":true,\"sortable\":true}},\"cursos\":{\"edit\":{\"label\":\"Cursos\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"nombre\"},\"list\":{\"label\":\"Cursos\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"nombre\",\"validar\",\"created_at\"],\"edit\":[[{\"name\":\"nombre\",\"size\":6},{\"name\":\"validar\",\"size\":4}]],\"editRelations\":[\"cursos\"]}}', 'object', '', '');
 
@@ -134,8 +134,129 @@ CREATE TABLE `cursos` (
 --
 
 INSERT INTO `cursos` (`id`, `nombre`, `curso_cod`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`, `matricula`) VALUES
-(1, 'Primero Bachiller ', '1BACH', '2021-11-10 17:05:09', 1, 1, '2021-11-10 16:05:07', '2021-11-10 17:57:42', 1),
-(2, '2 ESO', '2ESO', '2021-11-11 18:55:39', 1, 1, '2021-11-11 17:55:37', '2021-11-11 17:55:39', NULL);
+(1, '1º Bachillerato', 'BH1', '2021-11-10 17:05:09', 1, 1, '2021-11-10 16:05:07', '2021-12-11 13:43:57', 1),
+(2, '2º ESO', 'E2', '2021-11-11 18:55:39', 1, 1, '2021-11-11 17:55:37', '2021-12-11 13:38:42', NULL),
+(3, '1º ESO', 'E1', '2021-12-11 12:02:22', 1, 1, '2021-12-11 10:56:18', '2021-12-11 13:38:46', NULL),
+(10, '3º ESO', 'E3', '2021-12-11 12:46:44', 1, 1, '2021-12-11 11:46:42', '2021-12-11 13:38:37', NULL),
+(13, '4º ESO', 'E4', '2021-12-11 14:13:52', 1, 1, '2021-12-11 13:13:50', '2021-12-11 13:38:33', NULL),
+(14, '2º Bachillerato', 'BH2', '2021-12-11 14:42:55', 1, 1, '2021-12-11 13:42:37', '2021-12-11 13:44:01', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cursos_optativas__optativas_cursos`
+--
+
+CREATE TABLE `cursos_optativas__optativas_cursos` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `optativa_id` int(11) DEFAULT NULL,
+  `curso_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `cursos_optativas__optativas_cursos`
+--
+
+INSERT INTO `cursos_optativas__optativas_cursos` (`id`, `optativa_id`, `curso_id`) VALUES
+(1, 1, 3),
+(2, 3, 3),
+(3, 2, 3),
+(4, 5, 3),
+(5, 4, 3),
+(6, 6, 3),
+(7, 7, 3),
+(8, 8, 3),
+(9, 9, 3),
+(10, 10, 3),
+(11, 11, 3),
+(12, 12, 3),
+(28, 15, 2),
+(30, 16, 2),
+(32, 17, 2),
+(34, 18, 2),
+(36, 19, 2),
+(38, 20, 2),
+(40, 21, 2),
+(41, 22, 2),
+(42, 23, 2),
+(46, 26, 2),
+(54, 27, 2),
+(58, 28, 2),
+(62, 29, 2),
+(66, 31, 10),
+(67, 32, 10),
+(68, 33, 10),
+(69, 34, 10),
+(70, 30, 10),
+(71, 36, 10),
+(72, 37, 10),
+(73, 38, 10),
+(74, 39, 10),
+(75, 40, 10),
+(76, 41, 10),
+(77, 42, 10),
+(78, 43, 10),
+(79, 44, 10),
+(80, 45, 13),
+(81, 46, 13),
+(82, 47, 13),
+(83, 48, 13),
+(84, 50, 13),
+(85, 51, 13),
+(86, 52, 13),
+(87, 53, 13),
+(88, 54, 13),
+(89, 55, 13),
+(90, 56, 13);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cursos_troncales__troncales_cursos`
+--
+
+CREATE TABLE `cursos_troncales__troncales_cursos` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `troncale_id` int(11) DEFAULT NULL,
+  `curso_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `cursos_troncales__troncales_cursos`
+--
+
+INSERT INTO `cursos_troncales__troncales_cursos` (`id`, `troncale_id`, `curso_id`) VALUES
+(1, 1, 3),
+(2, 2, 3),
+(4, 4, 3),
+(5, 5, 3),
+(6, 6, 3),
+(7, 7, 3),
+(31, 11, 2),
+(35, 12, 2),
+(39, 13, 2),
+(43, 14, 2),
+(47, 15, 2),
+(51, 16, 2),
+(55, 17, 2),
+(59, 19, 2),
+(63, 21, 10),
+(66, 22, 10),
+(69, 23, 10),
+(72, 24, 10),
+(75, 25, 10),
+(78, 26, 10),
+(81, 27, 10),
+(88, 31, 10),
+(89, 10, 3),
+(90, 32, 10),
+(91, 34, 10),
+(92, 35, 10),
+(93, 36, 13),
+(94, 37, 13),
+(95, 38, 13),
+(96, 39, 13),
+(97, 40, 13);
 
 -- --------------------------------------------------------
 
@@ -184,7 +305,7 @@ CREATE TABLE `matriculas` (
 --
 
 INSERT INTO `matriculas` (`id`, `fecha`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`, `usuario`, `curso`, `user`) VALUES
-(1, '2021-11-03', '2021-11-10 18:57:43', 1, 1, '2021-11-10 17:57:37', '2021-11-15 17:50:35', 1, 1, 1);
+(1, '2021-11-03', '2021-11-10 18:57:43', 1, 1, '2021-11-10 17:57:37', '2021-12-11 13:43:57', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -209,7 +330,245 @@ CREATE TABLE `modalidades` (
 --
 
 INSERT INTO `modalidades` (`id`, `nombre`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`, `curso`, `modalidad_cod`) VALUES
-(1, 'Tecnologico', '2021-11-10 17:06:44', 1, 1, '2021-11-10 16:06:41', '2021-11-10 17:57:19', 1, 'TEC');
+(2, '3 ESO Bilingüe', '2021-12-11 13:11:15', 1, 1, '2021-12-11 12:11:12', '2021-12-11 13:38:37', 10, NULL),
+(3, '1 ESO Bilingüe', '2021-12-11 13:23:19', 1, 1, '2021-12-11 12:23:17', '2021-12-11 13:38:46', 3, NULL),
+(4, '1 ESO Plurilingüe Alemán', '2021-12-11 13:23:37', 1, 1, '2021-12-11 12:23:36', '2021-12-11 13:38:46', 3, NULL),
+(5, '1 ESO Plurilingüe Francés', '2021-12-11 13:23:48', 1, 1, '2021-12-11 12:23:47', '2021-12-11 13:38:46', 3, NULL),
+(6, '2 ESO Bilingüe', '2021-12-11 13:34:21', 1, 1, '2021-12-11 12:34:20', '2021-12-11 13:38:42', 2, NULL),
+(7, '2 ESO Plurilingüe Francés', '2021-12-11 13:34:29', 1, 1, '2021-12-11 12:34:28', '2021-12-11 13:38:42', 2, NULL),
+(8, '2 ESO Plurilingüe Alemán', '2021-12-11 13:34:40', 1, 1, '2021-12-11 12:34:39', '2021-12-11 13:38:42', 2, NULL),
+(9, '3 ESO Plurilingüe Francés', '2021-12-11 13:43:12', 1, 1, '2021-12-11 12:43:11', '2021-12-11 13:38:37', 10, NULL),
+(10, '4 ESO Bilingüe', '2021-12-11 14:14:43', 1, 1, '2021-12-11 13:14:42', '2021-12-11 13:38:33', 13, NULL),
+(11, '4 ESO Plurilingüe Francés', '2021-12-11 14:15:01', 1, 1, '2021-12-11 13:15:00', '2021-12-11 13:38:33', 13, NULL),
+(12, '4 ESO Formación Profesional', '2021-12-11 14:15:24', 1, 1, '2021-12-11 13:15:23', '2021-12-11 13:38:33', 13, NULL),
+(13, '1º Bachillerato Humanidades y Ciencias Sociales', '2021-12-11 14:57:42', 1, 1, '2021-12-11 13:57:41', '2021-12-11 13:57:42', 1, NULL),
+(14, '1º Bachillerato Humanidades y Ciencias Sociales Bilingüe', '2021-12-11 14:58:00', 1, 1, '2021-12-11 13:57:59', '2021-12-11 13:58:00', 1, NULL),
+(15, '1º Bachillerato Ciencias y Tecnología', '2021-12-11 14:58:15', 1, 1, '2021-12-11 13:58:14', '2021-12-11 13:58:15', 1, NULL),
+(16, '1º Bachillerato Ciencias y Tecnología Bilingüe', '2021-12-11 14:58:26', 1, 1, '2021-12-11 13:58:25', '2021-12-11 13:58:26', 1, NULL),
+(17, '1º Bachillerato ARTE', '2021-12-11 14:58:46', 1, 1, '2021-12-11 13:58:44', '2021-12-11 13:58:48', 1, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `modalidades_optativas__optativas_modalidades`
+--
+
+CREATE TABLE `modalidades_optativas__optativas_modalidades` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `modalidade_id` int(11) DEFAULT NULL,
+  `optativa_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `modalidades_optativas__optativas_modalidades`
+--
+
+INSERT INTO `modalidades_optativas__optativas_modalidades` (`id`, `modalidade_id`, `optativa_id`) VALUES
+(1, 2, 30),
+(2, 3, 2),
+(3, 3, 3),
+(4, 3, 4),
+(5, 3, 5),
+(6, 3, 6),
+(7, 3, 9),
+(8, 4, 9),
+(9, 5, 9),
+(10, 3, 11),
+(11, 4, 11),
+(12, 5, 11),
+(13, 3, 12),
+(14, 4, 12),
+(15, 5, 12),
+(16, 3, 10),
+(17, 4, 10),
+(18, 5, 10),
+(19, 4, 14),
+(20, 5, 13),
+(21, 6, 15),
+(22, 6, 16),
+(23, 6, 17),
+(24, 6, 18),
+(25, 6, 19),
+(26, 6, 20),
+(27, 6, 23),
+(28, 6, 26),
+(29, 7, 26),
+(30, 8, 26),
+(31, 6, 27),
+(32, 7, 27),
+(33, 8, 27),
+(34, 6, 28),
+(35, 7, 28),
+(36, 8, 28),
+(37, 7, 24),
+(38, 8, 25),
+(39, 2, 31),
+(40, 9, 31),
+(41, 2, 32),
+(42, 9, 32),
+(43, 2, 33),
+(44, 9, 33),
+(45, 2, 34),
+(46, 9, 34),
+(47, 9, 35),
+(48, 2, 36),
+(49, 2, 37),
+(50, 2, 38),
+(51, 2, 39),
+(52, 2, 40),
+(53, 2, 41),
+(54, 2, 42),
+(55, 2, 44),
+(56, 10, 45),
+(57, 11, 45),
+(58, 12, 45),
+(59, 10, 46),
+(60, 11, 46),
+(61, 12, 46),
+(62, 10, 47),
+(63, 11, 47),
+(64, 12, 47),
+(65, 10, 48),
+(66, 11, 48),
+(67, 12, 48),
+(68, 11, 49),
+(69, 10, 50),
+(70, 12, 50),
+(71, 10, 51),
+(72, 12, 51),
+(73, 10, 52),
+(74, 12, 52),
+(75, 10, 53),
+(76, 12, 53),
+(77, 10, 54),
+(78, 12, 54),
+(79, 10, 55),
+(80, 12, 55),
+(81, 12, 56);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `modalidades_troncales__troncales_modalidades`
+--
+
+CREATE TABLE `modalidades_troncales__troncales_modalidades` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `modalidade_id` int(11) DEFAULT NULL,
+  `troncale_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `modalidades_troncales__troncales_modalidades`
+--
+
+INSERT INTO `modalidades_troncales__troncales_modalidades` (`id`, `modalidade_id`, `troncale_id`) VALUES
+(1, 3, 8),
+(2, 4, 8),
+(3, 5, 8),
+(4, 3, 9),
+(5, 4, 9),
+(6, 5, 9),
+(7, 3, 2),
+(8, 4, 2),
+(9, 5, 2),
+(13, 3, 10),
+(14, 4, 10),
+(15, 5, 10),
+(16, 3, 4),
+(17, 4, 4),
+(18, 5, 4),
+(19, 3, 5),
+(20, 4, 5),
+(21, 5, 5),
+(22, 3, 6),
+(23, 4, 6),
+(24, 5, 6),
+(25, 6, 11),
+(26, 7, 11),
+(27, 8, 11),
+(28, 6, 14),
+(29, 7, 14),
+(30, 8, 14),
+(31, 6, 12),
+(32, 7, 12),
+(33, 8, 12),
+(34, 6, 13),
+(35, 7, 13),
+(36, 8, 13),
+(37, 6, 15),
+(38, 7, 15),
+(39, 8, 15),
+(40, 6, 16),
+(41, 7, 16),
+(42, 8, 16),
+(43, 6, 18),
+(44, 7, 18),
+(45, 8, 18),
+(46, 6, 20),
+(47, 7, 20),
+(48, 8, 20),
+(49, 2, 21),
+(50, 9, 21),
+(51, 2, 24),
+(52, 9, 24),
+(53, 2, 32),
+(54, 9, 32),
+(55, 2, 23),
+(56, 9, 23),
+(57, 2, 25),
+(58, 9, 25),
+(59, 2, 33),
+(60, 9, 33),
+(61, 2, 29),
+(62, 9, 29),
+(63, 2, 30),
+(64, 9, 30),
+(65, 2, 34),
+(66, 9, 34),
+(67, 10, 36),
+(68, 11, 36),
+(69, 12, 36),
+(70, 10, 37),
+(71, 11, 37),
+(72, 12, 37),
+(73, 10, 38),
+(74, 11, 38),
+(75, 12, 38),
+(76, 12, 39),
+(77, 12, 40),
+(78, 10, 41),
+(79, 11, 41),
+(80, 10, 42),
+(81, 11, 42),
+(82, 12, 43),
+(83, 12, 44),
+(84, 13, 46),
+(85, 14, 46),
+(86, 15, 46),
+(87, 16, 46),
+(88, 17, 46),
+(89, 13, 47),
+(90, 14, 47),
+(91, 15, 47),
+(92, 16, 47),
+(93, 17, 47),
+(94, 13, 48),
+(95, 14, 48),
+(96, 15, 48),
+(97, 16, 48),
+(98, 17, 48),
+(99, 15, 49),
+(100, 16, 49),
+(101, 13, 50),
+(102, 14, 50),
+(103, 15, 50),
+(104, 16, 50),
+(105, 17, 50),
+(106, 13, 51),
+(107, 14, 51),
+(108, 15, 52),
+(109, 16, 52);
 
 -- --------------------------------------------------------
 
@@ -226,15 +585,73 @@ CREATE TABLE `optativas` (
   `updated_by` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp(),
-  `curso` int(11) DEFAULT NULL
+  `curso` int(11) DEFAULT NULL,
+  `Horas` varchar(255) DEFAULT NULL,
+  `Religion` tinyint(1) DEFAULT NULL,
+  `LenguaExtranjera` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `optativas`
 --
 
-INSERT INTO `optativas` (`id`, `nombre`, `optativa_cod`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`, `curso`) VALUES
-(1, 'Tenologia de la informatica y la comunicacion', 'TIC', '2021-11-10 18:57:10', 1, 1, '2021-11-10 17:57:08', '2021-11-10 17:57:10', 1);
+INSERT INTO `optativas` (`id`, `nombre`, `optativa_cod`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`, `curso`, `Horas`, `Religion`, `LenguaExtranjera`) VALUES
+(1, 'Tenologia de la informatica y la comunicacion', 'TIC', '2021-11-10 18:57:10', 1, 1, '2021-11-10 17:57:08', '2021-11-10 17:57:10', 1, NULL, NULL, NULL),
+(2, 'Creación y Expresión Musical', 'CEM1E', '2021-12-11 12:02:51', 1, 1, '2021-12-11 10:39:23', '2021-12-11 12:26:57', 3, NULL, NULL, NULL),
+(3, 'Iniciación a la Investigación', 'INI1E', '2021-12-11 12:05:36', 1, 1, '2021-12-11 10:39:42', '2021-12-11 12:27:07', 3, NULL, NULL, NULL),
+(4, 'Teatro I: Teatro de creación', 'TEA1E', '2021-12-11 12:05:58', 1, 1, '2021-12-11 10:40:09', '2021-12-11 12:48:26', 3, NULL, NULL, NULL),
+(5, 'Oratoria y debate', 'ORA1E', '2021-12-11 12:06:16', 1, 1, '2021-12-11 10:40:26', '2021-12-11 12:27:25', 3, NULL, NULL, NULL),
+(6, 'Refuerzo de la competencia en comunicación lingüística', 'REFLIN1E', '2021-12-11 12:06:24', 1, 1, '2021-12-11 10:40:51', '2021-12-11 12:27:33', 3, NULL, NULL, NULL),
+(7, 'Francés', 'FRA1E', '2021-12-11 12:05:24', 1, 1, '2021-12-11 10:41:02', '2021-12-11 11:12:27', 3, NULL, NULL, NULL),
+(8, 'Alemán', 'ALE1E', '2021-12-11 12:02:39', 1, 1, '2021-12-11 10:41:13', '2021-12-11 11:12:27', 3, NULL, NULL, NULL),
+(9, 'Religión Católica', 'RELCAT1E', '2021-12-11 12:07:19', 1, 1, '2021-12-11 10:44:38', '2021-12-11 12:28:06', 3, NULL, 1, NULL),
+(10, 'Valores Éticos', 'VALET1E', '2021-12-11 12:07:41', 1, 1, '2021-12-11 10:45:05', '2021-12-11 12:28:34', 3, NULL, 1, NULL),
+(11, 'Religión Evangélica', 'RELEV1E', '2021-12-11 12:07:33', 1, 1, '2021-12-11 10:45:21', '2021-12-11 12:28:15', 3, NULL, 1, NULL),
+(12, 'Religión Islámica', 'RELISL1E', '2021-12-11 12:13:41', 1, 1, '2021-12-11 10:45:41', '2021-12-11 12:28:26', 3, NULL, 1, NULL),
+(13, 'Francés (SELE Plurilingüe)', 'FRASELE1E', '2021-12-11 12:16:46', 1, 1, '2021-12-11 10:54:49', '2021-12-11 12:28:56', NULL, NULL, NULL, 1),
+(14, 'Alemán (SELE Plurilingüe)', 'ALESELE1E', '2021-12-11 12:16:36', 1, 1, '2021-12-11 10:55:25', '2021-12-11 12:28:50', NULL, NULL, NULL, 1),
+(15, 'Robótica', 'ROB2E', '2021-12-11 12:33:05', 1, 1, '2021-12-11 11:32:58', '2021-12-11 12:35:41', NULL, NULL, NULL, NULL),
+(16, 'Iniciación a la Investigación', 'INI2E', '2021-12-11 12:33:25', 1, 1, '2021-12-11 11:33:24', '2021-12-11 12:35:52', NULL, NULL, NULL, NULL),
+(17, 'Teatro II: Teatro Clásico de los Siglos de Oro', 'TEA2E', '2021-12-11 12:34:15', 1, 1, '2021-12-11 11:34:14', '2021-12-11 12:48:29', NULL, NULL, NULL, NULL),
+(18, 'Literatura y cine', 'LICI2E', '2021-12-11 12:34:59', 1, 1, '2021-12-11 11:34:57', '2021-12-11 12:36:08', NULL, NULL, NULL, NULL),
+(19, 'Mitología Clásica', 'MITCL2E', '2021-12-11 12:35:32', 1, 1, '2021-12-11 11:35:30', '2021-12-11 12:36:17', NULL, NULL, NULL, NULL),
+(20, 'Arte y Creatividad', 'ART2E', '2021-12-11 12:36:00', 1, 1, '2021-12-11 11:35:58', '2021-12-11 12:36:24', NULL, NULL, NULL, NULL),
+(21, 'Francés', 'FRA2E', '2021-12-11 12:36:14', 1, 1, '2021-12-11 11:36:13', '2021-12-11 11:36:14', NULL, NULL, NULL, NULL),
+(22, 'Alemán', 'ALE2E', '2021-12-11 12:36:35', 1, 1, '2021-12-11 11:36:33', '2021-12-11 11:36:35', NULL, NULL, NULL, NULL),
+(23, 'Refuerzo de la competencia en comunicación lingüística', 'REFLIN2E', '2021-12-11 12:37:01', 1, 1, '2021-12-11 11:37:00', '2021-12-11 12:36:32', NULL, NULL, NULL, NULL),
+(24, 'Francés (SELE Plurilingüe)', 'FRASELE2E', '2021-12-11 12:42:19', 1, 1, '2021-12-11 11:38:14', '2021-12-11 12:37:31', NULL, NULL, NULL, 1),
+(25, 'Alemán (SELE Plurilingüe)', 'ALESELE2E', '2021-12-11 12:38:48', 1, 1, '2021-12-11 11:38:46', '2021-12-11 12:37:44', NULL, NULL, NULL, 1),
+(26, 'Religión Católica', 'RELCAT2E', '2021-12-11 12:39:41', 1, 1, '2021-12-11 11:39:37', '2021-12-11 12:36:43', NULL, NULL, 1, NULL),
+(27, 'Valores Éticos', 'VALET2E', '2021-12-11 12:41:23', 1, 1, '2021-12-11 11:41:22', '2021-12-11 12:36:53', NULL, NULL, 1, NULL),
+(28, 'Religión Evangélica', 'RELEV2E', '2021-12-11 12:41:39', 1, 1, '2021-12-11 11:41:36', '2021-12-11 12:37:03', NULL, NULL, 1, NULL),
+(29, 'Religión Islámica', 'RELISL2E', '2021-12-11 12:42:02', 1, 1, '2021-12-11 11:41:55', '2021-12-11 12:37:12', NULL, NULL, 1, NULL),
+(30, 'Cultura Clásica', 'CULCL3E', '2021-12-11 13:11:52', 1, 1, '2021-12-11 12:11:48', '2021-12-11 12:45:58', NULL, NULL, NULL, NULL),
+(31, 'Religión Católica', 'RELCAT3E', '2021-12-11 14:17:55', 1, 1, '2021-12-11 12:44:07', '2021-12-11 13:17:55', NULL, NULL, 1, NULL),
+(32, 'Valores Éticos', 'VALET3E', '2021-12-11 13:44:30', 1, 1, '2021-12-11 12:44:29', '2021-12-11 12:44:30', NULL, NULL, 1, NULL),
+(33, 'Religión Evangélica', 'RELEV3E', '2021-12-11 13:44:45', 1, 1, '2021-12-11 12:44:44', '2021-12-11 12:44:45', NULL, NULL, 1, NULL),
+(34, 'Religión Islámica', 'RELISL3E', '2021-12-11 13:45:12', 1, 1, '2021-12-11 12:45:11', '2021-12-11 12:45:12', NULL, NULL, 1, NULL),
+(35, 'Francés (SELE Plurilingüe)', 'FRASELE3E', '2021-12-11 13:45:32', 1, 1, '2021-12-11 12:45:31', '2021-12-11 12:45:32', NULL, NULL, NULL, 1),
+(36, 'Comunicación Audiovisual', 'COAU3E', '2021-12-11 13:46:42', 1, 1, '2021-12-11 12:46:41', '2021-12-11 12:46:42', NULL, NULL, NULL, NULL),
+(37, 'Iniciación a la Actividad Emprendedora y Empresarial', 'IEE3E', '2021-12-11 13:47:19', 1, 1, '2021-12-11 12:47:15', '2021-12-11 12:47:19', NULL, NULL, NULL, NULL),
+(38, 'Iniciación a la Investigación', 'INI3E', '2021-12-11 13:47:45', 1, 1, '2021-12-11 12:47:44', '2021-12-11 12:47:46', NULL, NULL, NULL, NULL),
+(39, 'Teatro III: Teatro Clásico Antiguo', 'TEA3E', '2021-12-11 13:48:16', 1, 1, '2021-12-11 12:48:15', '2021-12-11 12:48:34', NULL, NULL, NULL, NULL),
+(40, 'Física y Química de las Nanopartículas y los cristales', 'FYQNC3E', '2021-12-11 13:49:08', 1, 1, '2021-12-11 12:49:06', '2021-12-11 12:49:08', NULL, NULL, NULL, NULL),
+(41, 'Educación Física y Calidad de Vida', 'EDFCV3E', '2021-12-11 13:49:38', 1, 1, '2021-12-11 12:49:36', '2021-12-11 12:49:38', NULL, NULL, NULL, NULL),
+(42, 'Cerámica', 'CER3E', '2021-12-11 13:50:02', 1, 1, '2021-12-11 12:50:01', '2021-12-11 12:50:02', NULL, NULL, NULL, NULL),
+(43, 'Francés', 'FRA3E', '2021-12-11 14:08:19', 1, 1, '2021-12-11 13:08:18', '2021-12-11 13:08:19', NULL, NULL, NULL, NULL),
+(44, 'Refuerzo de la competencia en comunicación lingüística', 'REFLIN3E', '2021-12-11 14:08:34', 1, 1, '2021-12-11 13:08:33', '2021-12-11 13:08:34', NULL, NULL, NULL, NULL),
+(45, 'Religión Católica', 'RELCAT4E', '2021-12-11 14:18:42', 1, 1, '2021-12-11 13:18:41', '2021-12-11 13:18:42', NULL, NULL, 1, NULL),
+(46, 'Valores Éticos', 'VALET4E', '2021-12-11 14:19:00', 1, 1, '2021-12-11 13:18:58', '2021-12-11 13:19:00', NULL, NULL, 1, NULL),
+(47, 'Religión Evangélica', 'RELEV4E', '2021-12-11 14:19:16', 1, 1, '2021-12-11 13:19:15', '2021-12-11 13:19:16', NULL, NULL, 1, NULL),
+(48, 'Religión Islámica', 'RELISL4E', '2021-12-11 14:19:36', 1, 1, '2021-12-11 13:19:35', '2021-12-11 13:19:36', NULL, NULL, 1, NULL),
+(49, 'Francés (SELE Plurilingüe)', 'FRASELE4E', '2021-12-11 14:20:07', 1, 1, '2021-12-11 13:20:06', '2021-12-11 13:20:07', NULL, NULL, NULL, 1),
+(50, 'Cultura Científica', 'CULCIE4E', '2021-12-11 14:21:00', 1, 1, '2021-12-11 13:20:58', '2021-12-11 13:21:00', NULL, NULL, NULL, NULL),
+(51, 'Cultura Clásica', 'CULCL4E', '2021-12-11 14:21:19', 1, 1, '2021-12-11 13:21:18', '2021-12-11 13:21:19', NULL, NULL, NULL, NULL),
+(52, 'Educación Plástica, Visual y Audiovisual', 'EPVA4E', '2021-12-11 14:22:29', 1, 1, '2021-12-11 13:22:28', '2021-12-11 13:22:29', NULL, NULL, NULL, NULL),
+(53, 'Música', 'MUS4E', '2021-12-11 14:22:50', 1, 1, '2021-12-11 13:22:49', '2021-12-11 13:22:50', NULL, NULL, NULL, NULL),
+(54, 'Filosofía', 'FIL4E', '2021-12-11 14:23:17', 1, 1, '2021-12-11 13:23:16', '2021-12-11 13:23:17', NULL, NULL, NULL, NULL),
+(55, 'TIC', 'TIC4E', '2021-12-11 14:23:32', 1, 1, '2021-12-11 13:23:31', '2021-12-11 13:23:32', NULL, NULL, NULL, NULL),
+(56, 'Francés', 'FRA4E', '2021-12-11 14:23:52', 1, 1, '2021-12-11 13:23:51', '2021-12-11 13:23:52', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -340,19 +757,10 @@ INSERT INTO `strapi_permission` (`id`, `action`, `subject`, `properties`, `condi
 (58, 'plugins::documentation.settings.regenerate', NULL, '{}', '[]', 1, '2021-09-30 06:46:47', '2021-09-30 06:46:47'),
 (201, 'plugins::content-manager.explorer.create', 'application::condiciones.condiciones', '{\"fields\":[\"nombre\",\"validar\",\"cursos\"]}', '[]', 1, '2021-09-30 07:33:55', '2021-09-30 07:33:55'),
 (202, 'plugins::content-manager.explorer.create', 'application::cursos.cursos', '{\"fields\":[\"nombre\",\"curso_cod\",\"matricula\",\"troncales\",\"modalidades\",\"optativas\",\"condiciones\"]}', '[]', 1, '2021-09-30 07:33:55', '2021-09-30 07:33:55'),
-(204, 'plugins::content-manager.explorer.create', 'application::optativas.optativas', '{\"fields\":[\"nombre\",\"optativa_cod\",\"curso\"]}', '[]', 1, '2021-09-30 07:33:55', '2021-09-30 07:33:55'),
-(205, 'plugins::content-manager.explorer.create', 'application::troncales.troncales', '{\"fields\":[\"nombre\",\"asignatura_cod\",\"curso\"]}', '[]', 1, '2021-09-30 07:33:55', '2021-09-30 07:33:55'),
 (206, 'plugins::content-manager.explorer.read', 'application::condiciones.condiciones', '{\"fields\":[\"nombre\",\"validar\",\"cursos\"]}', '[]', 1, '2021-09-30 07:33:55', '2021-09-30 07:33:55'),
 (207, 'plugins::content-manager.explorer.read', 'application::cursos.cursos', '{\"fields\":[\"nombre\",\"curso_cod\",\"matricula\",\"troncales\",\"modalidades\",\"optativas\",\"condiciones\"]}', '[]', 1, '2021-09-30 07:33:55', '2021-09-30 07:33:55'),
-(209, 'plugins::content-manager.explorer.read', 'application::optativas.optativas', '{\"fields\":[\"nombre\",\"optativa_cod\",\"curso\"]}', '[]', 1, '2021-09-30 07:33:55', '2021-09-30 07:33:55'),
-(210, 'plugins::content-manager.explorer.read', 'application::troncales.troncales', '{\"fields\":[\"nombre\",\"asignatura_cod\",\"curso\"]}', '[]', 1, '2021-09-30 07:33:55', '2021-09-30 07:33:55'),
 (211, 'plugins::content-manager.explorer.update', 'application::condiciones.condiciones', '{\"fields\":[\"nombre\",\"validar\",\"cursos\"]}', '[]', 1, '2021-09-30 07:33:55', '2021-09-30 07:33:55'),
-(213, 'plugins::content-manager.explorer.update', 'application::optativas.optativas', '{\"fields\":[\"nombre\",\"optativa_cod\",\"curso\"]}', '[]', 1, '2021-09-30 07:33:55', '2021-09-30 07:33:55'),
-(214, 'plugins::content-manager.explorer.update', 'application::troncales.troncales', '{\"fields\":[\"nombre\",\"asignatura_cod\",\"curso\"]}', '[]', 1, '2021-09-30 07:33:55', '2021-09-30 07:33:55'),
 (220, 'plugins::content-manager.explorer.update', 'application::cursos.cursos', '{\"fields\":[\"nombre\",\"curso_cod\",\"matricula\",\"troncales\",\"modalidades\",\"optativas\",\"condiciones\"]}', '[]', 1, '2021-09-30 07:33:55', '2021-09-30 07:33:55'),
-(294, 'plugins::content-manager.explorer.create', 'application::modalidades.modalidades', '{\"fields\":[\"nombre\",\"curso\"]}', '[]', 1, '2021-11-11 17:45:50', '2021-11-11 17:45:50'),
-(295, 'plugins::content-manager.explorer.read', 'application::modalidades.modalidades', '{\"fields\":[\"nombre\",\"curso\"]}', '[]', 1, '2021-11-11 17:45:50', '2021-11-11 17:45:50'),
-(296, 'plugins::content-manager.explorer.update', 'application::modalidades.modalidades', '{\"fields\":[\"nombre\",\"curso\"]}', '[]', 1, '2021-11-11 17:45:50', '2021-11-11 17:45:50'),
 (361, 'plugins::content-manager.explorer.create', 'application::usuarios.usuarios', '{\"fields\":[]}', '[]', 1, '2021-11-15 17:48:20', '2021-11-15 17:48:20'),
 (363, 'plugins::content-manager.explorer.read', 'application::usuarios.usuarios', '{\"fields\":[]}', '[]', 1, '2021-11-15 17:48:20', '2021-11-15 17:48:20'),
 (365, 'plugins::content-manager.explorer.update', 'application::usuarios.usuarios', '{\"fields\":[]}', '[]', 1, '2021-11-15 17:48:20', '2021-11-15 17:48:20'),
@@ -362,21 +770,30 @@ INSERT INTO `strapi_permission` (`id`, `action`, `subject`, `properties`, `condi
 (384, 'plugins::content-manager.explorer.read', 'plugins::users-permissions.user', '{\"fields\":[\"username\",\"email\",\"provider\",\"password\",\"resetPasswordToken\",\"confirmationToken\",\"confirmed\",\"blocked\",\"role\",\"matriculas\"]}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
 (385, 'plugins::content-manager.explorer.update', 'application::matriculas.matriculas', '{\"fields\":[\"fecha\",\"curso\",\"user\"]}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
 (386, 'plugins::content-manager.explorer.update', 'plugins::users-permissions.user', '{\"fields\":[\"username\",\"email\",\"provider\",\"password\",\"resetPasswordToken\",\"confirmationToken\",\"confirmed\",\"blocked\",\"role\",\"matriculas\"]}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(387, 'plugins::content-manager.explorer.delete', 'application::condiciones.condiciones', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(388, 'plugins::content-manager.explorer.delete', 'application::cursos.cursos', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(389, 'plugins::content-manager.explorer.delete', 'application::matriculas.matriculas', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(390, 'plugins::content-manager.explorer.delete', 'application::modalidades.modalidades', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(391, 'plugins::content-manager.explorer.delete', 'application::optativas.optativas', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(392, 'plugins::content-manager.explorer.delete', 'application::troncales.troncales', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(393, 'plugins::content-manager.explorer.delete', 'application::usuarios.usuarios', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(394, 'plugins::content-manager.explorer.publish', 'application::condiciones.condiciones', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(395, 'plugins::content-manager.explorer.publish', 'application::cursos.cursos', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(396, 'plugins::content-manager.explorer.publish', 'application::modalidades.modalidades', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(397, 'plugins::content-manager.explorer.delete', 'plugins::users-permissions.user', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(398, 'plugins::content-manager.explorer.publish', 'application::matriculas.matriculas', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(399, 'plugins::content-manager.explorer.publish', 'application::optativas.optativas', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(400, 'plugins::content-manager.explorer.publish', 'application::troncales.troncales', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18'),
-(401, 'plugins::content-manager.explorer.publish', 'application::usuarios.usuarios', '{}', '[]', 1, '2021-11-15 17:49:18', '2021-11-15 17:49:18');
+(721, 'plugins::content-manager.explorer.create', 'application::optativas.optativas', '{\"fields\":[\"nombre\",\"optativa_cod\",\"cursos\",\"Horas\",\"Religion\",\"LenguaExtranjera\",\"modalidades\"]}', '[]', 1, '2021-12-11 12:10:24', '2021-12-11 12:10:24'),
+(723, 'plugins::content-manager.explorer.read', 'application::optativas.optativas', '{\"fields\":[\"nombre\",\"optativa_cod\",\"cursos\",\"Horas\",\"Religion\",\"LenguaExtranjera\",\"modalidades\"]}', '[]', 1, '2021-12-11 12:10:24', '2021-12-11 12:10:24'),
+(725, 'plugins::content-manager.explorer.update', 'application::optativas.optativas', '{\"fields\":[\"nombre\",\"optativa_cod\",\"cursos\",\"Horas\",\"Religion\",\"LenguaExtranjera\",\"modalidades\"]}', '[]', 1, '2021-12-11 12:10:24', '2021-12-11 12:10:24'),
+(741, 'plugins::content-manager.explorer.create', 'application::modalidades.modalidades', '{\"fields\":[\"nombre\",\"curso\",\"optativas\",\"troncales\"]}', '[]', 1, '2021-12-11 12:30:55', '2021-12-11 12:30:55'),
+(743, 'plugins::content-manager.explorer.read', 'application::modalidades.modalidades', '{\"fields\":[\"nombre\",\"curso\",\"optativas\",\"troncales\"]}', '[]', 1, '2021-12-11 12:30:55', '2021-12-11 12:30:55'),
+(745, 'plugins::content-manager.explorer.update', 'application::modalidades.modalidades', '{\"fields\":[\"nombre\",\"curso\",\"optativas\",\"troncales\"]}', '[]', 1, '2021-12-11 12:30:55', '2021-12-11 12:30:55'),
+(939, 'plugins::content-manager.explorer.create', 'application::troncales.troncales', '{\"fields\":[\"nombre\",\"asignatura_cod\",\"cursos\",\"modalidades\",\"Eleccion\",\"Tipo\"]}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(940, 'plugins::content-manager.explorer.read', 'application::troncales.troncales', '{\"fields\":[\"nombre\",\"asignatura_cod\",\"cursos\",\"modalidades\",\"Eleccion\",\"Tipo\"]}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(941, 'plugins::content-manager.explorer.update', 'application::troncales.troncales', '{\"fields\":[\"nombre\",\"asignatura_cod\",\"cursos\",\"modalidades\",\"Eleccion\",\"Tipo\"]}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(942, 'plugins::content-manager.explorer.delete', 'application::condiciones.condiciones', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(943, 'plugins::content-manager.explorer.delete', 'application::cursos.cursos', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(944, 'plugins::content-manager.explorer.delete', 'application::matriculas.matriculas', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(945, 'plugins::content-manager.explorer.delete', 'application::modalidades.modalidades', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(946, 'plugins::content-manager.explorer.delete', 'application::optativas.optativas', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(947, 'plugins::content-manager.explorer.delete', 'application::troncales.troncales', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(948, 'plugins::content-manager.explorer.delete', 'application::usuarios.usuarios', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(949, 'plugins::content-manager.explorer.publish', 'application::condiciones.condiciones', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(950, 'plugins::content-manager.explorer.publish', 'application::cursos.cursos', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(951, 'plugins::content-manager.explorer.delete', 'plugins::users-permissions.user', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(952, 'plugins::content-manager.explorer.publish', 'application::matriculas.matriculas', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(953, 'plugins::content-manager.explorer.publish', 'application::troncales.troncales', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(954, 'plugins::content-manager.explorer.publish', 'application::usuarios.usuarios', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(955, 'plugins::content-manager.explorer.publish', 'application::modalidades.modalidades', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30'),
+(956, 'plugins::content-manager.explorer.publish', 'application::optativas.optativas', '{}', '[]', 1, '2021-12-11 14:13:30', '2021-12-11 14:13:30');
 
 -- --------------------------------------------------------
 
@@ -451,15 +868,68 @@ CREATE TABLE `troncales` (
   `updated_by` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp(),
-  `curso` int(11) DEFAULT NULL
+  `curso` int(11) DEFAULT NULL,
+  `Eleccion` tinyint(1) DEFAULT NULL,
+  `Tipo` varchar(255) DEFAULT NULL,
+  `TroncalDeEleccion` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `troncales`
 --
 
-INSERT INTO `troncales` (`id`, `nombre`, `asignatura_cod`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`, `curso`) VALUES
-(1, 'Matematicas', 'MAT', NULL, 1, 1, '2021-11-10 18:00:56', '2021-11-10 18:00:56', 1);
+INSERT INTO `troncales` (`id`, `nombre`, `asignatura_cod`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`, `curso`, `Eleccion`, `Tipo`, `TroncalDeEleccion`) VALUES
+(1, 'Matematicas', 'MAT1E', '2021-12-11 12:00:42', 1, 1, '2021-11-10 18:00:56', '2021-12-11 11:11:36', 3, NULL, NULL, NULL),
+(2, 'Lengua Castellana y Literatura', 'LENG1E', '2021-12-11 12:00:38', 1, 1, '2021-12-11 10:34:02', '2021-12-11 12:38:51', 3, NULL, NULL, NULL),
+(4, 'Primera Lengua Extranjera Inglés', 'ING1E', '2021-12-11 12:00:52', 1, 1, '2021-12-11 10:34:54', '2021-12-11 12:39:37', 3, NULL, NULL, NULL),
+(5, 'Educación Física', 'EDF1E', '2021-12-11 12:00:19', 1, 1, '2021-12-11 10:35:10', '2021-12-11 12:39:45', 3, NULL, NULL, NULL),
+(6, 'Educación Plástica, Visual y Audiovisual', 'EPVA1E', '2021-12-11 12:00:22', 1, 1, '2021-12-11 10:35:35', '2021-12-11 12:39:54', 3, NULL, NULL, NULL),
+(7, 'Tecnología', 'TEC1E', '2021-12-11 12:01:12', 1, 1, '2021-12-11 10:35:46', '2021-12-11 11:11:36', 3, NULL, NULL, NULL),
+(8, 'Mathematics', 'MATING1E', '2021-12-11 12:00:46', 1, 1, '2021-12-11 10:49:15', '2021-12-11 12:31:37', NULL, NULL, NULL, NULL),
+(9, 'Technology', 'TECING1E', '2021-12-11 12:01:02', 1, 1, '2021-12-11 10:49:30', '2021-12-11 12:32:08', NULL, NULL, NULL, NULL),
+(10, 'Geografía e Historia', 'GEOHIS1E', '2021-12-11 12:00:26', 1, 1, '2021-12-11 10:57:33', '2021-12-11 12:39:23', 3, NULL, NULL, NULL),
+(11, 'Lengua Castellana y Literatura', 'LENG2E', '2021-12-11 12:24:28', 1, 1, '2021-12-11 11:24:26', '2021-12-11 12:40:51', NULL, NULL, NULL, NULL),
+(12, 'Geografía e Historia', 'GEOHIS2E', '2021-12-11 12:25:13', 1, 1, '2021-12-11 11:25:09', '2021-12-11 12:41:10', NULL, NULL, NULL, NULL),
+(13, 'Matemáticas', 'MAT2E', '2021-12-11 12:26:12', 1, 1, '2021-12-11 11:26:10', '2021-12-11 12:41:28', NULL, NULL, NULL, NULL),
+(14, 'Primera Lengua Extranjera Inglés', 'ING2E', '2021-12-11 12:27:02', 1, 1, '2021-12-11 11:26:35', '2021-12-11 12:41:01', NULL, NULL, NULL, NULL),
+(15, 'Educación Física', 'EDF2E', '2021-12-11 12:27:25', 1, 1, '2021-12-11 11:27:22', '2021-12-11 12:41:39', NULL, NULL, NULL, NULL),
+(16, 'Educación Plástica, Visual y Audiovisual', 'EPVA2E', '2021-12-11 12:28:09', 1, 1, '2021-12-11 11:28:07', '2021-12-11 12:41:45', NULL, NULL, NULL, NULL),
+(17, 'Física y Química', 'FYQ2E', '2021-12-11 12:28:49', 1, 1, '2021-12-11 11:28:48', '2021-12-11 11:28:49', NULL, NULL, NULL, NULL),
+(18, 'Physics and Chemistry', 'FYQING2E', '2021-12-11 12:29:56', 1, 1, '2021-12-11 11:29:52', '2021-12-11 12:41:59', NULL, NULL, NULL, NULL),
+(19, 'Música', 'MUS2E', '2021-12-11 12:30:14', 1, 1, '2021-12-11 11:30:13', '2021-12-11 11:30:14', NULL, NULL, NULL, NULL),
+(20, 'Music', 'MUSING2E', '2021-12-11 12:30:32', 1, 1, '2021-12-11 11:30:29', '2021-12-11 12:42:07', NULL, NULL, NULL, NULL),
+(21, 'Lengua Castellana y Literatura', 'LENG3E', '2021-12-11 12:55:47', 1, 1, '2021-12-11 11:55:46', '2021-12-11 13:09:10', NULL, NULL, NULL, NULL),
+(22, 'Biología y Geología', 'BIOGEO3E', '2021-12-11 12:56:50', 1, 1, '2021-12-11 11:56:48', '2021-12-11 11:56:50', NULL, NULL, NULL, NULL),
+(23, 'Geografía e Historia', 'GEOHIS3E', '2021-12-11 12:57:01', 1, 1, '2021-12-11 11:57:00', '2021-12-11 13:09:56', NULL, NULL, NULL, NULL),
+(24, 'Primera Lengua Extranjera Inglés', 'ING3E', '2021-12-11 12:57:16', 1, 1, '2021-12-11 11:57:14', '2021-12-11 13:09:18', NULL, NULL, NULL, NULL),
+(25, 'Educación Física', 'EDF3E', '2021-12-11 12:57:49', 1, 1, '2021-12-11 11:57:47', '2021-12-11 13:10:13', NULL, NULL, NULL, NULL),
+(26, 'Física y Química', 'FYQ3E', '2021-12-11 12:58:04', 1, 1, '2021-12-11 11:58:03', '2021-12-11 11:58:33', NULL, NULL, NULL, NULL),
+(27, 'Tecnología', 'TEC3E', '2021-12-11 12:59:01', 1, 1, '2021-12-11 11:59:00', '2021-12-11 11:59:01', NULL, NULL, NULL, NULL),
+(28, 'Technology', 'TECING3E', '2021-12-11 12:59:13', 1, 1, '2021-12-11 11:59:12', '2021-12-11 11:59:13', NULL, NULL, NULL, NULL),
+(29, 'Physics and Chemistry', 'FYQING3E', '2021-12-11 12:59:32', 1, 1, '2021-12-11 11:59:31', '2021-12-11 13:11:12', NULL, NULL, NULL, NULL),
+(30, 'Music', 'MUSING3E', '2021-12-11 12:59:49', 1, 1, '2021-12-11 11:59:48', '2021-12-11 13:11:21', NULL, NULL, NULL, NULL),
+(31, 'Música', 'MUS3E', '2021-12-11 13:00:02', 1, 1, '2021-12-11 12:00:01', '2021-12-11 12:00:02', NULL, NULL, NULL, NULL),
+(32, 'Biología y Geología', 'BIOGEO3E', '2021-12-11 14:09:43', 1, 1, '2021-12-11 13:09:42', '2021-12-11 13:09:43', NULL, NULL, NULL, NULL),
+(33, 'Technology', 'TECING3E', '2021-12-11 14:10:58', 1, 1, '2021-12-11 13:10:57', '2021-12-11 13:10:58', NULL, NULL, NULL, NULL),
+(34, 'Matemáticas Académicas', 'MATACA3E', '2021-12-11 14:12:20', 1, 1, '2021-12-11 13:12:18', '2021-12-11 13:12:20', NULL, NULL, NULL, NULL),
+(35, 'Matemáticas Aplicadas', 'MATAPL3E', '2021-12-11 14:12:40', 1, 1, '2021-12-11 13:12:39', '2021-12-11 13:12:40', NULL, NULL, NULL, NULL),
+(36, 'Lengua Castellana y Literatura', 'LENG4E', '2021-12-11 14:24:33', 1, 1, '2021-12-11 13:24:32', '2021-12-11 13:24:33', NULL, NULL, NULL, NULL),
+(37, 'Geografía e Historia', 'GEOHIS4E', '2021-12-11 14:24:48', 1, 1, '2021-12-11 13:24:47', '2021-12-11 13:24:48', NULL, NULL, NULL, NULL),
+(38, 'Primera Lengua Extranjera Inglés', 'ING4E', '2021-12-11 14:25:06', 1, 1, '2021-12-11 13:25:05', '2021-12-11 13:25:06', NULL, NULL, NULL, NULL),
+(39, 'Educación Física', 'EDF4E', '2021-12-11 14:25:39', 1, 1, '2021-12-11 13:25:38', '2021-12-11 13:25:39', NULL, NULL, NULL, NULL),
+(40, 'Matemáticas Académicas', 'MATAPL4E', '2021-12-11 14:26:04', 1, 1, '2021-12-11 13:26:03', '2021-12-11 13:26:04', NULL, NULL, NULL, NULL),
+(41, 'Mathematics', 'MATING4E', '2021-12-11 14:26:27', 1, 1, '2021-12-11 13:26:26', '2021-12-11 13:26:27', NULL, NULL, NULL, NULL),
+(42, 'Physical Training', 'EDFING4E', '2021-12-11 14:27:00', 1, 1, '2021-12-11 13:26:59', '2021-12-11 13:27:00', NULL, NULL, NULL, NULL),
+(43, 'Iniciación Actividad Emprendedora y Empresarial', 'IEE4E', '2021-12-11 14:27:33', 1, 1, '2021-12-11 13:27:32', '2021-12-11 13:27:33', NULL, NULL, NULL, NULL),
+(44, 'Ciencias Aplicadas a la Act. Profesional', 'CAAP4E', '2021-12-11 14:30:50', 1, 1, '2021-12-11 13:28:07', '2021-12-11 13:30:50', NULL, 1, NULL, NULL),
+(45, 'Tecnología', 'TEC4E', '2021-12-11 14:31:06', 1, 1, '2021-12-11 13:31:02', '2021-12-11 13:31:06', NULL, 1, NULL, NULL),
+(46, 'Lengua Castellana y Literatura I', 'LENG1BH', '2021-12-11 15:00:57', 1, 1, '2021-12-11 14:00:51', '2021-12-11 14:01:54', NULL, NULL, 'general', NULL),
+(47, 'Primera Lengua Extranjera Inglés I', 'ING1BH', '2021-12-11 15:02:19', 1, 1, '2021-12-11 14:02:18', '2021-12-11 14:02:19', NULL, NULL, 'general', NULL),
+(48, 'Filosofía', 'FIL1BH', '2021-12-11 15:03:02', 1, 1, '2021-12-11 14:03:01', '2021-12-11 14:03:02', NULL, NULL, 'general', NULL),
+(49, 'Matemáticas I', 'MAT1BH', '2021-12-11 15:04:01', 1, 1, '2021-12-11 14:04:00', '2021-12-11 14:04:01', NULL, NULL, 'general', NULL),
+(50, 'Educación Física', 'EDF1BH', '2021-12-11 15:04:49', 1, 1, '2021-12-11 14:04:48', '2021-12-11 14:06:04', NULL, NULL, 'especifica', NULL),
+(51, 'Historia del Mundo Contemporáneo', 'HISMC1BH', '2021-12-11 15:06:48', 1, 1, '2021-12-11 14:06:47', '2021-12-11 14:06:48', NULL, NULL, 'de_opcion', NULL),
+(52, 'Física y Química', 'FYQ1BH', '2021-12-11 15:07:08', 1, 1, '2021-12-11 14:07:07', '2021-12-11 14:07:08', NULL, NULL, 'de_opcion', NULL);
 
 -- --------------------------------------------------------
 
@@ -752,9 +1222,9 @@ INSERT INTO `users-permissions_permission` (`id`, `type`, `controller`, `action`
 (223, 'application', 'matriculas', 'delete', 0, '', 1, NULL, NULL),
 (224, 'application', 'matriculas', 'delete', 1, 'isauthenticated', 2, NULL, NULL),
 (225, 'application', 'matriculas', 'find', 0, '', 1, NULL, NULL),
-(226, 'application', 'matriculas', 'find', 1, 'isauthenticated', 2, NULL, NULL),
+(226, 'application', 'matriculas', 'find', 1, '', 2, NULL, NULL),
 (227, 'application', 'matriculas', 'findone', 0, '', 1, NULL, NULL),
-(228, 'application', 'matriculas', 'findone', 1, 'isauthenticated', 2, NULL, NULL),
+(228, 'application', 'matriculas', 'findone', 1, '', 2, NULL, NULL),
 (229, 'application', 'matriculas', 'update', 0, '', 1, NULL, NULL),
 (230, 'application', 'matriculas', 'update', 1, 'isauthenticated', 2, NULL, NULL),
 (231, 'application', 'usuarios', 'count', 0, '', 1, NULL, NULL),
@@ -929,6 +1399,18 @@ ALTER TABLE `cursos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `cursos_optativas__optativas_cursos`
+--
+ALTER TABLE `cursos_optativas__optativas_cursos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `cursos_troncales__troncales_cursos`
+--
+ALTER TABLE `cursos_troncales__troncales_cursos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `i18n_locales`
 --
 ALTER TABLE `i18n_locales`
@@ -945,6 +1427,18 @@ ALTER TABLE `matriculas`
 -- Indices de la tabla `modalidades`
 --
 ALTER TABLE `modalidades`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `modalidades_optativas__optativas_modalidades`
+--
+ALTER TABLE `modalidades_optativas__optativas_modalidades`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `modalidades_troncales__troncales_modalidades`
+--
+ALTER TABLE `modalidades_troncales__troncales_modalidades`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1057,7 +1551,19 @@ ALTER TABLE `core_store`
 -- AUTO_INCREMENT de la tabla `cursos`
 --
 ALTER TABLE `cursos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT de la tabla `cursos_optativas__optativas_cursos`
+--
+ALTER TABLE `cursos_optativas__optativas_cursos`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+
+--
+-- AUTO_INCREMENT de la tabla `cursos_troncales__troncales_cursos`
+--
+ALTER TABLE `cursos_troncales__troncales_cursos`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT de la tabla `i18n_locales`
@@ -1075,13 +1581,25 @@ ALTER TABLE `matriculas`
 -- AUTO_INCREMENT de la tabla `modalidades`
 --
 ALTER TABLE `modalidades`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT de la tabla `modalidades_optativas__optativas_modalidades`
+--
+ALTER TABLE `modalidades_optativas__optativas_modalidades`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+
+--
+-- AUTO_INCREMENT de la tabla `modalidades_troncales__troncales_modalidades`
+--
+ALTER TABLE `modalidades_troncales__troncales_modalidades`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 
 --
 -- AUTO_INCREMENT de la tabla `optativas`
 --
 ALTER TABLE `optativas`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT de la tabla `strapi_administrator`
@@ -1093,7 +1611,7 @@ ALTER TABLE `strapi_administrator`
 -- AUTO_INCREMENT de la tabla `strapi_permission`
 --
 ALTER TABLE `strapi_permission`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=402;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=957;
 
 --
 -- AUTO_INCREMENT de la tabla `strapi_role`
@@ -1117,7 +1635,7 @@ ALTER TABLE `strapi_webhooks`
 -- AUTO_INCREMENT de la tabla `troncales`
 --
 ALTER TABLE `troncales`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT de la tabla `upload_file`

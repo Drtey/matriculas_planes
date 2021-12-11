@@ -22,22 +22,22 @@
       "via": "curso",
       "model": "matriculas"
     },
-    "troncales": {
-      "collection": "troncales",
-      "via": "curso"
-    },
     "modalidades": {
-      "collection": "modalidades",
-      "via": "curso"
-    },
-    "optativas": {
-      "collection": "optativas",
-      "via": "curso"
+      "via": "curso",
+      "collection": "modalidades"
     },
     "condiciones": {
       "collection": "condiciones",
       "via": "cursos",
       "dominant": true
+    },
+    "troncales": {
+      "via": "cursos",
+      "collection": "troncales"
+    },
+    "optativas": {
+      "via": "cursos",
+      "collection": "optativas"
     }
   }
 }

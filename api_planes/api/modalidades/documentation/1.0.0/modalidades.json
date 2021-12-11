@@ -542,25 +542,25 @@
               "matricula": {
                 "type": "string"
               },
-              "troncales": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "modalidades": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "optativas": {
+              "condiciones": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "condiciones": {
+              "troncales": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "optativas": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -577,6 +577,106 @@
               }
             }
           },
+          "optativas": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "optativa_cod": {
+                  "type": "string"
+                },
+                "cursos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "Horas": {
+                  "type": "string"
+                },
+                "Religion": {
+                  "type": "boolean"
+                },
+                "LenguaExtranjera": {
+                  "type": "boolean"
+                },
+                "modalidades": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "troncales": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "asignatura_cod": {
+                  "type": "string"
+                },
+                "cursos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "modalidades": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "Eleccion": {
+                  "type": "boolean"
+                },
+                "Tipo": {
+                  "type": "string",
+                  "enum": [
+                    "general",
+                    "especifica",
+                    "de_opcion"
+                  ]
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -590,6 +690,18 @@
           },
           "curso": {
             "type": "string"
+          },
+          "optativas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "troncales": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

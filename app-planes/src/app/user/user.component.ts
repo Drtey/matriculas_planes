@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import axios from 'axios';
@@ -11,6 +11,8 @@ import axios from 'axios';
 export class UserComponent implements OnInit {
 
   matriculaUser;
+
+  response;
 
   constructor(private authService: AuthService) { 
 
@@ -60,6 +62,9 @@ export class UserComponent implements OnInit {
       editarBoton.classList.remove('apagado');
       guardarBoton.classList.add('apagado');
     });
+
+
+    this.getMatricula();
   }
 
   abrirModal() {
@@ -74,26 +79,28 @@ export class UserComponent implements OnInit {
     document.body.classList.remove('stop-scrolling')
   }
 
-<<<<<<< HEAD
-  getMatricula() {
-    console.log(this.authService.data.id);
+
+  async getMatricula() {
+    /* console.log(this.authService.data.id); */
     axios
       .get(`${this.authService.url}/matriculas?user=${this.authService.data.id}`)
       .then(response => {
-        this.matriculaUser = response.data;
-        console.log(this.matriculaUser);
+        response
+        console.log(response)
+        this.matriculaUser = response;
+        /* console.log(this.matriculaUser); */
       })
       .catch(error => {
         console.log(error);
       })
   }
-=======
+
   quitarFocus() {
     const select = document.getElementById('elegir-curso');
     select.blur();
   }
 
->>>>>>> 9905396d7a6332c038939dbe47a3bf02681aaa09
+
 }
 
 

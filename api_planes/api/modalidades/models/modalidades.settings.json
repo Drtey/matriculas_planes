@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "modalidades",
   "info": {
-    "name": "Modalidades"
+    "name": "Modalidades",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -17,6 +18,16 @@
     "curso": {
       "via": "modalidades",
       "model": "cursos"
+    },
+    "optativas": {
+      "collection": "optativas",
+      "via": "modalidades",
+      "dominant": true
+    },
+    "troncales": {
+      "via": "modalidades",
+      "collection": "troncales",
+      "dominant": true
     }
   }
 }

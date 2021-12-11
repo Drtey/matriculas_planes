@@ -1,4 +1,4 @@
-<div class="bloque matricula-item">
+<div class="bloque matricula-item" *ngIf="matricula">
     <div class="enviado-mensaje" *ngIf="enviada">
         <h3>ENVIADA</h3>
     </div>
@@ -17,7 +17,7 @@
             <dd>30/11/2021 19:35</dd>
         </dl>
     </div>
-    <span class="matricula-item__id">Nº 21373</span>
+    <span class="matricula-item__id">Nº {{matricula.data}}</span>
     <div class="matricula-item__botones">
         <button (click)="openModal()" class="boton enviar" [ngClass]="{'apagado': enviada == true}">Enviar al centro</button>
         <button class="boton" [ngClass]="{'apagado': enviada == true}">Editar matrícula</button>
