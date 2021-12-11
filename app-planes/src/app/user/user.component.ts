@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import axios from 'axios';
+import { getLocaleFirstDayOfWeek } from '@angular/common';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-user',
@@ -12,7 +14,7 @@ export class UserComponent implements OnInit {
 
   matriculaUser;
 
-  constructor(private authService: AuthService) { 
+  constructor(private cookie: CookieService,private authService: AuthService) { 
 
   }
 
@@ -60,6 +62,8 @@ export class UserComponent implements OnInit {
       editarBoton.classList.remove('apagado');
       guardarBoton.classList.add('apagado');
     });
+
+    this.getMatricula();
   }
 
   abrirModal() {
@@ -74,11 +78,11 @@ export class UserComponent implements OnInit {
     document.body.classList.remove('stop-scrolling')
   }
 
-<<<<<<< HEAD
   getMatricula() {
-    console.log(this.authService.data.id);
+    console.log(this.cookie.get('id'));
+    const id = this.cookie.get('id');
     axios
-      .get(`${this.authService.url}/matriculas?user=${this.authService.data.id}`)
+      .get(`${this.authService.url}/matriculas?user=${id}`)
       .then(response => {
         this.matriculaUser = response.data;
         console.log(this.matriculaUser);
@@ -87,13 +91,11 @@ export class UserComponent implements OnInit {
         console.log(error);
       })
   }
-=======
   quitarFocus() {
     const select = document.getElementById('elegir-curso');
     select.blur();
   }
 
->>>>>>> 9905396d7a6332c038939dbe47a3bf02681aaa09
 }
 
 

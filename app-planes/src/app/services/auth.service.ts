@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { ActivationStart, Router } from '@angular/router';
 import axios from 'axios';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class AuthService {
 
   url = "http://localhost:1337";
 
-  constructor(private http: HttpClient, private jwtHelper: JwtHelperService, private router: Router) { }
+  constructor(private cookie: CookieService, private jwtHelper: JwtHelperService, private router: Router) { }
 
   login(identifier, password) {
     axios
@@ -25,11 +26,13 @@ export class AuthService {
         // Handle success.
         console.log('Well done!');
         this.data = response.data.user;
-        localStorage.setItem('jwt',response.data.jwt);
+        this.cookie.set('jwt', response.data.jwt, {expires: 30 / 1440});
+        this.cookie.set('user', response.data, {expires: 30 / 1440});
+        this.cookie.set('id', response.data.user.id, {expires: 30 / 1440})
+        this.cookie.set('role', response.data.user.role.type, {expires: 30 / 1440})
+        console.log(this.cookie.get('role'));
         this.router.navigate(['main/user']);
-        
       })
-      
       .catch(error => {
         // Handle error.
         console.log('An error occurred:', error.response);
@@ -73,15 +76,15 @@ export class AuthService {
   }
 
   isAuth():boolean {
-    const jwt = localStorage.getItem('jwt');
-    if(this.jwtHelper.isTokenExpired(jwt) || !localStorage.getItem('jwt')) {
+    const jwt = this.cookie.get('jwt');
+    if(this.jwtHelper.isTokenExpired(jwt) || !this.cookie.get('jwt')) {
       return false;
     }
     return true;
   }
 
   logout(){
-    localStorage.removeItem('jwt');
+    this.cookie.deleteAll();
     this.router.navigate(['signin']);
   }
 
