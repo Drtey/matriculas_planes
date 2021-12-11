@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import axios from 'axios';
@@ -14,9 +14,6 @@ export class UserComponent implements OnInit {
 
   matriculaUser;
 
-  response;
-
-  constructor(private authService: AuthService) { 
   constructor(private cookie: CookieService,private authService: AuthService) { 
 
   }
@@ -81,30 +78,23 @@ export class UserComponent implements OnInit {
     document.body.classList.remove('stop-scrolling')
   }
 
-
-  async getMatricula() {
-    /* console.log(this.authService.data.id); */
   getMatricula() {
     console.log(this.cookie.get('id'));
     const id = this.cookie.get('id');
     axios
       .get(`${this.authService.url}/matriculas?user=${id}`)
       .then(response => {
-        response
-        console.log(response)
-        this.matriculaUser = response;
-        /* console.log(this.matriculaUser); */
+        this.matriculaUser = response.data;
+        console.log(this.matriculaUser);
       })
       .catch(error => {
         console.log(error);
       })
   }
-
   quitarFocus() {
     const select = document.getElementById('elegir-curso');
     select.blur();
   }
-
 
 }
 

@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { interval } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-matricula-item',
@@ -10,15 +9,9 @@ export class MatriculaItemComponent implements OnInit {
 
   enviada = true
 
-  @Input() matricula
-
   constructor() { }
 
   ngOnInit(): void {
-/*     console.log(this.matricula)
-    console.log(this.matricula.id) */
-    
-
   }
 
   openModal() {
