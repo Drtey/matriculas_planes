@@ -39,7 +39,7 @@ export class AuthService {
         const fp = document.getElementById('forgotten-password');
         fp.innerHTML = `
             <span style="color: #D83F3F">Credenciales incorrectas</span>
-            <a href="https://google.es" style="color: #3195d1;
+            <a href="/recover-password" style="color: #3195d1;
             font-weight: bold;">Recuperar contraseña</a>
         `
       });
@@ -59,6 +59,10 @@ export class AuthService {
       .catch(error => {
         // Handle error.
         console.log('An error occurred:', error.response);
+        const fp = document.getElementById('failed-signup');
+        fp.innerHTML = `
+            <span style="color: #D83F3F">El email es inválido o ya está registrado</span>
+        `
       });
   }
 
