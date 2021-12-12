@@ -35,11 +35,11 @@
     &__boton-atras {
         position: absolute;
         bottom: var(--spacer-9);
-        left: 300px;
-        width: 10rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 3rem;
         @media (max-width: 970px) {
-            left: 20px;
-            bottom: 20px;
+            bottom: 5px;
         }
     }
     
