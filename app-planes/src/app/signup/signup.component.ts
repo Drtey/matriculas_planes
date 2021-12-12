@@ -28,6 +28,10 @@ export class SignupComponent implements OnInit {
  */    }
     else {
       console.log("Password doesn´t match.")
+      const fp = document.getElementById('failed-signup');
+        fp.innerHTML = `
+            <span style="color: #D83F3F">Las contraseñas no coinciden</span>
+        `
     }
   }
 }

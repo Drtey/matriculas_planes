@@ -5,16 +5,18 @@
             <h2>Registro</h2>
 
             <label for="email" id="email">Correo electrónico</label>
-            <input (click)="register()" type="text" [(ngModel)]="usuario.email">
+            <input (keyup.enter)="register()" type="text" [(ngModel)]="usuario.email">
 
             <label for="usuario" id="usuario">Usuario</label>
-            <input (click)="register()" type="text" [(ngModel)]="usuario.username">
+            <input (keyup.enter)="register()" type="text" [(ngModel)]="usuario.username">
     
             <label for="password" id="password">Contraseña</label>
-            <input (click)="register()" type="password" [(ngModel)]="usuario.password">
+            <input (keyup.enter)="register()" type="password" [(ngModel)]="usuario.password">
     
             <label for="confirm-password" id="confirm-password">Confirmar contraseña</label>
-            <input (click)="register()" type="password" [(ngModel)]="usuario.password2">
+            <input (keyup.enter)="register()" type="password" [(ngModel)]="usuario.password2">
+
+            <div id="failed-signup" class="sign__container__failed-signup"></div>
     
             <button (click)="register()" class="sign__container__boton boton" id="signup-button">Crear cuenta</button>
     

@@ -50,6 +50,20 @@
                 display:block;
             }
         }
+
+        &__failed-signup {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+            margin-top: var(--spacer-1);
+            span {
+                display:block;
+                a {
+                    color: var(--color-primary);
+                    font-weight: bold;
+                }
+            }
+        }
     }
     @media (max-width: 700px) { 
         &__container {

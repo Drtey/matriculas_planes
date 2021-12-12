@@ -59,6 +59,10 @@ export class AuthService {
       .catch(error => {
         // Handle error.
         console.log('An error occurred:', error.response);
+        const fp = document.getElementById('failed-signup');
+        fp.innerHTML = `
+            <span style="color: #D83F3F">El email es inválido o ya está registrado</span>
+        `
       });
   }
 
