@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 export class SignupComponent implements OnInit {
 
   usuario = {
-    identifier: "",
+    email: "",
+    username: "",
     password: "",
     password2: ""
   }
@@ -22,7 +23,7 @@ export class SignupComponent implements OnInit {
 
   register() {
     if(this.usuario.password == this.usuario.password2) {
-      this.authService.register(this.usuario.identifier, this.usuario.password2);
+      this.authService.register(this.usuario.email, this.usuario.username, this.usuario.password2);
 /*       this.authService.emailValidation(this.usuario.identifier);
  */    }
     else {

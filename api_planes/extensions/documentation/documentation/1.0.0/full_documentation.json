@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/11/2021 4:13:29 PM"
+    "x-generation-date": "12/12/2021 12:32:54 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6250,25 +6250,25 @@
               "matricula": {
                 "type": "string"
               },
-              "troncales": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "modalidades": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "optativas": {
+              "condiciones": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "condiciones": {
+              "troncales": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "optativas": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -6327,6 +6327,21 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "tel": {
+                "type": "integer"
+              },
+              "DNI": {
+                "type": "string"
+              },
+              "Nombre": {
+                "type": "string"
+              },
+              "Papellido": {
+                "type": "string"
+              },
+              "Sapellido": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -7034,6 +7049,21 @@
                     "type": "string"
                   }
                 },
+                "tel": {
+                  "type": "integer"
+                },
+                "DNI": {
+                  "type": "string"
+                },
+                "Nombre": {
+                  "type": "string"
+                },
+                "Papellido": {
+                  "type": "string"
+                },
+                "Sapellido": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -7177,6 +7207,23 @@
                 }
               }
             }
+          },
+          "tel": {
+            "type": "integer"
+          },
+          "DNI": {
+            "type": "string",
+            "maxLength": 9,
+            "minLength": 9
+          },
+          "Nombre": {
+            "type": "string"
+          },
+          "Papellido": {
+            "type": "string"
+          },
+          "Sapellido": {
+            "type": "string"
           }
         }
       },
@@ -7224,6 +7271,23 @@
             "items": {
               "type": "string"
             }
+          },
+          "tel": {
+            "type": "integer"
+          },
+          "DNI": {
+            "type": "string",
+            "maxLength": 9,
+            "minLength": 9
+          },
+          "Nombre": {
+            "type": "string"
+          },
+          "Papellido": {
+            "type": "string"
+          },
+          "Sapellido": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

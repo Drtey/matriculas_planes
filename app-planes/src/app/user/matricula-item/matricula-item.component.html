@@ -5,19 +5,19 @@
     <div class="matricula-item__info">
         <dl>
             <dt>Nombre y apellidos</dt>
-            <dd>Vicente Martínez Rodríguez</dd>
+            <dd>{{matriculaUser.user.Nombre}} {{matriculaUser.user.Papellido}} {{matriculaUser.user.Sapellido}}</dd>
         
             <dt>NIF/NIE</dt>
-            <dd>49192904B</dd>
+            <dd>{{matriculaUser.user.DNI}}</dd>
         
             <dt>Curso</dt>
-            <dd>1º ESO</dd>
+            <dd>{{matriculaUser.curso.nombre}}</dd>
         
             <dt>Fecha de creación</dt>
-            <dd>30/11/2021 19:35</dd>
+            <dd>{{matriculaUser.created_at}}</dd>
         </dl>
     </div>
-    <span class="matricula-item__id">Nº 21373</span>
+    <span class="matricula-item__id">Nº {{matriculaUser.id}}</span>
     <div class="matricula-item__botones">
         <button (click)="openModal()" class="boton enviar" [ngClass]="{'apagado': enviada == true}">Enviar al centro</button>
         <button class="boton" [ngClass]="{'apagado': enviada == true}">Editar matrícula</button>
