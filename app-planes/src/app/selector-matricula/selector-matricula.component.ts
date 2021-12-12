@@ -48,5 +48,10 @@ export class SelectorMatriculaComponent implements OnInit {
       })
   }
 
+  togglemodalidades() {
+    document.getElementById('elegir-modalidades').style.display = "none";
+    document.getElementById('elegir-cursos').style.display = "block";
+  }
+
   
 }
