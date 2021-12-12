@@ -23,6 +23,166 @@
       "via": "matriculas",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "papellido": {
+      "type": "string",
+      "private": false,
+      "required": true
+    },
+    "sapellido": {
+      "type": "string",
+      "required": true
+    },
+    "NIF": {
+      "type": "string",
+      "required": true
+    },
+    "direccion": {
+      "type": "text",
+      "required": true
+    },
+    "localidad": {
+      "type": "string",
+      "required": true
+    },
+    "provincia": {
+      "type": "string",
+      "required": true
+    },
+    "lugarNacimiento": {
+      "type": "string",
+      "required": true
+    },
+    "provinciaNacimiento": {
+      "type": "string",
+      "required": true
+    },
+    "tel": {
+      "type": "biginteger",
+      "max": "9",
+      "min": "9"
+    },
+    "codigoPostal": {
+      "type": "biginteger",
+      "max": "5",
+      "min": "5",
+      "required": true
+    },
+    "fechaNac": {
+      "type": "date",
+      "required": true
+    },
+    "nSSocial": {
+      "type": "biginteger",
+      "max": "11",
+      "min": "11"
+    },
+    "nombreTutor1": {
+      "type": "string",
+      "required": true
+    },
+    "papellidoTutor1": {
+      "type": "string",
+      "required": true
+    },
+    "sapellidoTutor1": {
+      "type": "string",
+      "required": true
+    },
+    "emailTutor1": {
+      "type": "email"
+    },
+    "telTutor1": {
+      "type": "biginteger",
+      "max": "9",
+      "min": "9",
+      "required": true
+    },
+    "nombreTutor2": {
+      "type": "string"
+    },
+    "papellidoTutor2": {
+      "type": "string"
+    },
+    "sapellidoTutor2": {
+      "type": "string"
+    },
+    "emailTutor2": {
+      "type": "email"
+    },
+    "telTutor2": {
+      "type": "biginteger",
+      "max": "9",
+      "min": "9",
+      "required": true
+    },
+    "nifTutor1": {
+      "type": "string",
+      "required": true,
+      "maxLength": 9,
+      "minLength": 7
+    },
+    "nifTutor2": {
+      "type": "string",
+      "required": true,
+      "maxLength": 9,
+      "minLength": 7
+    },
+    "faltasTutor1": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "private": true
+    },
+    "faltasTutor2": {
+      "type": "boolean"
+    },
+    "imagenPermisos": {
+      "type": "boolean",
+      "required": true,
+      "private": true
+    },
+    "enfermedades": {
+      "type": "boolean",
+      "required": true
+    },
+    "salidaTutor1": {
+      "type": "boolean",
+      "required": false
+    },
+    "salidaTutor2": {
+      "type": "boolean",
+      "required": false
+    },
+    "firmaTutor1": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "firmaTutor2": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "datosPersonales": {
+      "type": "boolean",
+      "required": false
     }
   }
 }
