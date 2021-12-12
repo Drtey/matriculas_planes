@@ -16,6 +16,8 @@ export class AdminpanelComponent implements OnInit {
 
   matriculas;
   cursos;
+  modal;
+  modalidades;
 
   @ViewChild(DataTableDirective)
   dtElement: DataTableDirective;
@@ -31,26 +33,33 @@ export class AdminpanelComponent implements OnInit {
         this.matriculas = response.data;
         console.log(this.matriculas);
         this.rerender();
-        
       })
       .catch((error) => {
         console.log(error);
       });
-      axios
+    axios
       .get(`${this.db.url}/cursos`)
-      .then((response) => {
+      .then((response) => {        
         this.cursos = response.data.map((curso) => {
           return {
-              id: curso.id,
-              nombre: curso.nombre,}
-              ;});
-        console.log(this.cursos);
+            id: curso.id,
+            nombre: curso.nombre,
+            modalidades: curso.modalidades,
+          };
+        });
+        this.modalidades = this.cursos[0].modalidades.map((modalidad) => {
+          return {
+            id: modalidad.id,
+            nombre: modalidad.nombre,
+            };
         
+        });
+       
+        console.log(this.modalidades);
       })
       .catch((error) => {
         console.log(error);
       });
-    console.log(this.cookie.get('role'));
   }
   ngAfterViewInit(): void {
     this.dtTrigger.next();
@@ -67,7 +76,6 @@ export class AdminpanelComponent implements OnInit {
       pagingType: 'full_numbers',
       pageLength: 2,
     };
-    
   }
   rerender(): void {
     this.dtElement.dtInstance.then((dtInstance: DataTables.Api) => {
@@ -76,19 +84,24 @@ export class AdminpanelComponent implements OnInit {
       // Call the dtTrigger to rerender again
       this.dtTrigger.next();
     });
-   }
+  }
 
-   getMatriculasByCurso(id) {
+  getMatriculasByCurso(id) {
     axios
       .get(`${this.db.url}/matriculas?curso=${id}`)
       .then((response) => {
         this.matriculas = response.data;
         console.log(this.matriculas);
         this.rerender();
-        
       })
       .catch((error) => {
         console.log(error);
       });
-   }
+  }
+
+  setModalidad(id) {
+    
+    this.modal = id;
+    console.log(this.modal);
+  }
 }

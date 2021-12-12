@@ -3,10 +3,19 @@
   <div>
     <h2>Filtros disponibles</h2>
     <ng-container *ngFor="let curso of cursos">
-      <button class="boton">{{curso.nombre}}</button>
-    </ng-container>
+      <button class="boton" (click)="setModalidad(curso.id)">
+        {{ curso.nombre }}
+      </button>
+
+      <ng-container >
+        <div *ngFor="let modalidad of modalidades">
+          <button class="boton">
+            {{ modalidad.nombre }}
+          </button>
+        </div></ng-container
+      >
       
-    
+    </ng-container>
     
   </div>
 </div>
