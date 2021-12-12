@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-12-2021 a las 19:37:01
+-- Tiempo de generación: 12-12-2021 a las 19:58:41
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.11
 
@@ -134,12 +134,12 @@ CREATE TABLE `cursos` (
 --
 
 INSERT INTO `cursos` (`id`, `nombre`, `curso_cod`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`, `matricula`) VALUES
-(1, '1º Bachillerato', 'BH1', '2021-11-10 17:05:09', 1, 1, '2021-11-10 16:05:07', '2021-12-11 13:43:57', 1),
+(1, '1º ESO', 'E1', '2021-12-11 12:02:22', 1, 1, '2021-12-11 10:56:18', '2021-12-11 13:38:46', NULL),
 (2, '2º ESO', 'E2', '2021-11-11 18:55:39', 1, 1, '2021-11-11 17:55:37', '2021-12-11 13:38:42', NULL),
-(3, '1º ESO', 'E1', '2021-12-11 12:02:22', 1, 1, '2021-12-11 10:56:18', '2021-12-11 13:38:46', NULL),
-(10, '3º ESO', 'E3', '2021-12-11 12:46:44', 1, 1, '2021-12-11 11:46:42', '2021-12-11 13:38:37', NULL),
-(13, '4º ESO', 'E4', '2021-12-11 14:13:52', 1, 1, '2021-12-11 13:13:50', '2021-12-11 13:38:33', NULL),
-(14, '2º Bachillerato', 'BH2', '2021-12-11 14:42:55', 1, 1, '2021-12-11 13:42:37', '2021-12-11 13:44:01', NULL);
+(3, '3º ESO', 'E3', '2021-12-11 12:46:44', 1, 1, '2021-12-11 11:46:42', '2021-12-11 13:38:37', NULL),
+(4, '4º ESO', 'E4', '2021-12-11 14:13:52', 1, 1, '2021-12-11 13:13:50', '2021-12-11 13:38:33', NULL),
+(5, '1º Bachillerato', 'BH1', '2021-11-10 17:05:09', 1, 1, '2021-11-10 16:05:07', '2021-12-11 13:43:57', 1),
+(6, '2º Bachillerato', 'BH2', '2021-12-11 14:42:55', 1, 1, '2021-12-11 13:42:37', '2021-12-11 13:44:01', NULL);
 
 -- --------------------------------------------------------
 
@@ -946,21 +946,21 @@ INSERT INTO `strapi_permission` (`id`, `action`, `subject`, `properties`, `condi
 (1758, 'plugins::content-manager.explorer.create', 'application::matriculas.matriculas', '{\"fields\":[\"fecha\",\"curso\",\"user\",\"nombre\",\"papellido\",\"sapellido\",\"NIF\",\"direccion\",\"localidad\",\"provincia\",\"lugarNacimiento\",\"provinciaNacimiento\",\"tel\",\"codigoPostal\",\"fechaNac\",\"nSSocial\",\"nombreTutor1\",\"papellidoTutor1\",\"sapellidoTutor1\",\"emailTutor1\",\"telTutor1\",\"nombreTutor2\",\"papellidoTutor2\",\"sapellidoTutor2\",\"emailTutor2\",\"telTutor2\",\"nifTutor1\",\"nifTutor2\",\"faltasTutor1\",\"faltasTutor2\",\"imagenPermisos\",\"enfermedades\",\"salidaTutor1\",\"salidaTutor2\",\"firmaTutor1\",\"firmaTutor2\",\"datosPersonales\"]}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
 (1759, 'plugins::content-manager.explorer.read', 'application::matriculas.matriculas', '{\"fields\":[\"fecha\",\"curso\",\"user\",\"nombre\",\"papellido\",\"sapellido\",\"NIF\",\"direccion\",\"localidad\",\"provincia\",\"lugarNacimiento\",\"provinciaNacimiento\",\"tel\",\"codigoPostal\",\"fechaNac\",\"nSSocial\",\"nombreTutor1\",\"papellidoTutor1\",\"sapellidoTutor1\",\"emailTutor1\",\"telTutor1\",\"nombreTutor2\",\"papellidoTutor2\",\"sapellidoTutor2\",\"emailTutor2\",\"telTutor2\",\"nifTutor1\",\"nifTutor2\",\"faltasTutor1\",\"faltasTutor2\",\"imagenPermisos\",\"enfermedades\",\"salidaTutor1\",\"salidaTutor2\",\"firmaTutor1\",\"firmaTutor2\",\"datosPersonales\"]}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
 (1760, 'plugins::content-manager.explorer.update', 'application::matriculas.matriculas', '{\"fields\":[\"fecha\",\"curso\",\"user\",\"nombre\",\"papellido\",\"sapellido\",\"NIF\",\"direccion\",\"localidad\",\"provincia\",\"lugarNacimiento\",\"provinciaNacimiento\",\"tel\",\"codigoPostal\",\"fechaNac\",\"nSSocial\",\"nombreTutor1\",\"papellidoTutor1\",\"sapellidoTutor1\",\"emailTutor1\",\"telTutor1\",\"nombreTutor2\",\"papellidoTutor2\",\"sapellidoTutor2\",\"emailTutor2\",\"telTutor2\",\"nifTutor1\",\"nifTutor2\",\"faltasTutor1\",\"faltasTutor2\",\"imagenPermisos\",\"enfermedades\",\"salidaTutor1\",\"salidaTutor2\",\"firmaTutor1\",\"firmaTutor2\",\"datosPersonales\"]}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1761, 'plugins::content-manager.explorer.delete', 'application::condiciones.condiciones', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1762, 'plugins::content-manager.explorer.delete', 'application::cursos.cursos', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1763, 'plugins::content-manager.explorer.delete', 'application::matriculas.matriculas', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1764, 'plugins::content-manager.explorer.delete', 'application::modalidades.modalidades', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1765, 'plugins::content-manager.explorer.delete', 'application::optativas.optativas', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1766, 'plugins::content-manager.explorer.delete', 'application::troncales.troncales', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1767, 'plugins::content-manager.explorer.delete', 'application::usuarios.usuarios', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1768, 'plugins::content-manager.explorer.publish', 'application::condiciones.condiciones', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1769, 'plugins::content-manager.explorer.publish', 'application::cursos.cursos', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1770, 'plugins::content-manager.explorer.publish', 'application::modalidades.modalidades', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1771, 'plugins::content-manager.explorer.publish', 'application::optativas.optativas', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1772, 'plugins::content-manager.explorer.publish', 'application::troncales.troncales', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1773, 'plugins::content-manager.explorer.publish', 'application::usuarios.usuarios', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1774, 'plugins::content-manager.explorer.delete', 'plugins::users-permissions.user', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19'),
-(1775, 'plugins::content-manager.explorer.publish', 'application::matriculas.matriculas', '{}', '[]', 1, '2021-12-12 17:26:19', '2021-12-12 17:26:19');
+(1776, 'plugins::content-manager.explorer.delete', 'application::condiciones.condiciones', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:16'),
+(1777, 'plugins::content-manager.explorer.delete', 'application::cursos.cursos', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:16'),
+(1778, 'plugins::content-manager.explorer.delete', 'application::matriculas.matriculas', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:16'),
+(1779, 'plugins::content-manager.explorer.delete', 'application::modalidades.modalidades', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:16'),
+(1780, 'plugins::content-manager.explorer.delete', 'application::optativas.optativas', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:16'),
+(1781, 'plugins::content-manager.explorer.delete', 'application::troncales.troncales', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:16'),
+(1782, 'plugins::content-manager.explorer.delete', 'application::usuarios.usuarios', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:16'),
+(1783, 'plugins::content-manager.explorer.delete', 'plugins::users-permissions.user', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:16'),
+(1784, 'plugins::content-manager.explorer.publish', 'application::condiciones.condiciones', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:16'),
+(1785, 'plugins::content-manager.explorer.publish', 'application::cursos.cursos', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:16'),
+(1786, 'plugins::content-manager.explorer.publish', 'application::matriculas.matriculas', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:17'),
+(1787, 'plugins::content-manager.explorer.publish', 'application::optativas.optativas', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:17'),
+(1788, 'plugins::content-manager.explorer.publish', 'application::troncales.troncales', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:17'),
+(1789, 'plugins::content-manager.explorer.publish', 'application::usuarios.usuarios', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:17'),
+(1790, 'plugins::content-manager.explorer.publish', 'application::modalidades.modalidades', '{}', '[]', 1, '2021-12-12 17:44:16', '2021-12-12 17:44:17');
 
 -- --------------------------------------------------------
 
@@ -1146,6 +1146,13 @@ CREATE TABLE `upload_file` (
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `upload_file`
+--
+
+INSERT INTO `upload_file` (`id`, `name`, `alternativeText`, `caption`, `width`, `height`, `formats`, `hash`, `ext`, `mime`, `size`, `url`, `previewUrl`, `provider`, `provider_metadata`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
+(1, 'Captura de pantalla 2021-12-06 212105.png', '', '', 101, 154, NULL, 'Captura_de_pantalla_2021_12_06_212105_ae34485a99', '.png', 'image/png', '27.32', '/uploads/Captura_de_pantalla_2021_12_06_212105_ae34485a99.png', NULL, 'local', NULL, 1, 1, '2021-12-12 17:51:07', '2021-12-12 17:51:07');
 
 -- --------------------------------------------------------
 
@@ -1806,7 +1813,7 @@ ALTER TABLE `strapi_administrator`
 -- AUTO_INCREMENT de la tabla `strapi_permission`
 --
 ALTER TABLE `strapi_permission`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1776;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1791;
 
 --
 -- AUTO_INCREMENT de la tabla `strapi_role`
@@ -1836,7 +1843,7 @@ ALTER TABLE `troncales`
 -- AUTO_INCREMENT de la tabla `upload_file`
 --
 ALTER TABLE `upload_file`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `upload_file_morph`
