@@ -1,39 +1,65 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { DbService } from '../services/db.service';
 import axios from 'axios';
 import { CookieService } from 'ngx-cookie-service';
+import { Subject } from 'rxjs';
+import { DataTableDirective } from 'angular-datatables';
 
 @Component({
   selector: 'app-adminpanel',
   templateUrl: './adminpanel.component.html',
-  styleUrls: ['./adminpanel.component.scss']
+  styleUrls: ['./adminpanel.component.scss'],
 })
 export class AdminpanelComponent implements OnInit {
+  constructor(private db: DbService, private cookie: CookieService) {}
 
-  constructor(private db:DbService, private cookie:CookieService) { }
+  matriculas;
 
-  matriculas:any;
-  
+  @ViewChild(DataTableDirective)
+  dtElement: DataTableDirective;
+  dtOptions: DataTables.Settings = {};
+  dtTrigger: Subject<any> = new Subject();
 
-  async ngOnInit() {
+  ngOnInit(): void {
+    this.toDo();
 
-    this.matriculas =  axios
-    .get(`${this.db.url}/matriculas`)
-    .then(response => {
-      this.matriculas = response.data;
-      console.log(this.matriculas);
-      
-    })
-    .catch(error => {
-      console.log(error);
-    });    
+    axios
+      .get(`${this.db.url}/matriculas`)
+      .then((response) => {
+        this.matriculas = response.data;
+        console.log(this.matriculas);
+        this.rerender();
+        
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     console.log(this.cookie.get('role'));
   }
+  ngAfterViewInit(): void {
+    this.dtTrigger.next();
+  }
 
- 
+  ngOnDestroy(): void {
+    // Do not forget to unsubscribe the event
+    this.dtTrigger.unsubscribe();
+  }
 
-  
-  
-
+  toDo() {
+    this.dtOptions = {
+      ajax: this.matriculas,
+      pagingType: 'full_numbers',
+      pageLength: 2,
+    };
+    
+  }
+  rerender(): void {
+    this.dtElement.dtInstance.then((dtInstance: DataTables.Api) => {
+      // Destroy the table first
+      dtInstance.destroy();
+      // Call the dtTrigger to rerender again
+      this.dtTrigger.next();
+    });
+   }
 }

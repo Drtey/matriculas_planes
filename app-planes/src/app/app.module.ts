@@ -31,18 +31,19 @@ import { MatriculaItemComponent } from './user/matricula-item/matricula-item.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalComponent } from './modal/modal.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
+import { DataTablesModule } from 'angular-datatables';
 
 const rutas = [ 
 
   { path: 'signin', component: SigninComponent},
   { path: 'signup', component: SignupComponent},
-  { path: '', redirectTo: '/signin', pathMatch:'full'},
-  { path: 'adminpanel', component: AdminpanelComponent, canActivate: [AuthGuard, RoleGuard], data: {expectedRole: 'public'}},
+  { path: '', redirectTo: '/signin', pathMatch:'full'},  
   { path: 'main', component: MainComponent, canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'public' }, 
       children: [
       { path: 'user', component: UserComponent},
       { path: 'matricula', component: MatriculaComponent},
-      { path: '', component: MatriculaComponent}
+      { path: '', component: MatriculaComponent},
+      { path: 'adminpanel', component: AdminpanelComponent, canActivate: [AuthGuard, RoleGuard], data: {expectedRole: 'public'}}
     ]
   },
   ];
@@ -76,7 +77,8 @@ const rutas = [
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DataTablesModule
   ],
   providers: [
      // JWT
