@@ -8,13 +8,13 @@
             <dd>{{matriculaUser.user.Nombre}} {{matriculaUser.user.Papellido}} {{matriculaUser.user.Sapellido}}</dd>
         
             <dt>NIF/NIE</dt>
-            <dd>{{matriculaUser.user.DNI}}</dd>
+            <dd style="text-transform: uppercase;">{{matriculaUser.user.DNI}}</dd>
         
             <dt>Curso</dt>
             <dd>{{matriculaUser.curso.nombre}}</dd>
         
             <dt>Fecha de creación</dt>
-            <dd>{{matriculaUser.created_at}}</dd>
+            <dd>{{matriculaUser.created_at | date:"dd/MM/yyyy \'a las\' H:mm\'h\'"}}</dd>
         </dl>
     </div>
     <span class="matricula-item__id">Nº {{matriculaUser.id}}</span>
