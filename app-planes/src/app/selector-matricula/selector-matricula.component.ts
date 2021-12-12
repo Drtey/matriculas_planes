@@ -30,9 +30,23 @@ export class SelectorMatriculaComponent implements OnInit {
         console.log(error);
       })
   }
-
-  elegirModalidad() {
+  elegirModalidad(id) {
+    this.getModalidades(id);
     document.getElementById('elegir-cursos').style.display = "none";
     document.getElementById('elegir-modalidades').style.display = "block";
   }
+
+  getModalidades(idCurso) {
+    axios
+      .get(`${this.authService.url}/modalidades?curso=${idCurso}`)
+      .then(response => {
+        this.modalidades = response.data;
+        console.log(this.modalidades);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
+
+  
 }
