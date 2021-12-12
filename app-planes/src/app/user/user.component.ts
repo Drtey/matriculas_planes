@@ -71,6 +71,8 @@ export class UserComponent implements OnInit {
 
     this.getMatricula();
     this.getUser();
+
+    console.log(this.matriculaUser)
   }
 
   abrirModal() {

@@ -1,0 +1,27 @@
+.selector-matricula {
+    min-height: 70vh;
+    display: grid;
+    place-items: center;
+    &__contenedor {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        width: 50vw;
+        &__titulo {
+            margin: var(--spacer-5);
+        }
+        &__botones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content:center;
+            align-items: center;
+
+            button {
+                min-width: 10rem;
+            }
+        }
+    }
+    
+}

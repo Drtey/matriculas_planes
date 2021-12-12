@@ -201,6 +201,21 @@ input[type=submit] {
     }
 }
 
+.pc {
+    @media (max-width: 970px) {
+        display: none;
+    }
+}
+
+.movil {
+    font-size: .8em;
+    font-style: italic;
+    @media (min-width: 970px) {
+        display: none;
+
+    }
+}
+
 .titulo {
     margin-top: var(--spacer-8);
     text-align: center;
