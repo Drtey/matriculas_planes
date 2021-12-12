@@ -37,6 +37,9 @@
         "especifica",
         "de_opcion"
       ]
+    },
+    "Anotacion": {
+      "type": "text"
     }
   }
 }

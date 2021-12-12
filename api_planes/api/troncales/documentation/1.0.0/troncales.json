@@ -634,6 +634,9 @@
               "de_opcion"
             ]
           },
+          "Anotacion": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -670,6 +673,9 @@
               "especifica",
               "de_opcion"
             ]
+          },
+          "Anotacion": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

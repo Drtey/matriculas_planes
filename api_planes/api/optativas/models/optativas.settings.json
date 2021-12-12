@@ -35,6 +35,15 @@
     "modalidades": {
       "via": "optativas",
       "collection": "modalidades"
+    },
+    "OpcionBilingue": {
+      "type": "boolean"
+    },
+    "Nota": {
+      "type": "text"
+    },
+    "TroncalNoCursada": {
+      "type": "boolean"
     }
   }
 }

@@ -669,6 +669,9 @@
                     "de_opcion"
                   ]
                 },
+                "Anotacion": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -717,6 +720,15 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "OpcionBilingue": {
+                  "type": "boolean"
+                },
+                "Nota": {
+                  "type": "string"
+                },
+                "TroncalNoCursada": {
+                  "type": "boolean"
                 },
                 "published_at": {
                   "type": "string"

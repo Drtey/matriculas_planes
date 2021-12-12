@@ -20,8 +20,8 @@
       "model": "cursos"
     },
     "optativas": {
-      "collection": "optativas",
       "via": "modalidades",
+      "collection": "optativas",
       "dominant": true
     },
     "troncales": {
