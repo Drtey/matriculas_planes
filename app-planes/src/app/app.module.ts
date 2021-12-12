@@ -34,6 +34,7 @@ import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { DataTablesModule } from 'angular-datatables';
 import { SelectorMatriculaComponent } from './selector-matricula/selector-matricula.component';
 
+
 const rutas = [ 
 
   { path: 'signin', component: SigninComponent},
@@ -43,7 +44,7 @@ const rutas = [
       children: [
       { path: 'user', component: UserComponent },
       { path: 'selector-matricula', component: SelectorMatriculaComponent},
-      { path: 'matricula', component: MatriculaComponent},
+      { path: 'matricula/:id', component: MatriculaComponent},
       { path: '', component: MatriculaComponent},
       { path: 'adminpanel', component: AdminpanelComponent, canActivate: [AuthGuard, RoleGuard], data: {expectedRole: 'public'}}
     ]

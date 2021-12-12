@@ -22,6 +22,7 @@
         <button
           class="boton boton-modalidad"
           *ngFor="let modalidad of modalidades"
+            routerLink="/main/matricula/{{modalidad.id}}"
         >
           {{ modalidad.nombre }}
         </button>

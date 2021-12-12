@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import axios from 'axios';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-matricula',
@@ -8,11 +11,18 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 
 export class MatriculaComponent implements OnInit {
+  
 
-  constructor() { 
+  constructor(private route: ActivatedRoute,private router: Router, private authService: AuthService) {}
 
-  }
+  curso;
+  id = this.route.snapshot.paramMap.get('id');
   ngAfterViewInit() {
+    
+      
+  console.log("ID: "+this.id);
+      
+
       const darkMode = <HTMLInputElement> document.getElementById('dark-mode');
       const bloques = document.querySelectorAll('.bloque');
       const modal = document.querySelectorAll('.modal-planes');
@@ -42,4 +52,33 @@ export class MatriculaComponent implements OnInit {
     }); */
   }
 
+  
+  
+
+    getCurso() {
+      axios
+        .get(`${this.authService.url}/cursos`)
+        .then(response => {
+          this.curso = response.data;
+          console.log(this.curso);
+        })
+        .catch(error => {
+          console.log(error);
+        })
+    }
+
+    getOptativas() {
+      axios
+        .get(`${this.authService.url}/optativas?modalidades=${this.id}`)
+        .then(response => {
+          this.curso = response.data;
+          console.log(this.curso);
+        })
+        .catch(error => {
+          console.log(error);
+        })
+    }
+
+  
+  
 }
