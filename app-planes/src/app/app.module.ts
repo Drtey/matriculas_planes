@@ -33,11 +33,13 @@ import { ModalComponent } from './modal/modal.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { DataTablesModule } from 'angular-datatables';
 import { SelectorMatriculaComponent } from './selector-matricula/selector-matricula.component';
+import { RecoverPasswordComponent } from './signin/recover-password/recover-password.component';
 
 const rutas = [ 
 
   { path: 'signin', component: SigninComponent},
   { path: 'signup', component: SignupComponent},
+  { path: 'recover-password', component: RecoverPasswordComponent},
   { path: '', redirectTo: '/signin', pathMatch:'full'},  
   { path: 'main', component: MainComponent, canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'public' }, 
       children: [
@@ -72,6 +74,7 @@ const rutas = [
     ModalComponent,
     AdminpanelComponent,
     SelectorMatriculaComponent,
+    RecoverPasswordComponent,
   ],
   imports: [
     BrowserModule,
