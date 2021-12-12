@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { CookieService } from 'ngx-cookie-service';
 
@@ -10,11 +10,22 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router, private cookie:CookieService) { }
+  rutaAdmin
+
+  constructor(private authService: AuthService, private router: Router, private cookie:CookieService) {
+    this.router.events.subscribe((ev) => {
+      if (ev instanceof NavigationEnd) { 
+        if(this.router.url == '/main/adminpanel'){
+          this.rutaAdmin=false;
+        }
+      }
+    });
+  }
 
   ngOnInit(): void {
     const modal = document.getElementById('modal-logout');
     modal.style.display = "none";
+    this.getRole();
   }
 
   abrirModal() {

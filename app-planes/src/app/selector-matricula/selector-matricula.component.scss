@@ -10,6 +10,7 @@
         width: 50vw;
         &__titulo {
             margin: var(--spacer-5);
+            text-align: center;
         }
         &__botones {
             display: flex;
@@ -17,9 +18,14 @@
             gap: 30px;
             justify-content:center;
             align-items: center;
-
+            
             button {
                 min-width: 10rem;
+            }
+        }
+        @media (max-width: 970px) {
+            &__titulo {
+                margin: var(--spacer-5) 0;
             }
         }
     }

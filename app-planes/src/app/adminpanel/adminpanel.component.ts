@@ -111,7 +111,6 @@ export class AdminpanelComponent implements OnInit {
   }
 
   setModalidad(id) {
-    
     this.modal = id;
     console.log(this.modal);
   }

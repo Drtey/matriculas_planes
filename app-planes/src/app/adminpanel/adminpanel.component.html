@@ -1,8 +1,23 @@
-<h1>PANEL DE ADMINISTRADOR</h1>
-<div class="container">
-  <div>
+
+<div class="adminpanel">
+  <h1>PANEL DE ADMINISTRADOR</h1>
     <h2>Filtros disponibles</h2>
-    <ng-container *ngFor="let curso of cursos">
+    <div class="adminpanel__select-container">
+      <select name="" id="">
+        <option value="" disabled selected hidden>Elige curso</option>
+        <option *ngFor="let curso of cursos" value="{{ curso.id }}">{{ curso.nombre }}</option>
+      </select>
+      <select name="" id="">
+        <option value="" disabled selected hidden>Elige modalidad</option>
+        <option *ngFor="let modalidad of modalidades" value="{{ modalidad.id }}">{{ modalidad.nombre }}</option>
+      </select>
+    </div>
+  <div class="adminpanel__tabla">
+    
+<div class="adminpanel__panel-titulo">
+  
+    
+    <!-- <ng-container *ngFor="let curso of cursos">
       <button class="boton" (click)="setModalidad(curso.id)">
         {{ curso.nombre }}
       </button>
@@ -15,12 +30,9 @@
         </div></ng-container
       >
       
-    </ng-container>
+    </ng-container> -->
     
-  </div>
 </div>
-<div class="adminpanel">
-  <div class="adminpanel__tabla">
 <table
   datatable
   [dtOptions]="dtOptions"
@@ -36,12 +48,6 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>2</td>
-      <td>Paco</td>
-      <td>Pérez</td>
-      <td>1ºESO</td>
-    </tr>
     <tr *ngFor="let matricula of matriculas">
       <td>{{ matricula.id }}</td>
       <td>{{ matricula.user.username }}</td>

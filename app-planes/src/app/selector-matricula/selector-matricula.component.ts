@@ -10,11 +10,13 @@ import axios from 'axios';
 export class SelectorMatriculaComponent implements OnInit {
 
   cursos;
+  modalidades;
 
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
     this.getCursos();
+    document.getElementById('elegir-modalidades').style.display = "none";
   }
 
   getCursos() {
@@ -27,5 +29,10 @@ export class SelectorMatriculaComponent implements OnInit {
       .catch(error => {
         console.log(error);
       })
+  }
+
+  elegirModalidad() {
+    document.getElementById('elegir-cursos').style.display = "none";
+    document.getElementById('elegir-modalidades').style.display = "block";
   }
 }
