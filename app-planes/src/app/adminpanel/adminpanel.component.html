@@ -1,1 +1,20 @@
-<p>adminpanel works!</p>
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"  class="row-border hover">
+    <thead>
+      <tr>
+        <th>Nº Matrícula</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Curso</th>
+      </tr>
+    </thead>
+    <tbody>         
+      <tr *ngFor="let matricula of matriculas">
+        <td>{{matricula.id}}</td>
+        <td>{{matricula.user.username}}</td>
+        <td>{{matricula.user.username}}</td>
+        <td>{{matricula.curso.nombre}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+  
