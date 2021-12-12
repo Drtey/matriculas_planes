@@ -3,5 +3,34 @@
     position: relative;
     height: 20vh;
     background-color: var(--color-primary);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
+    display: flex;
+    padding: var(--spacer-3);
+    justify-content: space-evenly;
+    color: var(--color-font-light);
+    &__bloque {
+        a {
+            color: var(--color-font-light);
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &__titulo {
+
+        }
+        &__texto {
+
+        }
+        &__lista {
+            list-style: none;
+            padding: 0;
+        }
+    }
+    @media (max-width: 970px) {
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        gap: 20px;
+    }
 }

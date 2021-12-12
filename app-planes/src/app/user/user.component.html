@@ -1,4 +1,6 @@
-
+<div class="notificacion-datos" id="notificacion-datos">
+    <span><i class="fas fa-check-circle" style="margin-right: 10px; color:rgb(41, 155, 41)"></i> Tus datos se han guardado con éxito</span>
+</div>
 <div class="user">
     <div>
         <div class="user__datos bloque">
@@ -19,7 +21,7 @@
            
         </div>
         <div class="user__crear-matricula bloque">   
-            <select name="curso" class="user__crear-matricula__select" id="elegir-curso" (change)="quitarFocus()" required>
+            <!-- <select name="curso" class="user__crear-matricula__select" id="elegir-curso" (change)="quitarFocus()" required>
                 <option value="" disabled selected hidden>Elige curso</option>
                 <option value="1eso">1º ESO</option>
                 <option value="2eso">2º ESO</option>
@@ -27,13 +29,14 @@
                 <option value="4eso">4º ESO</option>
                 <option value="1bach">1º BACHILLER</option>
                 <option value="2bach">2º BACHILLER</option>
-              </select>
-              <input (click)="abrirModal()" type="submit" value="Crear matrícula" class="boton user__crear-matricula__boton">
+              </select> -->
+              <input routerLink="/main/selector-matricula" routerLinkActive="active" type="submit" value="Crear otra matrícula" class="boton user__crear-matricula__boton">
         </div>
     </div>
    
     <div class="user__lista-matriculas">
         <h1 class="titulo">TUS MATRÍCULAS</h1>
+        <div class="bloque" *ngIf="matriculaUser.length == 0"> <h4>No has creado ninguna matrícula.</h4> </div>
         <app-matricula-item *ngFor="let matriculaUser of matriculaUser" [matriculaUser]="matriculaUser"></app-matricula-item>
         
 

@@ -66,7 +66,26 @@ export class AdminpanelComponent implements OnInit {
     this.dtOptions = {
       ajax: this.matriculas,
       pagingType: 'full_numbers',
-      pageLength: 2,
+      pageLength: 10,
+      language: {
+        "emptyTable": "No hay información",
+        "info": "Mostrando _START_ a _END_ de _TOTAL_ Matrículas",
+        "infoEmpty": "Mostrando 0 to 0 of 0 Matrículas",
+        "infoFiltered": "(Filtrado de _MAX_ total matrículas)",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "_MENU_ Mostrar Matrículas ",
+        "loadingRecords": "Cargando...",
+        "processing": "Procesando...",
+        "search": "Buscar:",
+        "zeroRecords": "Sin resultados encontrados",
+        "paginate": {
+            "first": "Primero",
+            "last": "Último",
+            "next": "Siguiente",
+            "previous": "Anterior"
+        }
+      },
     };
   }
   rerender(): void {

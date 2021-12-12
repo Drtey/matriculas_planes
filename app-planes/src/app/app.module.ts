@@ -32,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalComponent } from './modal/modal.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { DataTablesModule } from 'angular-datatables';
+import { SelectorMatriculaComponent } from './selector-matricula/selector-matricula.component';
 
 const rutas = [ 
 
@@ -40,7 +41,8 @@ const rutas = [
   { path: '', redirectTo: '/signin', pathMatch:'full'},  
   { path: 'main', component: MainComponent, canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'public' }, 
       children: [
-      { path: 'user', component: UserComponent},
+      { path: 'user', component: UserComponent },
+      { path: 'selector-matricula', component: SelectorMatriculaComponent},
       { path: 'matricula', component: MatriculaComponent},
       { path: '', component: MatriculaComponent},
       { path: 'adminpanel', component: AdminpanelComponent, canActivate: [AuthGuard, RoleGuard], data: {expectedRole: 'public'}}
@@ -69,6 +71,7 @@ const rutas = [
     MatriculaItemComponent,
     ModalComponent,
     AdminpanelComponent,
+    SelectorMatriculaComponent,
   ],
   imports: [
     BrowserModule,

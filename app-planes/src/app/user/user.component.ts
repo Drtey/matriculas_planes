@@ -71,6 +71,8 @@ export class UserComponent implements OnInit {
 
     this.getMatricula();
     this.getUser();
+
+    console.log(this.matriculaUser)
   }
 
   abrirModal() {
@@ -109,6 +111,11 @@ export class UserComponent implements OnInit {
       .then(response => {
         // Handle success.
         console.log('User updated');
+        const datosGuardados = document.getElementById('notificacion-datos');
+        datosGuardados.style.opacity = '1';
+        setTimeout(function () {
+            datosGuardados.style.opacity = '0';;
+        }, 2500);
       })
       .catch(error => {
         // Handle error.

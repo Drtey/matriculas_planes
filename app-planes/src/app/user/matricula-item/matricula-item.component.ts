@@ -14,6 +14,7 @@ export class MatriculaItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.modifyPdf();
   }
 
   openModal() {
@@ -46,5 +47,6 @@ export class MatriculaItemComponent implements OnInit {
     })
   
     const pdfBytes = await pdfDoc.save();
+    console.log(pdfBytes);
   }
 }
