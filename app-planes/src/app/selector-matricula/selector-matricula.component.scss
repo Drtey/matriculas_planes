@@ -2,12 +2,14 @@
     min-height: 70vh;
     display: grid;
     place-items: center;
+    position: relative;
     &__contenedor {
         display: flex;
         justify-content:center;
         align-items: center;
         flex-direction: column;
         width: 50vw;
+        margin-bottom: var(--spacer-10);
         &__titulo {
             margin: var(--spacer-5);
             text-align: center;
@@ -18,15 +20,26 @@
             gap: 30px;
             justify-content:center;
             align-items: center;
-            
+
             button {
                 min-width: 10rem;
             }
+            
         }
         @media (max-width: 970px) {
             &__titulo {
                 margin: var(--spacer-5) 0;
             }
+        }
+    }
+    &__boton-atras {
+        position: absolute;
+        bottom: var(--spacer-9);
+        left: 300px;
+        width: 10rem;
+        @media (max-width: 970px) {
+            left: 20px;
+            bottom: 20px;
         }
     }
     

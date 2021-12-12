@@ -33,6 +33,12 @@
     &__panel-titulo {
         margin-bottom: var(--spacer-5);
     }
+    @media (max-width: 970px) {
+        padding: var(--spacer-1);
+        &__tabla {
+            margin-top: var(--spacer-2);
+        }
+    }
 }
 
 .adminpanel.dark {

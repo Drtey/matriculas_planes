@@ -12,6 +12,7 @@
         <li><a (click)="abrirModal()">Cerrar Sesión</a></li>
     </ul>
     <ul class="header__nav-mobile">
+        <li *ngIf="getRole() == 'public'"><a routerLink="/main/adminpanel" routerLinkActive="active"><i class="fas fa-lock"></i></a></li>
         <li><a routerLink="/main/user" routerLinkActive="active"><i class="fas fa-user"></i></a></li>
         <li><a (click)="abrirModal()"><i class="fas fa-sign-out-alt"></i></a></li>
     </ul>
