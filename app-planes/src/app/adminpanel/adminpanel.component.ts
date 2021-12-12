@@ -47,15 +47,7 @@ export class AdminpanelComponent implements OnInit {
             modalidades: curso.modalidades,
           };
         });
-        this.modalidades = this.cursos[0].modalidades.map((modalidad) => {
-          return {
-            id: modalidad.id,
-            nombre: modalidad.nombre,
-            };
         
-        });
-       
-        console.log(this.modalidades);
       })
       .catch((error) => {
         console.log(error);
