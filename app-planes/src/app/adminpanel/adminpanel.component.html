@@ -1,20 +1,42 @@
-<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"  class="row-border hover">
-    <thead>
-      <tr>
-        <th>Nº Matrícula</th>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Curso</th>
-      </tr>
-    </thead>
-    <tbody>         
-      <tr *ngFor="let matricula of matriculas">
-        <td>{{matricula.id}}</td>
-        <td>{{matricula.user.username}}</td>
-        <td>{{matricula.user.username}}</td>
-        <td>{{matricula.curso.nombre}}</td>
-      </tr>
-     
-    </tbody>
-  </table>
-  
+<h1>PANEL DE ADMINISTRADOR</h1>
+<div class="container">
+  <div>
+    <h2>Filtros disponibles</h2>
+    <ng-container *ngFor="let curso of cursos">
+      <button class="boton">{{curso.nombre}}</button>
+    </ng-container>
+      
+    
+    
+  </div>
+</div>
+
+<table
+  datatable
+  [dtOptions]="dtOptions"
+  [dtTrigger]="dtTrigger"
+  class="row-border hover"
+>
+  <thead>
+    <tr>
+      <th>Nº Matrícula</th>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Curso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>Paco</td>
+      <td>Pérez</td>
+      <td>1ºESO</td>
+    </tr>
+    <tr *ngFor="let matricula of matriculas">
+      <td>{{ matricula.id }}</td>
+      <td>{{ matricula.user.username }}</td>
+      <td>{{ matricula.user.username }}</td>
+      <td>{{ matricula.curso.nombre }}</td>
+    </tr>
+  </tbody>
+</table>

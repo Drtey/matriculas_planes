@@ -15,6 +15,7 @@ export class AdminpanelComponent implements OnInit {
   constructor(private db: DbService, private cookie: CookieService) {}
 
   matriculas;
+  cursos;
 
   @ViewChild(DataTableDirective)
   dtElement: DataTableDirective;
@@ -30,6 +31,20 @@ export class AdminpanelComponent implements OnInit {
         this.matriculas = response.data;
         console.log(this.matriculas);
         this.rerender();
+        
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      axios
+      .get(`${this.db.url}/cursos`)
+      .then((response) => {
+        this.cursos = response.data.map((curso) => {
+          return {
+              id: curso.id,
+              nombre: curso.nombre,}
+              ;});
+        console.log(this.cursos);
         
       })
       .catch((error) => {
@@ -61,5 +76,19 @@ export class AdminpanelComponent implements OnInit {
       // Call the dtTrigger to rerender again
       this.dtTrigger.next();
     });
+   }
+
+   getMatriculasByCurso(id) {
+    axios
+      .get(`${this.db.url}/matriculas?curso=${id}`)
+      .then((response) => {
+        this.matriculas = response.data;
+        console.log(this.matriculas);
+        this.rerender();
+        
+      })
+      .catch((error) => {
+        console.log(error);
+      });
    }
 }
