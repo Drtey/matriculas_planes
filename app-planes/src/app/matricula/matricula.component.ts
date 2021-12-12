@@ -13,7 +13,7 @@ export class MatriculaComponent implements OnInit {
 
   }
   ngAfterViewInit() {
-     const darkMode = <HTMLInputElement> document.getElementById('dark-mode');
+      const darkMode = <HTMLInputElement> document.getElementById('dark-mode');
       const bloques = document.querySelectorAll('.bloque');
       const modal = document.querySelectorAll('.modal-planes');
       bloques.forEach(element => {
@@ -22,9 +22,11 @@ export class MatriculaComponent implements OnInit {
       modal.forEach(element => {
         element.classList.remove('dark');
       });
+      document.querySelector('.adminpanel').classList.remove('dark');
       
       if (darkMode.checked) {
         document.body.classList.add('dark');
+        document.querySelector('.adminpanel').classList.add('dark');
         bloques.forEach(element => {
           element.classList.add('dark');
         });

@@ -27,6 +27,8 @@ export class AdminpanelComponent implements OnInit {
   ngOnInit(): void {
     this.toDo();
 
+    
+
     axios
       .get(`${this.db.url}/matriculas`)
       .then((response) => {
@@ -52,6 +54,8 @@ export class AdminpanelComponent implements OnInit {
       .catch((error) => {
         console.log(error);
       });
+
+
   }
   ngAfterViewInit(): void {
     this.dtTrigger.next();

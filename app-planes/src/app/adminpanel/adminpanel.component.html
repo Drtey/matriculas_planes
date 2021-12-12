@@ -1,61 +1,42 @@
 
 <div class="adminpanel">
   <h1>PANEL DE ADMINISTRADOR</h1>
-    <h2>Filtros disponibles</h2>
-    <div class="adminpanel__select-container">
-      <select name="" id="">
-        <option value="" disabled selected hidden>Elige curso</option>
-        <option *ngFor="let curso of cursos" value="{{ curso.id }}">{{ curso.nombre }}</option>
-      </select>
-      <select name="" id="">
-        <option value="" disabled selected hidden>Elige modalidad</option>
-        <option *ngFor="let modalidad of modalidades" value="{{ modalidad.id }}">{{ modalidad.nombre }}</option>
-      </select>
-    </div>
+  <h2>Filtros disponibles</h2>
+  <div class="adminpanel__select-container">
+    <select name="" id="">
+      <option value="" disabled selected hidden>Elige curso</option>
+      <option *ngFor="let curso of cursos" value="{{ curso.id }}">{{ curso.nombre }}</option>
+    </select>
+    <select name="" id="">
+      <option value="" disabled selected hidden>Elige modalidad</option>
+      <option *ngFor="let modalidad of modalidades" value="{{ modalidad.id }}">{{ modalidad.nombre }}</option>
+    </select>
+  </div>
   <div class="adminpanel__tabla">
-    
-<div class="adminpanel__panel-titulo">
   
-    
-    <!-- <ng-container *ngFor="let curso of cursos">
-      <button class="boton" (click)="setModalidad(curso.id)">
-        {{ curso.nombre }}
-      </button>
-
-      <ng-container >
-        <div *ngFor="let modalidad of modalidades">
-          <button class="boton">
-            {{ modalidad.nombre }}
-          </button>
-        </div></ng-container
-      >
-      
-    </ng-container> -->
-    
-</div>
-<table
-  datatable
-  [dtOptions]="dtOptions"
-  [dtTrigger]="dtTrigger"
-  class="row-border hover"
->
-  <thead>
-    <tr>
-      <th>Nº Matrícula</th>
-      <th>Nombre</th>
-      <th>Apellidos</th>
-      <th>Curso</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let matricula of matriculas">
-      <td>{{ matricula.id }}</td>
-      <td>{{ matricula.user.username }}</td>
-      <td>{{ matricula.user.username }}</td>
-      <td>{{ matricula.curso.nombre }}</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+    <table
+      datatable
+      [dtOptions]="dtOptions"
+      [dtTrigger]="dtTrigger"
+      class="row-border hover"
+    >
+      <thead>
+        <tr>
+          <th>Nº Matrícula</th>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Curso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let matricula of matriculas">
+          <td>{{ matricula.id }}</td>
+          <td>{{ matricula.user.username }}</td>
+          <td>{{ matricula.user.username }}</td>
+          <td>{{ matricula.curso.nombre }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   
 </div> 

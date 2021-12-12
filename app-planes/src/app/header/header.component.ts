@@ -10,16 +10,10 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class HeaderComponent implements OnInit {
 
-  rutaAdmin
+  dark = true;
 
   constructor(private authService: AuthService, private router: Router, private cookie:CookieService) {
-    this.router.events.subscribe((ev) => {
-      if (ev instanceof NavigationEnd) { 
-        if(this.router.url == '/main/adminpanel'){
-          this.rutaAdmin=false;
-        }
-      }
-    });
+    
   }
 
   ngOnInit(): void {
@@ -54,6 +48,10 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.authService.logout();
+  }
+
+  setDark(bool) {
+    this.dark = bool;
   }
 
 }

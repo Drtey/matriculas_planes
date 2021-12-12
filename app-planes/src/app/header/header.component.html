@@ -2,7 +2,9 @@
 <div class="header">
     <div class="header__logo"><a routerLink="/main/matricula" routerLinkActive="active"><img src="../../assets/img/svg/logo_planes_blanco.svg" class="header__logo-svg" draggable="false"/></a></div>
     
-    <app-dark-mode class="header__dark-mode" *ngIf="rutaAdmin"></app-dark-mode> 
+    <ng-container *ngIf="dark">
+        <app-dark-mode class="header__dark-mode"></app-dark-mode> 
+    </ng-container>
     
     <ul class="header__nav">
         <li *ngIf="getRole() == 'public'"><a routerLink="/main/adminpanel" routerLinkActive="active">Administrador</a></li>

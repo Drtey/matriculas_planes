@@ -34,3 +34,19 @@
         margin-bottom: var(--spacer-5);
     }
 }
+
+.adminpanel.dark {
+    color: var(--color-font-light);
+    tr {
+        background-color: var(--color-grey-1);
+        &:hover {
+            background-color: var(--color-grey-2);
+        }
+    }
+    label {
+        color: var(--color-font-light);
+    }
+    &__adminpanel__tabla {
+        color: var(--color-font-light);
+    }
+}
