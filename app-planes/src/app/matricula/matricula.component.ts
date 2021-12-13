@@ -65,18 +65,20 @@ export class MatriculaComponent implements OnInit {
   }
 
   imagen = {
-    autorizo: null,
-    noautorizo: null,
+    autorizo: false,
   }
 
   enfermedades = {
-    si: null,
-    no: null
+    enfermedad: false,
   }
 
   salida = {
     tutor1: null,
     tutor2: null
+  }
+
+  datosPersonales = {
+    autorizo: false
   }
 
   ngAfterViewInit() {
@@ -171,17 +173,17 @@ export class MatriculaComponent implements OnInit {
         emailTutor2: this.familiar.emailTutor2,
         nifTutor2: this.familiar.nifTutor2,
         telTutor2: this.familiar.telefTutor2,
-        faltasTutor: this.familiar.faltasTutor,
-        imagenPermisos: true,
-        enfermedades: true,
-        salidaTutor1: true,
-        salidaTutor2: true,
+        faltasTutor: this.familiar.faltasTutor, //cambio
+        imagenPermisos: this.imagen.autorizo,
+        enfermedades: this.enfermedades.enfermedad,
+        salidaTutor1: this.salida.tutor1,
+        salidaTutor2: this.salida.tutor2,
         datosPersonales: true,
         centroProcedencia: this.academicos.centro,
-        repite: false,
+        repite: this.academicos.repite,
         valores: "string",
-        valoresTutor1: true,
-        valoresTutor2: true,
+        valoresTutor1: this.academicos.valoresTutor1,
+        valoresTutor2: this.academicos.valoresTutor2,
         ordenOptativas: "string",
       })
       .then(response => {

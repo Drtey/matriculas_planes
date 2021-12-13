@@ -67,7 +67,7 @@
                     <label class="campo datos-familiares__label" for="nombreTutor1"><strong>Nombre*</strong></label>
                     <input class="campo datos-familiares__input  campo-50" type="text" name="nombreTutor1" id="nombreTutor1" required [(ngModel)]="familiar.nombreTutor1">
             
-                    <label class="campo datos-familiares__label" for="emailTutor1"><strong>Correo Electrónico</strong></label>
+                    <label class="campo datos-familiares__label" for="emailTutor1"><strong>Correo Electrónico*</strong></label>
                     <input class="campo datos-familiares__input  campo-50" type="text" name="emailTutor1" id="emailTutor1" required [(ngModel)]="familiar.emailTutor1">
                     
                     <label class="campo datos-familiares__label" for="nifTutor1"><strong>NIF/NIE* <i class="fas fa-question-circle pc" data-toggle="tooltip" title="Número de Identificación Fiscal / Número de Identificación de Extranjero"></i></strong> <span class="movil">(Número de Identificación Fiscal / Número de Identificación de Extranjero)</span></label>
@@ -81,31 +81,31 @@
                     <h3>Tutor 2</h3>
             
                     <label class="campo datos-familiares__label" for="papellidoTutor2"><strong>Primer apellido*</strong></label>
-                    <input class="campo datos-familiares__input  campo-50" type="text" name="papellidoTutor2" id="papellidoTutor2" required [(ngModel)]="familiar.apellido1Tutor2">
+                    <input class="campo datos-familiares__input  campo-50" type="text" name="papellidoTutor2" id="papellidoTutor2" [(ngModel)]="familiar.apellido1Tutor2">
 
                     <label class="campo datos-familiares__label" for="sapellidoTutor2"><strong>Segundo apellido*</strong></label>
-                    <input class="campo datos-familiares__input  campo-50" type="text" name="sapellidoTutor2" id="sapellidoTutor2" required [(ngModel)]="familiar.apellido2Tutor2">
+                    <input class="campo datos-familiares__input  campo-50" type="text" name="sapellidoTutor2" id="sapellidoTutor2" [(ngModel)]="familiar.apellido2Tutor2">
                     
                     <label class="campo datos-familiares__label" for="nombreTutor2"><strong>Nombre</strong></label>
-                    <input class="campo datos-familiares__input campo-50" type="text" name="nombreTutor2" id="nombreTutor2" required [(ngModel)]="familiar.nombreTutor2">
+                    <input class="campo datos-familiares__input campo-50" type="text" name="nombreTutor2" id="nombreTutor2" [(ngModel)]="familiar.nombreTutor2">
             
                     <label class="campo datos-familiares__label" for="emailTutor2"><strong>Correo Electrónico</strong></label>
-                    <input class="campo datos-familiares__input campo-50" type="text" name="emailTutor2" id="emailTutor2" required [(ngModel)]="familiar.emailTutor2">
+                    <input class="campo datos-familiares__input campo-50" type="text" name="emailTutor2" id="emailTutor2" [(ngModel)]="familiar.emailTutor2">
                     
                     <label class="campo datos-familiares__label" for="nifTutor2"><strong>NIF/NIE <i class="fas fa-question-circle pc" data-toggle="tooltip" title="Número de Identificación Fiscal / Número de Identificación de Extranjero"></i></strong> <span class="movil">(Número de Identificación Fiscal / Número de Identificación de Extranjero)</span></label>
-                    <input class="campo datos-familiares__input campo-25" type="text" name="nifTutor2" id="nifTutor2" required [(ngModel)]="familiar.nifTutor2">
+                    <input class="campo datos-familiares__input campo-25" type="text" name="nifTutor2" id="nifTutor2" [(ngModel)]="familiar.nifTutor2">
             
                     <label class="campo datos-familiares__label" for="telefTutor2"><strong>Teléfono</strong></label>
-                    <input class="campo datos-familiares__input campo-25" type="text" name="telefTutor2" id="telefTutor2" required [(ngModel)]="familiar.telefTutor2">
+                    <input class="campo datos-familiares__input campo-25" type="text" name="telefTutor2" id="telefTutor2" [(ngModel)]="familiar.telefTutor2">
                 </div>
             
                     <label class="campo datos-familiares__label" for="telefFaltas"><strong>Teléfono móvil para control de faltas*</strong></label>
                     <div class="datos-familiares__radio radio">
-                        <input type="radio" id="tutor1" name="tutor" value="tutor1" [(ngModel)]="familiar.faltasTutor"> 
+                        <input type="radio" id="tutor1" name="tutor" value="tutor1" required [(ngModel)]="familiar.faltasTutor"> 
                         <label for="tutor1">Tutor 1</label>
                     </div>
                     <div class="datos-familiares__radio radio">
-                        <input type="radio" id="tutor2" name="tutor" value="tutor2" [(ngModel)]="familiar.faltasTutor">
+                        <input type="radio" id="tutor2" name="tutor" value="tutor2" required [(ngModel)]="familiar.faltasTutor">
                         <label for="tutor1">Tutor 2</label>
                     </div>  
                 
@@ -121,11 +121,11 @@
                 <div class="datos-academicos__repite ">
                     <label class="campo datos-academicos__label"><strong>Repite:*</strong></label>
                     <div class= "datos-academicos__radio radio">
-                        <input type="radio" id="siRepite" name="repite" value="siRepite" required>
+                        <input type="radio" id="siRepite" name="repite" value="true" required [(ngModel)]="academicos.repite">
                         <label for="siRepite">Sí</label>
                     </div>
                     <div class="datos-academicos__radio radio">
-                        <input type="radio" id="noRepite" name="repite" value="noRepite" required>
+                        <input type="radio" id="noRepite" name="repite" value="false" required [(ngModel)]="academicos.repite">
                         <label for="noRepite">No</label>
                     </div>
                 </div>
@@ -151,11 +151,11 @@
                 
                     <label>Autorizan:</label>
                     <div class="datos-academicos__checkbox checkbox">    
-                        <input type="checkbox" id="tutor1Autoriza" name="autorizaOptativa" value="tutor1Autoriza">
+                        <input type="checkbox" id="tutor1Autoriza" name="autorizaOptativa" value="tutor1Autoriza" [(ngModel)]="academicos.valoresTutor1">
                         <label for="tutor1Autoriza">Tutor 1</label>
                     </div>
                     <div class="datos-academicos__checkbox checkbox">    
-                        <input type="checkbox" id="tutor2Autoriza" name="autorizaOptativa" value="tutor2Autoriza">
+                        <input type="checkbox" id="tutor2Autoriza" name="autorizaOptativa" value="tutor2Autoriza" [(ngModel)]="academicos.valoresTutor2">
                         <label for="tutor2Autoriza">Tutor 2</label>
                     </div>
                 </div>
@@ -170,16 +170,18 @@
                             </li>
                         </ul>
                         <!-- SOLO SI LO REQUIERE MATES -->
-                        <div class= "datos-academicos__radio radio">
-                            <input type="radio" id="matesAcad" name="mates" value="matesAcad">
-                            <label for="matesAcad"><strong>Mates Académicas</strong></label>
+                        <div>
+                            <div class= "datos-academicos__radio radio">
+                                <input type="radio" id="matesAcad" name="mates" value="matesAcad">
+                                <label for="matesAcad"><strong>Mates Académicas</strong></label>
+                            </div>
+                            <label style="margin: 0;">(Orientadas a Bachiller)</label>
+                            <div class="datos-academicos__radio radio">
+                                <input type="radio" id="matesApli" name="mates" value="matesApli">
+                                <label for="matesApli"><strong>Mates Aplicadas</strong></label>
+                            </div>
+                            <label style="margin: 0;">(Orientadas a Formación Profesional)</label>
                         </div>
-                        <label style="margin: 0;">(Orientadas a Bachiller)</label>
-                        <div class="datos-academicos__radio radio">
-                            <input type="radio" id="matesApli" name="mates" value="matesApli">
-                            <label for="matesApli"><strong>Mates Aplicadas</strong></label>
-                        </div>
-                        <label style="margin: 0;">(Orientadas a Formación Profesional)</label>
                         <!-- FIN DE SOLO SI LO REQUIERE MATES -->
                         <div class="datos-academicos__separator" >
                             <h4>Segunda Lengua Extranjera</h4>
@@ -230,11 +232,11 @@
             
                 <div class="autoriza-imagen__radios">
                     <div class="radio">
-                        <input class="autoriza-imagen__input" type="radio" id="si" name="repite" value="si" [(ngModel)]="imagen.autorizo">
+                        <input class="autoriza-imagen__input" type="radio" id="si" name="autoriza-imagen" value="true" [(ngModel)]="imagen.autorizo">
                         <label class="autoriza-imagen__label" for="si">AUTORIZO</label>
                     </div>
                     <div class="radio">
-                        <input class="autoriza-imagen__input" type="radio" id="no" name="repite" value="no" [(ngModel)]="imagen.noautorizo">
+                        <input class="autoriza-imagen__input" type="radio" id="no" name="autoriza-imagen" value="false" [(ngModel)]="imagen.autorizo">
                         <label class="autoriza-imagen__label" for="no">NO AUTORIZO</label>
                     </div>
                 </div>
@@ -259,11 +261,11 @@
             
                 <div style="display: flex; margin-top: var(--spacer-2);">
                     <div class="radio">
-                        <input type="radio" id="siEnfermedad" name="enfermedad" value="siEnfermedad" [(ngModel)]="enfermedades.si">
+                        <input type="radio" id="siEnfermedad" name="enfermedad" value="true" [(ngModel)]="enfermedades.enfermedad">
                         <label for="siEnfermedad">Sí</label>
                     </div>
                     <div class="radio">
-                        <input type="radio" id="noEnfermedad" name="enfermedad" value="noEnfermedad" [(ngModel)]="enfermedades.no">
+                        <input type="radio" id="noEnfermedad" name="enfermedad" value="false" [(ngModel)]="enfermedades.enfermedad">
                         <label for="noEnfermedad">No</label>
                     </div>
                 </div>
@@ -293,29 +295,12 @@
                     </div>
                 </div>
             
-            
-                <div class="autorizacion-salida__bloque">
-                    <label for="firmaTutor1"><strong>Sube la firma del Tutor 1:</strong></label>
-            
-                    <input type="file" class="subir-archivo"
-                        id="firmaTutor1" name="firmaTutor"
-                        accept="image/png, image/jpeg">
-            
-            
-                    <label for="firmaTutor2"><strong>Sube la firma del Tutor 2:</strong></label>
-            
-                    <input type="file" class="subir-archivo"
-                        id="firmaTuto2" name="firmaTutor"
-                        accept="image/png, image/jpeg">
-            
-                </div>
-            
             </div>
 
             <div class="autorizacion-datos-personales bloque">
                 <label>Autorizo la <strong>incorporación de datos personales</strong> de mi hijo, hija al fichero de datos de la biblioteca escolar del IES José Planes para la gestión de préstamos de ejemplares bibliográficos. Los derechos que mantiene sobre esos datos se recogen en el Título III de la Ley Orgánica 3/2018, de 5 de diciembre.</label>
                 <div class="checkbox" style="display: flex;">  
-                    <input id="autorizacionDatosPersonales" type="checkbox" name="autorizarDatosPersonales" role="switch" value="on">
+                    <input id="autorizacionDatosPersonales" type="checkbox" name="autorizarDatosPersonales" role="switch" value="true" [(ngModel)]="datosPersonales.autorizo">
                     <label for="autorizacionDatosPersonales" required>AUTORIZO</label>
                 </div>
             </div>
