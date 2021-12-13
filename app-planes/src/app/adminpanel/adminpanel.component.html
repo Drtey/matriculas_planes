@@ -33,8 +33,8 @@
       <tbody>
         <tr *ngFor="let matricula of matriculas">
           <td>{{ matricula.id }}</td>
-          <td>{{ matricula.user.username }}</td>
-          <td>{{ matricula.user.username }}</td>
+          <td>{{ matricula.nombre}}</td>
+          <td>{{ matricula.papellido }} {{ matricula.sapellido }}</td>
           <td>{{ matricula.curso.nombre }}</td>
           <td><button class="boton fas fa-eye" alt="Ver matrícula"></button></td>
         </tr>
