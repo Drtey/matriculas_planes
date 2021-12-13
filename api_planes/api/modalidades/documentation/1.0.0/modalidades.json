@@ -707,14 +707,10 @@
               "papellidoTutor1",
               "sapellidoTutor1",
               "telTutor1",
-              "telTutor2",
               "nifTutor1",
-              "nifTutor2",
               "faltasTutor1",
               "imagenPermisos",
               "enfermedades",
-              "firmaTutor1",
-              "firmaTutor2",
               "repite",
               "ordenOptativas"
             ],
@@ -824,15 +820,6 @@
               "salidaTutor2": {
                 "type": "boolean"
               },
-              "firmaTutor1": {
-                "type": "string"
-              },
-              "firmaTutor2": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "datosPersonales": {
                 "type": "boolean"
               },
@@ -856,6 +843,9 @@
               },
               "modalidad": {
                 "type": "string"
+              },
+              "enviada": {
+                "type": "boolean"
               },
               "published_at": {
                 "type": "string"

@@ -112,7 +112,7 @@
       "type": "biginteger",
       "max": "9",
       "min": "9",
-      "required": true
+      "required": false
     },
     "nifTutor1": {
       "type": "string",
@@ -120,7 +120,7 @@
     },
     "nifTutor2": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "faltasTutor1": {
       "type": "boolean",
@@ -147,28 +147,6 @@
     "salidaTutor2": {
       "type": "boolean",
       "required": false
-    },
-    "firmaTutor1": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": true,
-      "pluginOptions": {}
-    },
-    "firmaTutor2": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "files",
-        "images",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": true,
-      "pluginOptions": {}
     },
     "datosPersonales": {
       "type": "boolean",
@@ -197,6 +175,9 @@
     "modalidad": {
       "via": "matricula",
       "model": "modalidades"
+    },
+    "enviada": {
+      "type": "boolean"
     }
   }
 }

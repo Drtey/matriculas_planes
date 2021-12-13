@@ -532,14 +532,10 @@
           "papellidoTutor1",
           "sapellidoTutor1",
           "telTutor1",
-          "telTutor2",
           "nifTutor1",
-          "nifTutor2",
           "faltasTutor1",
           "imagenPermisos",
           "enfermedades",
-          "firmaTutor1",
-          "firmaTutor2",
           "repite",
           "ordenOptativas"
         ],
@@ -745,143 +741,6 @@
           "salidaTutor2": {
             "type": "boolean"
           },
-          "firmaTutor1": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "firmaTutor2": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "datosPersonales": {
             "type": "boolean"
           },
@@ -943,6 +802,9 @@
               }
             }
           },
+          "enviada": {
+            "type": "boolean"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -966,9 +828,7 @@
           "papellidoTutor1",
           "sapellidoTutor1",
           "telTutor1",
-          "telTutor2",
           "nifTutor1",
-          "nifTutor2",
           "faltasTutor1",
           "imagenPermisos",
           "enfermedades",
@@ -1104,6 +964,9 @@
           },
           "modalidad": {
             "type": "string"
+          },
+          "enviada": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",

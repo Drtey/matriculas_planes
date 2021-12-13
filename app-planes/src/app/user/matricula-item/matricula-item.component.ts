@@ -8,13 +8,16 @@ import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 })
 export class MatriculaItemComponent implements OnInit {
 
-  enviada = true
+  enviada = true;
+
+
   @Input() matriculaUser;
 
   constructor() { }
 
   ngOnInit(): void {
     this.modifyPdf();
+    console.log("MATRICULA USER: "+this.matriculaUser)
   }
 
   openModal() {
