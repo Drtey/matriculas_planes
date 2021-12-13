@@ -693,6 +693,12 @@
               "ordenOptativas": {
                 "type": "string"
               },
+              "modalidad": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "published_at": {
                 "type": "string"
               },
@@ -727,6 +733,12 @@
                   }
                 },
                 "troncales": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "matriculas": {
                   "type": "array",
                   "items": {
                     "type": "string"

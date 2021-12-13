@@ -197,6 +197,11 @@
     "ordenOptativas": {
       "type": "text",
       "required": true
+    },
+    "modalidad": {
+      "collection": "modalidades",
+      "via": "matriculas",
+      "dominant": true
     }
   }
 }

@@ -18,7 +18,7 @@ export class MatriculaComponent implements OnInit {
 
   optativas;
   troncales;
-  curso;
+  modalidad;
   id = this.route.snapshot.paramMap.get('id');
   user;
 
@@ -116,7 +116,7 @@ export class MatriculaComponent implements OnInit {
     axios
       .get(`${this.authService.url}/modalidades/${this.id}`)
       .then(response => {
-        this.curso = response.data;
+        this.modalidad = response.data;
         this.troncales = response.data.troncales;
         this.optativas = response.data.optativas;
       })
@@ -141,8 +141,9 @@ export class MatriculaComponent implements OnInit {
   crearMatricula(){
     axios
       .post(`${this.authService.url}/matriculas`, {
-        user: this.user,
-        curso: this.curso,
+        user: this.user.id,
+        curso: this.modalidad.curso.id,
+        modalidad: this.modalidad.nombre,
         nombre: this.alumno.nombre,
         papellido: this.alumno.papellido,
         sapellido: this.alumno.sapellido,

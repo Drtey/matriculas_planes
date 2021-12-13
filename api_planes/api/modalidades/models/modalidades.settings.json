@@ -28,6 +28,10 @@
       "via": "modalidades",
       "collection": "troncales",
       "dominant": true
+    },
+    "matriculas": {
+      "via": "modalidad",
+      "collection": "matriculas"
     }
   }
 }

@@ -1418,6 +1418,12 @@
                 "ordenOptativas": {
                   "type": "string"
                 },
+                "modalidad": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
