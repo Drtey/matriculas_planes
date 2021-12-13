@@ -2,6 +2,7 @@ import { Component, OnInit, Input} from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import axios from 'axios';
+import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -13,12 +14,13 @@ import { AuthService } from '../services/auth.service';
 export class MatriculaComponent implements OnInit {
   
 
-  constructor(private route: ActivatedRoute,private router: Router, private authService: AuthService) {}
+  constructor(private route: ActivatedRoute,private router: Router, private authService: AuthService, private cookie: CookieService) {}
 
   optativas;
   troncales;
   curso;
   id = this.route.snapshot.paramMap.get('id');
+  user;
 
   alumno = {
     papellido: "",
@@ -28,13 +30,53 @@ export class MatriculaComponent implements OnInit {
     direccion: "",
     localidad: "",
     provincia: "",
-    cp: "",
-    telef: "",
+    cp: 0,
+    telef: 0,
     fechaNac: "",
     lugarNac: "",
     provinciaNac: "",
     email: "",
-    nuss: "",
+    nuss: 0,
+  }
+
+  familiar = {
+    papellidoTutor1: "",
+    sapellidoTutor1: "",
+    nombreTutor1: "",
+    emailTutor1: "",
+    nifTutor1: "",
+    telefTutor1: 0,
+    papellidoTutor2: "",
+    sapellidoTutor2: "",
+    nombreTutor2: "",
+    emailTutor2: "",
+    nifTutor2: "",
+    telefTutor2: 0,
+    faltasTutor1: null,
+    faltasTutor2: null,
+  }
+
+  academicos = {
+    centro: "",
+    repite: false,
+    valoresTutor1: false,
+    valoresTutor2: false,
+    ordenOptativas: [],
+  }
+
+  imagen = {
+    autorizo: null,
+    noautorizo: null,
+  }
+
+  enfermedades = {
+    si: null,
+    no: null
+  }
+
+  salida = {
+    tutor1: null,
+    tutor2: null
   }
 
   ngAfterViewInit() {
@@ -67,6 +109,7 @@ export class MatriculaComponent implements OnInit {
       event.returnValue = `Are you sure you want to leave?`;
     }); */
     this.getCurso();
+    this.getUser();
   }
 
   getCurso() {
@@ -82,9 +125,63 @@ export class MatriculaComponent implements OnInit {
       })
   }
 
+  getUser() {
+    const id = this.cookie.get('id');
+    axios
+      .get(`${this.authService.url}/users/${id}`)
+      .then(response => {
+        this.user = response.data;
+        console.log(this.user);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
+
   crearMatricula(){
     axios
-      .post(`${this.authService.url}/matriculas`)
+      .post(`${this.authService.url}/matriculas`, {
+        user: this.user,
+        curso: this.curso,
+        nombre: this.alumno.nombre,
+        papellido: this.alumno.papellido,
+        sapellido: this.alumno.sapellido,
+        NIF: this.alumno.nif,
+        direccion: this.alumno.direccion,
+        localidad: this.alumno.localidad,
+        lugarNacimiento: this.alumno.lugarNac,
+        provinciaNacimiento: this.alumno.provinciaNac,
+        provincia: this.alumno.provincia,
+        tel: this.alumno.telef,
+        codigoPostal: this.alumno.cp,
+        fechaNac: this.alumno.fechaNac,
+        nSSocial: this.alumno.nuss,
+        nombreTutor1: this.familiar.nombreTutor1,
+        papellidoTutor1: this.familiar.papellidoTutor1,
+        sapellidoTutor1: this.familiar.sapellidoTutor1,
+        emailTutor1: this.familiar.emailTutor1,
+        nifTutor1: this.familiar.nifTutor1,
+        telTutor1: this.familiar.telefTutor1,
+        nombreTutor2: this.familiar.nombreTutor2,
+        papellidoTutor2: this.familiar.papellidoTutor2,
+        sapellidoTutor2: this.familiar.sapellidoTutor2,
+        emailTutor2: this.familiar.emailTutor2,
+        nifTutor2: this.familiar.nifTutor2,
+        telTutor2: this.familiar.telefTutor2,
+        faltasTutor1: false,
+        faltasTutor2: true,
+        imagenPermisos: true,
+        enfermedades: true,
+        salidaTutor1: true,
+        salidaTutor2: true,
+        datosPersonales: true,
+        centroProcedencia: this.academicos.centro,
+        repite: false,
+        valores: "string",
+        valoresTutor1: true,
+        valoresTutor2: true,
+        ordenOptativas: "string",
+      })
       .then(response => {
         // Handle success.
         console.log('Well done!');

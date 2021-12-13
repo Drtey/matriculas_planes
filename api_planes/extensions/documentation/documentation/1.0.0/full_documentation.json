@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/13/2021 2:32:12 AM"
+    "x-generation-date": "12/13/2021 4:03:44 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6595,14 +6595,10 @@
             "type": "integer"
           },
           "nifTutor1": {
-            "type": "string",
-            "maxLength": 9,
-            "minLength": 7
+            "type": "string"
           },
           "nifTutor2": {
-            "type": "string",
-            "maxLength": 9,
-            "minLength": 7
+            "type": "string"
           },
           "faltasTutor2": {
             "type": "boolean"
@@ -6888,14 +6884,10 @@
             "type": "integer"
           },
           "nifTutor1": {
-            "type": "string",
-            "maxLength": 9,
-            "minLength": 7
+            "type": "string"
           },
           "nifTutor2": {
-            "type": "string",
-            "maxLength": 9,
-            "minLength": 7
+            "type": "string"
           },
           "faltasTutor1": {
             "type": "boolean",

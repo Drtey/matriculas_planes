@@ -728,14 +728,10 @@
             "type": "integer"
           },
           "nifTutor1": {
-            "type": "string",
-            "maxLength": 9,
-            "minLength": 7
+            "type": "string"
           },
           "nifTutor2": {
-            "type": "string",
-            "maxLength": 9,
-            "minLength": 7
+            "type": "string"
           },
           "faltasTutor2": {
             "type": "boolean"
@@ -1021,14 +1017,10 @@
             "type": "integer"
           },
           "nifTutor1": {
-            "type": "string",
-            "maxLength": 9,
-            "minLength": 7
+            "type": "string"
           },
           "nifTutor2": {
-            "type": "string",
-            "maxLength": 9,
-            "minLength": 7
+            "type": "string"
           },
           "faltasTutor1": {
             "type": "boolean",
