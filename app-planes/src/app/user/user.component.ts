@@ -13,7 +13,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class UserComponent implements OnInit {
 
 
-  matriculaUser;
+  matriculaUser = [];
   
   user = {
     email: "",
@@ -94,7 +94,7 @@ export class UserComponent implements OnInit {
       .get(`${this.authService.url}/matriculas?user=${id}`)
       .then(response => {
         this.matriculaUser = response.data;
-        console.log(this.matriculaUser);
+        console.log(this.matriculaUser[0].modalidad.nombre);
       })
       .catch(error => {
         console.log(error);

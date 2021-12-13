@@ -5,13 +5,13 @@
     <div class="matricula-item__info">
         <dl>
             <dt>Nombre y apellidos</dt>
-            <dd>{{matriculaUser.user.Nombre}} {{matriculaUser.user.Papellido}} {{matriculaUser.user.Sapellido}}</dd>
+            <dd>{{matriculaUser.nombre}} {{matriculaUser.papellido}} {{matriculaUser.sapellido}}</dd>
         
             <dt>NIF/NIE</dt>
-            <dd style="text-transform: uppercase;">{{matriculaUser.user.DNI}}</dd>
+            <dd style="text-transform: uppercase;">{{matriculaUser.NIF}}</dd>
         
             <dt>Curso</dt>
-            <dd>{{matriculaUser.curso.nombre}}</dd>
+            <dd>{{matriculaUser.modalidad.nombre}}</dd>
         
             <dt>Fecha de creación</dt>
             <dd>{{matriculaUser.created_at | date:"dd/MM/yyyy \'a las\' H:mm\'h\'"}}</dd>
