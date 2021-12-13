@@ -544,16 +544,19 @@
                 "curso_cod": {
                   "type": "string"
                 },
-                "matricula": {
-                  "type": "string"
-                },
-                "troncales": {
+                "modalidades": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "modalidades": {
+                "condiciones": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "troncales": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -565,7 +568,7 @@
                     "type": "string"
                   }
                 },
-                "condiciones": {
+                "matriculas": {
                   "type": "array",
                   "items": {
                     "type": "string"

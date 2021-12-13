@@ -16,7 +16,7 @@
       "type": "date"
     },
     "curso": {
-      "via": "matricula",
+      "via": "matriculas",
       "model": "cursos"
     },
     "user": {
@@ -92,8 +92,6 @@
     },
     "telTutor1": {
       "type": "biginteger",
-      "max": "9",
-      "min": "9",
       "required": true
     },
     "nombreTutor2": {
@@ -110,8 +108,6 @@
     },
     "telTutor2": {
       "type": "biginteger",
-      "max": "9",
-      "min": "9",
       "required": false
     },
     "nifTutor1": {
@@ -173,7 +169,7 @@
       "required": true
     },
     "modalidad": {
-      "via": "matricula",
+      "via": "matriculas",
       "model": "modalidades"
     },
     "enviada": {

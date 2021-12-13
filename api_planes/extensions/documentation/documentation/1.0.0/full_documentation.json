@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/13/2021 10:54:44 PM"
+    "x-generation-date": "12/13/2021 11:35:22 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5881,16 +5881,19 @@
                 "curso_cod": {
                   "type": "string"
                 },
-                "matricula": {
-                  "type": "string"
-                },
-                "troncales": {
+                "modalidades": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "modalidades": {
+                "condiciones": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "troncales": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -5902,7 +5905,7 @@
                     "type": "string"
                   }
                 },
-                "condiciones": {
+                "matriculas": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -5966,175 +5969,6 @@
           "curso_cod": {
             "type": "string"
           },
-          "matricula": {
-            "required": [
-              "id",
-              "nombre",
-              "papellido",
-              "sapellido",
-              "NIF",
-              "direccion",
-              "localidad",
-              "provincia",
-              "lugarNacimiento",
-              "provinciaNacimiento",
-              "codigoPostal",
-              "fechaNac",
-              "nombreTutor1",
-              "papellidoTutor1",
-              "sapellidoTutor1",
-              "telTutor1",
-              "nifTutor1",
-              "faltasTutor1",
-              "imagenPermisos",
-              "enfermedades",
-              "repite",
-              "ordenOptativas"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "fecha": {
-                "type": "string"
-              },
-              "curso": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "nombre": {
-                "type": "string"
-              },
-              "papellido": {
-                "type": "string"
-              },
-              "sapellido": {
-                "type": "string"
-              },
-              "NIF": {
-                "type": "string"
-              },
-              "direccion": {
-                "type": "string"
-              },
-              "localidad": {
-                "type": "string"
-              },
-              "provincia": {
-                "type": "string"
-              },
-              "lugarNacimiento": {
-                "type": "string"
-              },
-              "provinciaNacimiento": {
-                "type": "string"
-              },
-              "tel": {
-                "type": "integer"
-              },
-              "codigoPostal": {
-                "type": "integer"
-              },
-              "fechaNac": {
-                "type": "string"
-              },
-              "nSSocial": {
-                "type": "integer"
-              },
-              "nombreTutor1": {
-                "type": "string"
-              },
-              "papellidoTutor1": {
-                "type": "string"
-              },
-              "sapellidoTutor1": {
-                "type": "string"
-              },
-              "emailTutor1": {
-                "type": "string"
-              },
-              "telTutor1": {
-                "type": "integer"
-              },
-              "nombreTutor2": {
-                "type": "string"
-              },
-              "papellidoTutor2": {
-                "type": "string"
-              },
-              "sapellidoTutor2": {
-                "type": "string"
-              },
-              "emailTutor2": {
-                "type": "string"
-              },
-              "telTutor2": {
-                "type": "integer"
-              },
-              "nifTutor1": {
-                "type": "string"
-              },
-              "nifTutor2": {
-                "type": "string"
-              },
-              "faltasTutor1": {
-                "type": "boolean"
-              },
-              "faltasTutor2": {
-                "type": "boolean"
-              },
-              "imagenPermisos": {
-                "type": "boolean"
-              },
-              "enfermedades": {
-                "type": "boolean"
-              },
-              "salidaTutor1": {
-                "type": "boolean"
-              },
-              "salidaTutor2": {
-                "type": "boolean"
-              },
-              "datosPersonales": {
-                "type": "boolean"
-              },
-              "centroProcedencia": {
-                "type": "string"
-              },
-              "repite": {
-                "type": "boolean"
-              },
-              "valores": {
-                "type": "string"
-              },
-              "valoresTutor1": {
-                "type": "boolean"
-              },
-              "valoresTutor2": {
-                "type": "boolean"
-              },
-              "ordenOptativas": {
-                "type": "string"
-              },
-              "modalidad": {
-                "type": "string"
-              },
-              "enviada": {
-                "type": "boolean"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "modalidades": {
             "type": "array",
             "items": {
@@ -6163,8 +5997,11 @@
                     "type": "string"
                   }
                 },
-                "matricula": {
-                  "type": "string"
+                "matriculas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"
@@ -6324,6 +6161,178 @@
               }
             }
           },
+          "matriculas": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "nombre",
+                "papellido",
+                "sapellido",
+                "NIF",
+                "direccion",
+                "localidad",
+                "provincia",
+                "lugarNacimiento",
+                "provinciaNacimiento",
+                "codigoPostal",
+                "fechaNac",
+                "nombreTutor1",
+                "papellidoTutor1",
+                "sapellidoTutor1",
+                "telTutor1",
+                "nifTutor1",
+                "faltasTutor1",
+                "imagenPermisos",
+                "enfermedades",
+                "repite",
+                "ordenOptativas"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "fecha": {
+                  "type": "string"
+                },
+                "curso": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "papellido": {
+                  "type": "string"
+                },
+                "sapellido": {
+                  "type": "string"
+                },
+                "NIF": {
+                  "type": "string"
+                },
+                "direccion": {
+                  "type": "string"
+                },
+                "localidad": {
+                  "type": "string"
+                },
+                "provincia": {
+                  "type": "string"
+                },
+                "lugarNacimiento": {
+                  "type": "string"
+                },
+                "provinciaNacimiento": {
+                  "type": "string"
+                },
+                "tel": {
+                  "type": "integer"
+                },
+                "codigoPostal": {
+                  "type": "integer"
+                },
+                "fechaNac": {
+                  "type": "string"
+                },
+                "nSSocial": {
+                  "type": "integer"
+                },
+                "nombreTutor1": {
+                  "type": "string"
+                },
+                "papellidoTutor1": {
+                  "type": "string"
+                },
+                "sapellidoTutor1": {
+                  "type": "string"
+                },
+                "emailTutor1": {
+                  "type": "string"
+                },
+                "telTutor1": {
+                  "type": "integer"
+                },
+                "nombreTutor2": {
+                  "type": "string"
+                },
+                "papellidoTutor2": {
+                  "type": "string"
+                },
+                "sapellidoTutor2": {
+                  "type": "string"
+                },
+                "emailTutor2": {
+                  "type": "string"
+                },
+                "telTutor2": {
+                  "type": "integer"
+                },
+                "nifTutor1": {
+                  "type": "string"
+                },
+                "nifTutor2": {
+                  "type": "string"
+                },
+                "faltasTutor1": {
+                  "type": "boolean"
+                },
+                "faltasTutor2": {
+                  "type": "boolean"
+                },
+                "imagenPermisos": {
+                  "type": "boolean"
+                },
+                "enfermedades": {
+                  "type": "boolean"
+                },
+                "salidaTutor1": {
+                  "type": "boolean"
+                },
+                "salidaTutor2": {
+                  "type": "boolean"
+                },
+                "datosPersonales": {
+                  "type": "boolean"
+                },
+                "centroProcedencia": {
+                  "type": "string"
+                },
+                "repite": {
+                  "type": "boolean"
+                },
+                "valores": {
+                  "type": "string"
+                },
+                "valoresTutor1": {
+                  "type": "boolean"
+                },
+                "valoresTutor2": {
+                  "type": "boolean"
+                },
+                "ordenOptativas": {
+                  "type": "string"
+                },
+                "modalidad": {
+                  "type": "string"
+                },
+                "enviada": {
+                  "type": "boolean"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -6336,9 +6345,6 @@
             "type": "string"
           },
           "curso_cod": {
-            "type": "string"
-          },
-          "matricula": {
             "type": "string"
           },
           "modalidades": {
@@ -6360,6 +6366,12 @@
             }
           },
           "optativas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "matriculas": {
             "type": "array",
             "items": {
               "type": "string"
@@ -6424,9 +6436,6 @@
               "curso_cod": {
                 "type": "string"
               },
-              "matricula": {
-                "type": "string"
-              },
               "modalidades": {
                 "type": "array",
                 "items": {
@@ -6446,6 +6455,12 @@
                 }
               },
               "optativas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "matriculas": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -6651,8 +6666,11 @@
                   "type": "string"
                 }
               },
-              "matricula": {
-                "type": "string"
+              "matriculas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"
@@ -6868,9 +6886,6 @@
               "curso_cod": {
                 "type": "string"
               },
-              "matricula": {
-                "type": "string"
-              },
               "modalidades": {
                 "type": "array",
                 "items": {
@@ -6890,6 +6905,12 @@
                 }
               },
               "optativas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "matriculas": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -7018,172 +7039,175 @@
               }
             }
           },
-          "matricula": {
-            "required": [
-              "id",
-              "nombre",
-              "papellido",
-              "sapellido",
-              "NIF",
-              "direccion",
-              "localidad",
-              "provincia",
-              "lugarNacimiento",
-              "provinciaNacimiento",
-              "codigoPostal",
-              "fechaNac",
-              "nombreTutor1",
-              "papellidoTutor1",
-              "sapellidoTutor1",
-              "telTutor1",
-              "nifTutor1",
-              "faltasTutor1",
-              "imagenPermisos",
-              "enfermedades",
-              "repite",
-              "ordenOptativas"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "fecha": {
-                "type": "string"
-              },
-              "curso": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "nombre": {
-                "type": "string"
-              },
-              "papellido": {
-                "type": "string"
-              },
-              "sapellido": {
-                "type": "string"
-              },
-              "NIF": {
-                "type": "string"
-              },
-              "direccion": {
-                "type": "string"
-              },
-              "localidad": {
-                "type": "string"
-              },
-              "provincia": {
-                "type": "string"
-              },
-              "lugarNacimiento": {
-                "type": "string"
-              },
-              "provinciaNacimiento": {
-                "type": "string"
-              },
-              "tel": {
-                "type": "integer"
-              },
-              "codigoPostal": {
-                "type": "integer"
-              },
-              "fechaNac": {
-                "type": "string"
-              },
-              "nSSocial": {
-                "type": "integer"
-              },
-              "nombreTutor1": {
-                "type": "string"
-              },
-              "papellidoTutor1": {
-                "type": "string"
-              },
-              "sapellidoTutor1": {
-                "type": "string"
-              },
-              "emailTutor1": {
-                "type": "string"
-              },
-              "telTutor1": {
-                "type": "integer"
-              },
-              "nombreTutor2": {
-                "type": "string"
-              },
-              "papellidoTutor2": {
-                "type": "string"
-              },
-              "sapellidoTutor2": {
-                "type": "string"
-              },
-              "emailTutor2": {
-                "type": "string"
-              },
-              "telTutor2": {
-                "type": "integer"
-              },
-              "nifTutor1": {
-                "type": "string"
-              },
-              "nifTutor2": {
-                "type": "string"
-              },
-              "faltasTutor1": {
-                "type": "boolean"
-              },
-              "faltasTutor2": {
-                "type": "boolean"
-              },
-              "imagenPermisos": {
-                "type": "boolean"
-              },
-              "enfermedades": {
-                "type": "boolean"
-              },
-              "salidaTutor1": {
-                "type": "boolean"
-              },
-              "salidaTutor2": {
-                "type": "boolean"
-              },
-              "datosPersonales": {
-                "type": "boolean"
-              },
-              "centroProcedencia": {
-                "type": "string"
-              },
-              "repite": {
-                "type": "boolean"
-              },
-              "valores": {
-                "type": "string"
-              },
-              "valoresTutor1": {
-                "type": "boolean"
-              },
-              "valoresTutor2": {
-                "type": "boolean"
-              },
-              "ordenOptativas": {
-                "type": "string"
-              },
-              "modalidad": {
-                "type": "string"
-              },
-              "enviada": {
-                "type": "boolean"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+          "matriculas": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "nombre",
+                "papellido",
+                "sapellido",
+                "NIF",
+                "direccion",
+                "localidad",
+                "provincia",
+                "lugarNacimiento",
+                "provinciaNacimiento",
+                "codigoPostal",
+                "fechaNac",
+                "nombreTutor1",
+                "papellidoTutor1",
+                "sapellidoTutor1",
+                "telTutor1",
+                "nifTutor1",
+                "faltasTutor1",
+                "imagenPermisos",
+                "enfermedades",
+                "repite",
+                "ordenOptativas"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "fecha": {
+                  "type": "string"
+                },
+                "curso": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "papellido": {
+                  "type": "string"
+                },
+                "sapellido": {
+                  "type": "string"
+                },
+                "NIF": {
+                  "type": "string"
+                },
+                "direccion": {
+                  "type": "string"
+                },
+                "localidad": {
+                  "type": "string"
+                },
+                "provincia": {
+                  "type": "string"
+                },
+                "lugarNacimiento": {
+                  "type": "string"
+                },
+                "provinciaNacimiento": {
+                  "type": "string"
+                },
+                "tel": {
+                  "type": "integer"
+                },
+                "codigoPostal": {
+                  "type": "integer"
+                },
+                "fechaNac": {
+                  "type": "string"
+                },
+                "nSSocial": {
+                  "type": "integer"
+                },
+                "nombreTutor1": {
+                  "type": "string"
+                },
+                "papellidoTutor1": {
+                  "type": "string"
+                },
+                "sapellidoTutor1": {
+                  "type": "string"
+                },
+                "emailTutor1": {
+                  "type": "string"
+                },
+                "telTutor1": {
+                  "type": "integer"
+                },
+                "nombreTutor2": {
+                  "type": "string"
+                },
+                "papellidoTutor2": {
+                  "type": "string"
+                },
+                "sapellidoTutor2": {
+                  "type": "string"
+                },
+                "emailTutor2": {
+                  "type": "string"
+                },
+                "telTutor2": {
+                  "type": "integer"
+                },
+                "nifTutor1": {
+                  "type": "string"
+                },
+                "nifTutor2": {
+                  "type": "string"
+                },
+                "faltasTutor1": {
+                  "type": "boolean"
+                },
+                "faltasTutor2": {
+                  "type": "boolean"
+                },
+                "imagenPermisos": {
+                  "type": "boolean"
+                },
+                "enfermedades": {
+                  "type": "boolean"
+                },
+                "salidaTutor1": {
+                  "type": "boolean"
+                },
+                "salidaTutor2": {
+                  "type": "boolean"
+                },
+                "datosPersonales": {
+                  "type": "boolean"
+                },
+                "centroProcedencia": {
+                  "type": "string"
+                },
+                "repite": {
+                  "type": "boolean"
+                },
+                "valores": {
+                  "type": "string"
+                },
+                "valoresTutor1": {
+                  "type": "boolean"
+                },
+                "valoresTutor2": {
+                  "type": "boolean"
+                },
+                "ordenOptativas": {
+                  "type": "string"
+                },
+                "modalidad": {
+                  "type": "string"
+                },
+                "enviada": {
+                  "type": "boolean"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -7213,8 +7237,11 @@
               "type": "string"
             }
           },
-          "matricula": {
-            "type": "string"
+          "matriculas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -7258,9 +7285,6 @@
                 "curso_cod": {
                   "type": "string"
                 },
-                "matricula": {
-                  "type": "string"
-                },
                 "modalidades": {
                   "type": "array",
                   "items": {
@@ -7280,6 +7304,12 @@
                   }
                 },
                 "optativas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "matriculas": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -7334,8 +7364,11 @@
                     "type": "string"
                   }
                 },
-                "matricula": {
-                  "type": "string"
+                "matriculas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"
@@ -7444,9 +7477,6 @@
                 "curso_cod": {
                   "type": "string"
                 },
-                "matricula": {
-                  "type": "string"
-                },
                 "modalidades": {
                   "type": "array",
                   "items": {
@@ -7466,6 +7496,12 @@
                   }
                 },
                 "optativas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "matriculas": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -7511,8 +7547,11 @@
                     "type": "string"
                   }
                 },
-                "matricula": {
-                  "type": "string"
+                "matriculas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"

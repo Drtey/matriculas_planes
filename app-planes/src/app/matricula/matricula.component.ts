@@ -18,6 +18,7 @@ export class MatriculaComponent implements OnInit {
   constructor(private route: ActivatedRoute,private router: Router, private authService: AuthService, private cookie: CookieService) {}
 
   optativas;
+  curso;
   troncales;
   modalidad;
   id = this.route.snapshot.paramMap.get('id');
@@ -110,16 +111,19 @@ export class MatriculaComponent implements OnInit {
 /*     window.addEventListener('beforeunload', (event) => {
       event.returnValue = `Are you sure you want to leave?`;
     }); */
-    this.getCurso();
+    this.getModalidad();
     this.getUser();
    
   }
 
-  getCurso() {
+  getModalidad() {
     axios
       .get(`${this.authService.url}/modalidades/${this.id}`)
       .then(response => {
         this.modalidad = response.data;
+        console.log(this.modalidad);
+        this.curso = response.data.curso;
+        console.log(this.curso.id);
         this.troncales = response.data.troncales;
         this.optativas = response.data.optativas;
       })
@@ -146,7 +150,7 @@ export class MatriculaComponent implements OnInit {
     axios
       .post(`${this.authService.url}/matriculas`, {
         user: this.user.id,
-        curso: this.modalidad.curso.id,
+        curso: this.curso.nombre,
         modalidad: this.modalidad.nombre,
         nombre: this.alumno.nombre,
         papellido: this.alumno.papellido,

@@ -561,9 +561,6 @@
               "curso_cod": {
                 "type": "string"
               },
-              "matricula": {
-                "type": "string"
-              },
               "modalidades": {
                 "type": "array",
                 "items": {
@@ -583,6 +580,12 @@
                 }
               },
               "optativas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "matriculas": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -788,8 +791,11 @@
                   "type": "string"
                 }
               },
-              "matricula": {
-                "type": "string"
+              "matriculas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"

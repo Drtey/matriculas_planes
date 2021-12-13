@@ -18,10 +18,6 @@
     "curso_cod": {
       "type": "string"
     },
-    "matricula": {
-      "via": "curso",
-      "model": "matriculas"
-    },
     "modalidades": {
       "via": "curso",
       "collection": "modalidades"
@@ -38,6 +34,10 @@
     "optativas": {
       "via": "cursos",
       "collection": "optativas"
+    },
+    "matriculas": {
+      "via": "curso",
+      "collection": "matriculas"
     }
   }
 }
