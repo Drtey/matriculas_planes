@@ -904,48 +904,42 @@
             "type": "string"
           },
           "modalidad": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "nombre": {
-                  "type": "string"
-                },
-                "curso": {
-                  "type": "string"
-                },
-                "optativas": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "troncales": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "matriculas": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "curso": {
+                "type": "string"
+              },
+              "optativas": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "troncales": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "matricula": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -1109,10 +1103,7 @@
             "type": "string"
           },
           "modalidad": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "string"
           },
           "published_at": {
             "type": "string",

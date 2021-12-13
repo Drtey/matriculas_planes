@@ -29,9 +29,9 @@
       "collection": "troncales",
       "dominant": true
     },
-    "matriculas": {
+    "matricula": {
       "via": "modalidad",
-      "collection": "matriculas"
+      "model": "matriculas"
     }
   }
 }

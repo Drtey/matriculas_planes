@@ -620,11 +620,8 @@
                     "type": "string"
                   }
                 },
-                "matriculas": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "matricula": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"

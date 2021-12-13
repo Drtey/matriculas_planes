@@ -62,14 +62,10 @@
       "required": true
     },
     "tel": {
-      "type": "biginteger",
-      "max": "9",
-      "min": "9"
+      "type": "biginteger"
     },
     "codigoPostal": {
       "type": "biginteger",
-      "max": "5",
-      "min": "5",
       "required": true
     },
     "fechaNac": {
@@ -199,9 +195,8 @@
       "required": true
     },
     "modalidad": {
-      "collection": "modalidades",
-      "via": "matriculas",
-      "dominant": true
+      "via": "matricula",
+      "model": "modalidades"
     }
   }
 }

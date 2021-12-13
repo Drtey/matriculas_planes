@@ -694,10 +694,7 @@
                 "type": "string"
               },
               "modalidad": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -738,11 +735,8 @@
                     "type": "string"
                   }
                 },
-                "matriculas": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "matricula": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"

@@ -1419,10 +1419,7 @@
                   "type": "string"
                 },
                 "modalidad": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
