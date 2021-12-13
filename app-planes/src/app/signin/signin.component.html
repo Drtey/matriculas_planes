@@ -8,8 +8,11 @@
             <input (keyup.enter)="logIn()" type="text" [(ngModel)]="usuario.identifier">
     
             <label for="password" id="password">Contraseña</label>
-            <input (keyup.enter)="logIn()" type="password" [(ngModel)]="usuario.password">
-    
+            <div class="sign__container__password-container">
+                <input (keyup.enter)="logIn()" type="password" [(ngModel)]="usuario.password" id="signinPassword">
+                <i class="fas fa-eye sign__container__password-container__eye" id="toggleSigninPassword" (click)="togglePassword()"></i>
+            </div>
+           
             <div id="forgotten-password" class="sign__container__forgotten-password"></div>
 
             <button (click)="logIn()" class="sign__container__boton boton" id="signin-button">Entrar</button>

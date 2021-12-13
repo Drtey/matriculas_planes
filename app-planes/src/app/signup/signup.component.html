@@ -11,10 +11,16 @@
             <input (keyup.enter)="register()" type="text" [(ngModel)]="usuario.username">
     
             <label for="password" id="password">Contraseña</label>
-            <input (keyup.enter)="register()" type="password" [(ngModel)]="usuario.password">
+            <div class="sign__container__password-container">
+                <input (keyup.enter)="register()" type="password" [(ngModel)]="usuario.password" id="signupPassword">
+                <i class="fas fa-eye sign__container__password-container__eye" id="toggleSignupPassword" (click)="togglePassword()"></i>
+            </div>
     
             <label for="confirm-password" id="confirm-password">Confirmar contraseña</label>
-            <input (keyup.enter)="register()" type="password" [(ngModel)]="usuario.password2">
+            <div class="sign__container__password-container">
+                <input (keyup.enter)="register()" type="password" [(ngModel)]="usuario.password2" id="signupPassword2">
+                <i class="fas fa-eye sign__container__password-container__eye" id="toggleSignupPassword2" (click)="togglePassword2()"></i>
+            </div>
 
             <div id="failed-signup" class="sign__container__failed-signup"></div>
     

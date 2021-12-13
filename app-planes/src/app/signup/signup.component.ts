@@ -34,4 +34,37 @@ export class SignupComponent implements OnInit {
         `
     }
   }
+
+  togglePassword() {
+    const togglePassword = document.getElementById('toggleSignupPassword')
+    const password = document.getElementById('signupPassword');
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    
+    if (password.getAttribute('type') == 'text') {
+        togglePassword.classList.remove('fa-eye')
+        togglePassword.classList.add('fa-eye-slash')
+    }
+    if (password.getAttribute('type') == 'password') {
+      togglePassword.classList.remove('fa-eye-slash')
+        togglePassword.classList.add('fa-eye')
+    }
+  }
+  togglePassword2() {
+    const togglePassword = document.getElementById('toggleSignupPassword2')
+    const password = document.getElementById('signupPassword2');
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    
+    if (password.getAttribute('type') == 'text') {
+        togglePassword.classList.remove('fa-eye')
+        togglePassword.classList.add('fa-eye-slash')
+    }
+    if (password.getAttribute('type') == 'password') {
+      togglePassword.classList.remove('fa-eye-slash')
+      togglePassword.classList.add('fa-eye')
+    }
+  }
+  
+
 }
