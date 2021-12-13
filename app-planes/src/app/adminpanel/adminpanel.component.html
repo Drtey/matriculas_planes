@@ -3,11 +3,11 @@
   <h1>PANEL DE ADMINISTRADOR</h1>
   <h2>Filtros disponibles</h2>
   <div class="adminpanel__select-container">
-    <select name="" id="">
+    <select name="" id="cursoid" (change)="getModalidadesByCurso()" [(ngModel)]="selectedOption" >
       <option value="" disabled selected hidden>Elige curso</option>
       <option *ngFor="let curso of cursos" value="{{ curso.id }}">{{ curso.nombre }}</option>
     </select>
-    <select name="" id="">
+    <select name="" id="" (change)="filtrarMatriculas()" [(ngModel)]="selectedOption2" >
       <option value="" disabled selected hidden>Elige modalidad</option>
       <option *ngFor="let modalidad of modalidades" value="{{ modalidad.id }}">{{ modalidad.nombre }}</option>
     </select>
@@ -34,6 +34,7 @@
           <td>{{ matricula.user.username }}</td>
           <td>{{ matricula.user.username }}</td>
           <td>{{ matricula.curso.nombre }}</td>
+          <td><button class="boton fas fa-eye" alt="Ver matrícula"></button></td>
         </tr>
       </tbody>
     </table>

@@ -18,6 +18,8 @@ export class AdminpanelComponent implements OnInit {
   cursos;
   modal;
   modalidades;
+  selectedOption;
+  selectedOption2;
 
   @ViewChild(DataTableDirective)
   dtElement: DataTableDirective;
@@ -117,5 +119,44 @@ export class AdminpanelComponent implements OnInit {
   setModalidad(id) {
     this.modal = id;
     console.log(this.modal);
+  }
+
+  getModalidadesByCurso() {
+       
+    axios
+      .get(`${this.db.url}/modalidades?curso=${this.selectedOption}`)
+      .then((response) => {
+        this.modalidades = response.data;
+        console.log(this.modalidades);
+        this.rerender();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+      axios
+      .get(`${this.db.url}/matriculas?curso=${this.selectedOption}`)
+      .then((response) => {
+        this.matriculas = response.data;
+        console.log(this.matriculas);
+        this.rerender();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+  filtrarMatriculas() { 
+    axios
+      .get(`${this.db.url}/matriculas?curso=${this.selectedOption}&modalidad=${this.selectedOption2}`)
+      .then((response) => {
+        this.matriculas = response.data;
+        console.log(this.matriculas);
+        this.rerender();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+      console.log(this.matriculas);
   }
 }
