@@ -4,6 +4,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import axios from 'axios';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from '../services/auth.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-matricula',
@@ -30,30 +31,29 @@ export class MatriculaComponent implements OnInit {
     direccion: "",
     localidad: "",
     provincia: "",
-    cp: 0,
-    telef: 0,
+    cp: null,
+    telef: null,
     fechaNac: "",
     lugarNac: "",
     provinciaNac: "",
     email: "",
-    nuss: 0,
+    nuss: null,
   }
 
   familiar = {
-    papellidoTutor1: "",
-    sapellidoTutor1: "",
+    apellido1Tutor1: "",
+    apellido2Tutor1: "",
     nombreTutor1: "",
     emailTutor1: "",
     nifTutor1: "",
-    telefTutor1: 0,
-    papellidoTutor2: "",
-    sapellidoTutor2: "",
+    telefTutor1: null,
+    apellido1Tutor2: "",
+    apellido2Tutor2: "",
     nombreTutor2: "",
     emailTutor2: "",
     nifTutor2: "",
-    telefTutor2: 0,
-    faltasTutor1: null,
-    faltasTutor2: null,
+    telefTutor2: null,
+    faltasTutor: null,
   }
 
   academicos = {
@@ -98,7 +98,7 @@ export class MatriculaComponent implements OnInit {
         bloques.forEach(element => {
           element.classList.add('dark');
         });
-        modal.forEach(element => {
+        modal.forEach(element => { 
           element.classList.add('dark');
         });
       }
@@ -110,6 +110,7 @@ export class MatriculaComponent implements OnInit {
     }); */
     this.getCurso();
     this.getUser();
+   
   }
 
   getCurso() {
@@ -139,6 +140,7 @@ export class MatriculaComponent implements OnInit {
   }
 
   crearMatricula(){
+    const modal = document.getElementById('modal-matricula');
     axios
       .post(`${this.authService.url}/matriculas`, {
         user: this.user.id,
@@ -158,19 +160,18 @@ export class MatriculaComponent implements OnInit {
         fechaNac: this.alumno.fechaNac,
         nSSocial: this.alumno.nuss,
         nombreTutor1: this.familiar.nombreTutor1,
-        papellidoTutor1: this.familiar.papellidoTutor1,
-        sapellidoTutor1: this.familiar.sapellidoTutor1,
+        papellidoTutor1: this.familiar.apellido1Tutor1,
+        sapellidoTutor1: this.familiar.apellido2Tutor1,
         emailTutor1: this.familiar.emailTutor1,
         nifTutor1: this.familiar.nifTutor1,
         telTutor1: this.familiar.telefTutor1,
         nombreTutor2: this.familiar.nombreTutor2,
-        papellidoTutor2: this.familiar.papellidoTutor2,
-        sapellidoTutor2: this.familiar.sapellidoTutor2,
+        papellidoTutor2: this.familiar.apellido1Tutor2,
+        sapellidoTutor2: this.familiar.apellido2Tutor2,
         emailTutor2: this.familiar.emailTutor2,
         nifTutor2: this.familiar.nifTutor2,
         telTutor2: this.familiar.telefTutor2,
-        faltasTutor1: false,
-        faltasTutor2: true,
+        faltasTutor: this.familiar.faltasTutor,
         imagenPermisos: true,
         enfermedades: true,
         salidaTutor1: true,
@@ -190,6 +191,22 @@ export class MatriculaComponent implements OnInit {
       .catch(error => {
         // Handle error.
         console.log('An error occurred:', error.response);
+
       });
   }  
+
+  
+  abrirModal() {
+    const modal = document.getElementById('modal-matricula');
+    modal.style.display = "flex";
+    document.body.classList.add('stop-scrolling')
+  }
+
+  cancelarModal() {
+    const modal = document.getElementById('modal-matricula');
+    modal.style.display = "none";
+    document.body.classList.remove('stop-scrolling')
+  }
+
+
 }
