@@ -26,24 +26,20 @@ export class AdminpanelComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject();
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
     this.toDo();
-
-    
-
     axios
       .get(`${this.db.url}/matriculas`)
       .then((response) => {
         this.matriculas = response.data;
-        console.log(this.matriculas);
-        this.rerender();
+        console.log(this.matriculas);        
       })
       .catch((error) => {
         console.log(error);
       });
     axios
       .get(`${this.db.url}/cursos`)
-      .then((response) => {        
+      .then((response) => {
         this.cursos = response.data.map((curso) => {
           return {
             id: curso.id,
@@ -51,16 +47,15 @@ export class AdminpanelComponent implements OnInit {
             modalidades: curso.modalidades,
           };
         });
-        
       })
       .catch((error) => {
         console.log(error);
       });
-
-
   }
   ngAfterViewInit(): void {
+    
     this.dtTrigger.next();
+
   }
 
   ngOnDestroy(): void {
@@ -74,25 +69,26 @@ export class AdminpanelComponent implements OnInit {
       pagingType: 'full_numbers',
       pageLength: 10,
       language: {
-        "emptyTable": "No hay información",
-        "info": "Mostrando _START_ a _END_ de _TOTAL_ Matrículas",
-        "infoEmpty": "Mostrando 0 to 0 of 0 Matrículas",
-        "infoFiltered": "(Filtrado de _MAX_ total matrículas)",
-        "infoPostFix": "",
-        "thousands": ",",
-        "lengthMenu": "_MENU_ Mostrar Matrículas ",
-        "loadingRecords": "Cargando...",
-        "processing": "Procesando...",
-        "search": "Buscar:",
-        "zeroRecords": "Sin resultados encontrados",
-        "paginate": {
-            "first": "Primero",
-            "last": "Último",
-            "next": "Siguiente",
-            "previous": "Anterior"
-        }
+        emptyTable: 'No hay información',
+        info: 'Mostrando _START_ a _END_ de _TOTAL_ Matrículas',
+        infoEmpty: 'Mostrando 0 to 0 of 0 Matrículas',
+        infoFiltered: '(Filtrado de _MAX_ total matrículas)',
+        infoPostFix: '',
+        thousands: ',',
+        lengthMenu: '_MENU_ Mostrar Matrículas ',
+        loadingRecords: 'Cargando...',
+        processing: 'Procesando...',
+        search: 'Buscar:',
+        zeroRecords: 'Sin resultados encontrados',
+        paginate: {
+          first: 'Primero',
+          last: 'Último',
+          next: 'Siguiente',
+          previous: 'Anterior',
+        },
       },
     };
+    
   }
   rerender(): void {
     this.dtElement.dtInstance.then((dtInstance: DataTables.Api) => {
@@ -122,7 +118,6 @@ export class AdminpanelComponent implements OnInit {
   }
 
   getModalidadesByCurso() {
-       
     axios
       .get(`${this.db.url}/modalidades?curso=${this.selectedOption}`)
       .then((response) => {
@@ -134,7 +129,7 @@ export class AdminpanelComponent implements OnInit {
         console.log(error);
       });
 
-      axios
+    axios
       .get(`${this.db.url}/matriculas?curso=${this.selectedOption}`)
       .then((response) => {
         this.matriculas = response.data;
@@ -145,9 +140,11 @@ export class AdminpanelComponent implements OnInit {
         console.log(error);
       });
   }
-  filtrarMatriculas() { 
+  filtrarMatriculas() {
     axios
-      .get(`${this.db.url}/matriculas?curso=${this.selectedOption}&modalidad=${this.selectedOption2}`)
+      .get(
+        `${this.db.url}/matriculas?curso=${this.selectedOption}&modalidad=${this.selectedOption2}`
+      )
       .then((response) => {
         this.matriculas = response.data;
         console.log(this.matriculas);
@@ -157,6 +154,20 @@ export class AdminpanelComponent implements OnInit {
         console.log(error);
       });
 
-      console.log(this.matriculas);
+    console.log(this.matriculas);
+  }
+
+  resetFilters() {
+    this.selectedOption = '0';
+    this.selectedOption2 = '0';
+    axios
+      .get(`${this.db.url}/matriculas`)
+      .then((response) => {
+        this.matriculas = response.data;
+        console.log(this.matriculas);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 }
