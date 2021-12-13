@@ -53,8 +53,8 @@
         <div class="datos-academicos__contenedor-materias__half">
             <h4>Materias que cursan</h4>
             <ul class="materias-cursa" >
-                <li *ngFor="let materiaCursa of materiasCursa">
-                    {{ materiaCursa }}
+                <li *ngFor="let troncales of troncales">
+                    {{troncales.nombre}}
                 </li>
             </ul>
             <!-- SOLO SI LO REQUIERE MATES -->
@@ -94,9 +94,9 @@
             <h4>Optativa</h4>
             <h6>Numerar <strong>TODAS</strong> por orden de prioridad. Se cursará <strong>UNA</strong>:</h6>
             <ul class="materias-optativas">
-                <li *ngFor="let materiaOptativa of materiasOptativas; let i = index">
+                <li *ngFor="let optativas of optativas">
                     <input type="number" class="order-input">
-                    <label>{{ materiaOptativa }}</label>
+                    <label>{{ optativas.nombre }}</label>
                 </li>
             </ul>
         </div>

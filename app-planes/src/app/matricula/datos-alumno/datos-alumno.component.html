@@ -2,43 +2,46 @@
 
     <h1>Datos personales del alumno, alumna</h1>
 
-    <label class="campo datos-alumno__label" for="apellidos"><strong>Apellidos*</strong></label>
-    <input class="campo datos-alumno__input campo-50" type="text" name="apellidos" id="apellidos" required>
+    <label class="campo datos-alumno__label" for="papellido"><strong>Primer apellido*</strong></label>
+    <input class="campo datos-alumno__input campo-50" type="text" name="papellido" id="papellido" required [(ngModel)]="alumno.papellido">
+
+    <label class="campo datos-alumno__label" for="sapellido"><strong>Segundo apellido*</strong></label>
+    <input class="campo datos-alumno__input campo-50" type="text" name="sapellido" id="sapellido" required [(ngModel)]="alumno.sapellido">
 
     <label class="campo datos-alumno__label" for="nombre"><strong>Nombre*</strong></label>
-    <input class="campo datos-alumno__input campo-50" type="text" name="nombre" id="nombre" required>
+    <input class="campo datos-alumno__input campo-50" type="text" name="nombre" id="nombre" required [(ngModel)]="alumno.nombre">
 
     <label class="campo datos-alumno__label" for="nif"><strong>NIF/NIE* <i class="fas fa-question-circle pc" data-toggle="tooltip" title="Número de Identificación Fiscal / Número de Identificación de Extranjero"></i></strong> <span class="movil">(Número de Identificación Fiscal / Número de Identificación de Extranjero)</span></label>
-    <input class="campo datos-alumno__input campo-25" type="text" name="nif" id="nif" required>
+    <input class="campo datos-alumno__input campo-25" type="text" name="nif" id="nif" required [(ngModel)]="alumno.nif">
 
     <label class="campo datos-alumno__label" for="direccion"><strong>Dirección*</strong></label>
-    <input class="campo datos-alumno__input campo-50" type="text" name="direccion" id="direccion" required>
+    <input class="campo datos-alumno__input campo-50" type="text" name="direccion" id="direccion" required [(ngModel)]="alumno.direccion">
 
     <label class="campo datos-alumno__label" for="localidad"><strong>Localidad*</strong></label>
-    <input class="campo datos-alumno__input campo-50" type="text" name="localidad" id="localidad" required>
+    <input class="campo datos-alumno__input campo-50" type="text" name="localidad" id="localidad" required [(ngModel)]="alumno.localidad">
 
     <label class="campo datos-alumno__label" for="provincia"><strong>Provincia*</strong></label>
-    <input class="campo datos-alumno__input campo-50" type="text" name="provincia" id="provincia" required>
+    <input class="campo datos-alumno__input campo-50" type="text" name="provincia" id="provincia" required [(ngModel)]="alumno.provincia">
 
     <label class="campo datos-alumno__label" for="cp"><strong>CP* <i class="fas fa-question-circle pc" data-toggle="tooltip" title="Código Postal"></i></strong> <span class="movil">(Código Postal)</span></label>
-    <input class="campo datos-alumno__input campo-25" type="text" name="cp" id="cp" required>
+    <input class="campo datos-alumno__input campo-25" type="text" name="cp" id="cp" required [(ngModel)]="alumno.cp">
 
     <label class="campo datos-alumno__label" for="telef"><strong>Teléfono</strong></label>
-    <input class="campo datos-alumno__input campo-25" type="text" name="telef" id="telef" required>
+    <input class="campo datos-alumno__input campo-25" type="text" name="telef" id="telef" required [(ngModel)]="alumno.telef">
 
     <label class="campo datos-alumno__label" for="fechaNac"><strong>Fecha de nacimiento*</strong></label>
-    <input class="campo datos-alumno__input campo-25" type="date" name="fechaNac" id="fechaNac" required>
+    <input class="campo datos-alumno__input campo-25" type="date" name="fechaNac" id="fechaNac" required [(ngModel)]="alumno.fechaNac">
 
     <label class="campo datos-alumno__label" for="lugarNac"><strong>Lugar de nacimiento*</strong></label>
-    <input class="campo datos-alumno__input campo-50" type="text" name="lugarNac" id="lugarNac" required>
+    <input class="campo datos-alumno__input campo-50" type="text" name="lugarNac" id="lugarNac" required [(ngModel)]="alumno.lugarNac">
 
     <label class="campo datos-alumno__label" for="provinciaNac"><strong>Provincia de nacimiento*</strong></label>
-    <input class="campo datos-alumno__input campo-50" type="text" name="provinciaNac" id="provinciaNac" required>
+    <input class="campo datos-alumno__input campo-50" type="text" name="provinciaNac" id="provinciaNac" required [(ngModel)]="alumno.provinciaNac">
 
     <label class="campo datos-alumno__label" for="email"><strong>Correo Electrónico</strong></label>
-    <input class="campo datos-alumno__input campo-50" type="text" name="email" id="email" required>
+    <input class="campo datos-alumno__input campo-50" type="text" name="email" id="email" required [(ngModel)]="alumno.email">
 
     <label class="campo datos-alumno__label" for="nuss"><strong>NUSS <i class="fas fa-question-circle pc" data-toggle="tooltip" title="Número de la Seguridad Social"></i></strong> <span class="movil">(Número de la Seguridad Social)</span></label>
-    <input class="campo datos-alumno__input campo-25" type="text" name="nuss" id="nuss">
+    <input class="campo datos-alumno__input campo-25" type="text" name="nuss" id="nuss" [(ngModel)]="alumno.nuss">
 
 </div>

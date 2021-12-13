@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-datos-academicos',
@@ -7,30 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatosAcademicosComponent implements OnInit {
 
-
-materiasOptativas = [
-  'materia1',
-  'materia2',
-  'materia3',
-  'materia4',
-  'materia5',
-  'materia6',
-  'materia7',
-  'materia8',
-]
-
-materiasCursa = [
-  'materia1',
-  'materia2',
-  'materia3',
-  'materia4',
-  'materia5',
-  'materia6',
-  'materia7',
-]
-
-matematicasOpciones
-
+@Input() curso;
+@Input() optativas;
+@Input() troncales;
+materiasOptativas;
+materiasCursa;
+matematicasOpciones;
 
 
 // almacenar listitems
@@ -49,6 +31,7 @@ dragStartIndex
       draggable_list.append(element); 
     })*/
   }
+  
 
   /* createList() {
     [...this.materiasOptativas]

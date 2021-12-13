@@ -65,21 +65,6 @@
     },
     "tel": {
       "type": "biginteger"
-    },
-    "DNI": {
-      "type": "string",
-      "unique": true,
-      "maxLength": 9,
-      "minLength": 9
-    },
-    "Nombre": {
-      "type": "string"
-    },
-    "Papellido": {
-      "type": "string"
-    },
-    "Sapellido": {
-      "type": "string"
     }
   }
 }

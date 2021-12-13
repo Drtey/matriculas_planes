@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/12/2021 7:26:18 PM"
+    "x-generation-date": "12/13/2021 2:32:12 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5991,7 +5991,9 @@
               "imagenPermisos",
               "enfermedades",
               "firmaTutor1",
-              "firmaTutor2"
+              "firmaTutor2",
+              "repite",
+              "ordenOptativas"
             ],
             "properties": {
               "id": {
@@ -6110,6 +6112,24 @@
               },
               "datosPersonales": {
                 "type": "boolean"
+              },
+              "centroProcedencia": {
+                "type": "string"
+              },
+              "repite": {
+                "type": "boolean"
+              },
+              "valores": {
+                "type": "string"
+              },
+              "valoresTutor1": {
+                "type": "boolean"
+              },
+              "valoresTutor2": {
+                "type": "boolean"
+              },
+              "ordenOptativas": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -6386,7 +6406,9 @@
           "imagenPermisos",
           "enfermedades",
           "firmaTutor1",
-          "firmaTutor2"
+          "firmaTutor2",
+          "repite",
+          "ordenOptativas"
         ],
         "properties": {
           "id": {
@@ -6493,18 +6515,6 @@
               },
               "tel": {
                 "type": "integer"
-              },
-              "DNI": {
-                "type": "string"
-              },
-              "Nombre": {
-                "type": "string"
-              },
-              "Papellido": {
-                "type": "string"
-              },
-              "Sapellido": {
-                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -6746,6 +6756,24 @@
           "datosPersonales": {
             "type": "boolean"
           },
+          "centroProcedencia": {
+            "type": "string"
+          },
+          "repite": {
+            "type": "boolean"
+          },
+          "valores": {
+            "type": "string"
+          },
+          "valoresTutor1": {
+            "type": "boolean"
+          },
+          "valoresTutor2": {
+            "type": "boolean"
+          },
+          "ordenOptativas": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -6774,7 +6802,9 @@
           "nifTutor2",
           "faltasTutor1",
           "imagenPermisos",
-          "enfermedades"
+          "enfermedades",
+          "repite",
+          "ordenOptativas"
         ],
         "properties": {
           "fecha": {
@@ -6888,6 +6918,24 @@
           },
           "datosPersonales": {
             "type": "boolean"
+          },
+          "centroProcedencia": {
+            "type": "string"
+          },
+          "repite": {
+            "type": "boolean"
+          },
+          "valores": {
+            "type": "string"
+          },
+          "valoresTutor1": {
+            "type": "boolean"
+          },
+          "valoresTutor2": {
+            "type": "boolean"
+          },
+          "ordenOptativas": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -7608,18 +7656,6 @@
                 "tel": {
                   "type": "integer"
                 },
-                "DNI": {
-                  "type": "string"
-                },
-                "Nombre": {
-                  "type": "string"
-                },
-                "Papellido": {
-                  "type": "string"
-                },
-                "Sapellido": {
-                  "type": "string"
-                },
                 "created_by": {
                   "type": "string"
                 },
@@ -7760,7 +7796,9 @@
                 "imagenPermisos",
                 "enfermedades",
                 "firmaTutor1",
-                "firmaTutor2"
+                "firmaTutor2",
+                "repite",
+                "ordenOptativas"
               ],
               "properties": {
                 "id": {
@@ -7880,6 +7918,24 @@
                 "datosPersonales": {
                   "type": "boolean"
                 },
+                "centroProcedencia": {
+                  "type": "string"
+                },
+                "repite": {
+                  "type": "boolean"
+                },
+                "valores": {
+                  "type": "string"
+                },
+                "valoresTutor1": {
+                  "type": "boolean"
+                },
+                "valoresTutor2": {
+                  "type": "boolean"
+                },
+                "ordenOptativas": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -7894,20 +7950,6 @@
           },
           "tel": {
             "type": "integer"
-          },
-          "DNI": {
-            "type": "string",
-            "maxLength": 9,
-            "minLength": 9
-          },
-          "Nombre": {
-            "type": "string"
-          },
-          "Papellido": {
-            "type": "string"
-          },
-          "Sapellido": {
-            "type": "string"
           }
         }
       },
@@ -7958,20 +8000,6 @@
           },
           "tel": {
             "type": "integer"
-          },
-          "DNI": {
-            "type": "string",
-            "maxLength": 9,
-            "minLength": 9
-          },
-          "Nombre": {
-            "type": "string"
-          },
-          "Papellido": {
-            "type": "string"
-          },
-          "Sapellido": {
-            "type": "string"
           },
           "created_by": {
             "type": "string"

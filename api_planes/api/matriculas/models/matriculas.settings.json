@@ -183,6 +183,26 @@
     "datosPersonales": {
       "type": "boolean",
       "required": false
+    },
+    "centroProcedencia": {
+      "type": "string"
+    },
+    "repite": {
+      "type": "boolean",
+      "required": true
+    },
+    "valores": {
+      "type": "string"
+    },
+    "valoresTutor1": {
+      "type": "boolean"
+    },
+    "valoresTutor2": {
+      "type": "boolean"
+    },
+    "ordenOptativas": {
+      "type": "text",
+      "required": true
     }
   }
 }

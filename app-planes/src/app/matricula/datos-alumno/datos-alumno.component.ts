@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-datos-alumno',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatosAlumnoComponent implements OnInit {
 
-  constructor() { }
+  alumno = {
+    papellido: "",
+    sapellido: "",
+    nombre: "",
+    nif: "",
+    direccion: "",
+    localidad: "",
+    provincia: "",
+    cp: "",
+    telef: "",
+    fechaNac: "",
+    lugarNac: "",
+    provinciaNac: "",
+    email: "",
+    nuss: "",
+  }
+
+  constructor() {
+   }
 
   ngOnInit(): void {
+
   }
 
 }

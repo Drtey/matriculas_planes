@@ -553,7 +553,9 @@
               "imagenPermisos",
               "enfermedades",
               "firmaTutor1",
-              "firmaTutor2"
+              "firmaTutor2",
+              "repite",
+              "ordenOptativas"
             ],
             "properties": {
               "id": {
@@ -672,6 +674,24 @@
               },
               "datosPersonales": {
                 "type": "boolean"
+              },
+              "centroProcedencia": {
+                "type": "string"
+              },
+              "repite": {
+                "type": "boolean"
+              },
+              "valores": {
+                "type": "string"
+              },
+              "valoresTutor1": {
+                "type": "boolean"
+              },
+              "valoresTutor2": {
+                "type": "boolean"
+              },
+              "ordenOptativas": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"

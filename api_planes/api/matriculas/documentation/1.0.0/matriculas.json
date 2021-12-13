@@ -539,7 +539,9 @@
           "imagenPermisos",
           "enfermedades",
           "firmaTutor1",
-          "firmaTutor2"
+          "firmaTutor2",
+          "repite",
+          "ordenOptativas"
         ],
         "properties": {
           "id": {
@@ -646,18 +648,6 @@
               },
               "tel": {
                 "type": "integer"
-              },
-              "DNI": {
-                "type": "string"
-              },
-              "Nombre": {
-                "type": "string"
-              },
-              "Papellido": {
-                "type": "string"
-              },
-              "Sapellido": {
-                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -899,6 +889,24 @@
           "datosPersonales": {
             "type": "boolean"
           },
+          "centroProcedencia": {
+            "type": "string"
+          },
+          "repite": {
+            "type": "boolean"
+          },
+          "valores": {
+            "type": "string"
+          },
+          "valoresTutor1": {
+            "type": "boolean"
+          },
+          "valoresTutor2": {
+            "type": "boolean"
+          },
+          "ordenOptativas": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -927,7 +935,9 @@
           "nifTutor2",
           "faltasTutor1",
           "imagenPermisos",
-          "enfermedades"
+          "enfermedades",
+          "repite",
+          "ordenOptativas"
         ],
         "properties": {
           "fecha": {
@@ -1041,6 +1051,24 @@
           },
           "datosPersonales": {
             "type": "boolean"
+          },
+          "centroProcedencia": {
+            "type": "string"
+          },
+          "repite": {
+            "type": "boolean"
+          },
+          "valores": {
+            "type": "string"
+          },
+          "valoresTutor1": {
+            "type": "boolean"
+          },
+          "valoresTutor2": {
+            "type": "boolean"
+          },
+          "ordenOptativas": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

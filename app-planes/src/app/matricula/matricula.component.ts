@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import axios from 'axios';
@@ -15,13 +15,29 @@ export class MatriculaComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,private router: Router, private authService: AuthService) {}
 
+  optativas;
+  troncales;
   curso;
   id = this.route.snapshot.paramMap.get('id');
+
+  alumno = {
+    papellido: "",
+    sapellido: "",
+    nombre: "",
+    nif: "",
+    direccion: "",
+    localidad: "",
+    provincia: "",
+    cp: "",
+    telef: "",
+    fechaNac: "",
+    lugarNac: "",
+    provinciaNac: "",
+    email: "",
+    nuss: "",
+  }
+
   ngAfterViewInit() {
-    
-      
-  console.log("ID: "+this.id);
-      
 
       const darkMode = <HTMLInputElement> document.getElementById('dark-mode');
       const bloques = document.querySelectorAll('.bloque');
@@ -50,35 +66,32 @@ export class MatriculaComponent implements OnInit {
 /*     window.addEventListener('beforeunload', (event) => {
       event.returnValue = `Are you sure you want to leave?`;
     }); */
+    this.getCurso();
   }
 
-  
-  
+  getCurso() {
+    axios
+      .get(`${this.authService.url}/modalidades/${this.id}`)
+      .then(response => {
+        this.curso = response.data;
+        this.troncales = response.data.troncales;
+        this.optativas = response.data.optativas;
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
 
-    getCurso() {
-      axios
-        .get(`${this.authService.url}/cursos`)
-        .then(response => {
-          this.curso = response.data;
-          console.log(this.curso);
-        })
-        .catch(error => {
-          console.log(error);
-        })
-    }
-
-    getOptativas() {
-      axios
-        .get(`${this.authService.url}/optativas?modalidades=${this.id}`)
-        .then(response => {
-          this.curso = response.data;
-          console.log(this.curso);
-        })
-        .catch(error => {
-          console.log(error);
-        })
-    }
-
-  
-  
+  crearMatricula(){
+    axios
+      .post(`${this.authService.url}/matriculas`)
+      .then(response => {
+        // Handle success.
+        console.log('Well done!');
+      })
+      .catch(error => {
+        // Handle error.
+        console.log('An error occurred:', error.response);
+      });
+  }  
 }

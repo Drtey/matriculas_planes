@@ -570,18 +570,6 @@
                 "tel": {
                   "type": "integer"
                 },
-                "DNI": {
-                  "type": "string"
-                },
-                "Nombre": {
-                  "type": "string"
-                },
-                "Papellido": {
-                  "type": "string"
-                },
-                "Sapellido": {
-                  "type": "string"
-                },
                 "created_by": {
                   "type": "string"
                 },
