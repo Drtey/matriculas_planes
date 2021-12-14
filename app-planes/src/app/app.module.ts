@@ -35,6 +35,8 @@ import { DataTablesModule } from 'angular-datatables';
 import { SelectorMatriculaComponent } from './selector-matricula/selector-matricula.component';
 import { RecoverPasswordComponent } from './signin/recover-password/recover-password.component';
 
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+
 
 const rutas = [ 
 
@@ -85,7 +87,8 @@ const rutas = [
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    DataTablesModule
+    DataTablesModule,
+    Ng2SmartTableModule
   ],
   providers: [
      // JWT

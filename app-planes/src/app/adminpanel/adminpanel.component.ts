@@ -5,6 +5,15 @@ import axios from 'axios';
 import { CookieService } from 'ngx-cookie-service';
 import { Subject } from 'rxjs';
 import { DataTableDirective } from 'angular-datatables';
+    
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { right } from '@popperjs/core';
+
+  
+    
+
+
+
 
 @Component({
   selector: 'app-adminpanel',
@@ -25,6 +34,62 @@ export class AdminpanelComponent implements OnInit {
   dtElement: DataTableDirective;
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject();
+
+  settings = {
+    actions:{
+      position:'right',
+      edit:false,
+      add:false,
+      delete:false,
+      custom:[
+        {
+          name:'view',
+          title:'<i class="fa fa-eye"></i>'
+        },
+      ],
+      columnTitle:'Acciones',
+    },    
+    columns: {      
+      id: {
+        title: 'Nº Matrícula',
+        filter: false,
+      },
+      nombre: {
+        title: 'Nombre',
+        filter: false,
+      },
+      papellido: {
+        title: '1º Apellido',
+        filter: false,
+      },
+      sapellido:{
+        title:'2º Apellido',
+        filter: false,
+      },
+      NIF:{
+        title:'NIF/NIE',
+        filter: false,
+      },
+      tel:{
+        title:'Teléfono',
+        filter: false,
+      },
+      nSSocial:{
+        title:'Nº Seguridad Social',
+        filter:false,
+      },       
+      enviada:{
+        title:'Enviada',
+        filter: false,
+      }
+      
+    },
+    pager: {
+      display: true,
+      perPage: 10,
+    },
+    
+  };
 
   ngOnInit(): void {    
     this.toDo();
