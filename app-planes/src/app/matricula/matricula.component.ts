@@ -113,7 +113,6 @@ export class MatriculaComponent implements OnInit {
     }); */
     this.getModalidad();
     this.getUser();
-   
   }
 
   getModalidad() {
@@ -200,6 +199,19 @@ export class MatriculaComponent implements OnInit {
 
       });
   }  
+
+  buscarReligion() {
+   /*  this.optativas.forEach(optativa => {
+      let keepGoing = true;
+      if(keepGoing) {
+        if(optativa.Religion) {
+          return true;
+          keepGoing = false;
+        }
+      } 
+
+    });*/
+  }
 
   
   abrirModal() {
