@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import axios from 'axios';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-matricula-item',
@@ -13,7 +15,7 @@ export class MatriculaItemComponent implements OnInit {
 
   @Input() matriculaUser;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
     this.modifyPdf();
@@ -22,6 +24,18 @@ export class MatriculaItemComponent implements OnInit {
 
   openModal() {
     
+  }
+
+  deleteMatricula(id){
+    axios
+      .delete(`${this.authService.url}/matriculas/${id}`)
+      .then(response => {
+        console.log('Well done!');
+      })
+      .catch(error => {
+        // Handle error.
+        console.log('An error occurred:', error.response);
+      });
   }
 
   async modifyPdf() {
