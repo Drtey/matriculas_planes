@@ -23,7 +23,7 @@
         }
     }
     &__id {
-        color: var(--color-grey-2);
+        color: rgb(122, 122, 122);
         position: absolute;
         top: var(--spacer-3);
         left: 50%;
@@ -39,7 +39,7 @@
     width: 120%;
     height: 60px;
     background-color: var(--color-grey-2);
-    opacity: .5;
+    opacity: .6;
     transform: translateX(-50%) translateY(-50%) rotate(-15deg);
     display: flex;
     justify-content: center;

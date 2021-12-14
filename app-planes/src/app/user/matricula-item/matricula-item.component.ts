@@ -94,6 +94,7 @@ export class MatriculaItemComponent implements OnInit {
     });
 
     this.cerrarEnviarModal(id);
+    window.location.reload();
   }
 
   borrarMatricula(id) {
@@ -108,6 +109,7 @@ export class MatriculaItemComponent implements OnInit {
     });
 
     this.cerrarBorrarModal(id);
+    window.location.reload();
   }
 
 }

@@ -1,17 +1,18 @@
 .footer {
     clear: both;
     position: relative;
-    height: 20vh;
-    background-color: var(--color-primary);
+    height: 25vh;
+    background-color: var(--color-primary-hover);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
     display: flex;
-    padding: var(--spacer-3);
+    padding: var(--spacer-7);
     justify-content: space-evenly;
     color: var(--color-font-light);
     &__bloque {
         a {
             color: var(--color-font-light);
             text-decoration: none;
+            font-size: 1.2em;
             &:hover {
                 text-decoration: underline;
             }
