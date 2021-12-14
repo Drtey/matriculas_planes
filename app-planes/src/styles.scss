@@ -341,6 +341,7 @@ input[type=submit] {
 
 
 .boton.apagado {
+    pointer-events: none;
     color: var(--color-font-light) !important;
     border: none !important;
     background-color: var(--color-grey-1) !important;
