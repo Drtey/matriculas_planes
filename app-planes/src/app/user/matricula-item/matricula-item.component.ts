@@ -38,6 +38,20 @@ export class MatriculaItemComponent implements OnInit {
       });
   }
 
+  enviarMatricula(id){
+    axios
+      .post(`${this.authService.url}/matriculas/${id}`, {
+        enviada: true
+      })
+      .then(response => {
+        console.log('Well done!');
+      })
+      .catch(error => {
+        // Handle error.
+        console.log('An error occurred:', error.response);
+      });
+  }
+
   async modifyPdf() {
 
     //Fetch de un PDF que existe 
