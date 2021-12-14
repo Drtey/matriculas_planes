@@ -22,10 +22,28 @@ export class MatriculaItemComponent implements OnInit {
     console.log("MATRICULA USER: "+this.matriculaUser)
   }
 
-  openModal() {
+  
+  ngAfterViewInit() {
+    const darkMode = <HTMLInputElement> document.getElementById('dark-mode');
+    const bloques = document.querySelectorAll('.bloque');
+    const modal = document.querySelectorAll('.modal-planes');
+    bloques.forEach(element => {
+      element.classList.remove('dark');
+    });
+    modal.forEach(element => {
+      element.classList.remove('dark');
+    });
     
+    if (darkMode.checked) {
+      document.body.classList.add('dark');
+      bloques.forEach(element => {
+        element.classList.add('dark');
+      });
+      modal.forEach(element => {
+        element.classList.add('dark');
+      });
+    }
   }
-
   async modifyPdf() {
 
     //Fetch de un PDF que existe 

@@ -10,7 +10,8 @@
     &__datos {
         grid-area: datos;
         padding: var(--spacer-6);
-        height: min-content;
+        min-height: max-content;
+        height: 450px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
