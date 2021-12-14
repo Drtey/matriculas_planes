@@ -19,8 +19,32 @@
     </div>
     <span class="matricula-item__id">Nº {{matriculaUser.id}}</span>
     <div class="matricula-item__botones">
-        <button (click)="openModal()" class="boton enviar" [ngClass]="{'apagado': matriculaUser.enviada == true}">Enviar al centro</button>
+        <button (click)="abrirEnviarModal(matriculaUser.id)" class="boton enviar" [ngClass]="{'apagado': matriculaUser.enviada == true}">Enviar al centro</button>
         <button class="boton">Descargar matrícula</button>
-        <button class="boton eliminar" [ngClass]="{'apagado': matriculaUser.enviada == true}">Eliminar</button>
+        <button (click)="abrirBorrarModal(matriculaUser.id)" class="boton eliminar" [ngClass]="{'apagado': matriculaUser.enviada == true}">Eliminar</button>
     </div>
 </div>
+
+<div class="modal-matricula" id="modal-matricula-enviar-{{matriculaUser.id}}">
+    <div class="modal-matricula__contenedor modal-planes">
+        <h3>¿Seguro que quieres <span class="texto-primario">enviar</span> esta matrícula?</h3>
+        <p>Seguirás podiendo descargar esta matrícula.</p>
+        <div class="modal-matricula__contenedor__botones">
+            <button (click)="enviarMatricula(matriculaUser.id)" class="boton enviar">Aceptar</button>
+            <button (click)="cerrarEnviarModal(matriculaUser.id)" class="boton eliminar">Cancelar</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal-matricula" id="modal-matricula-borrar-{{matriculaUser.id}}">
+    <div class="modal-matricula__contenedor modal-planes">
+        <h3>¿Seguro que quieres <span class="texto-aviso">eliminar</span> esta matrícula?</h3>
+        <p>Desaparecerá por completo de tu repositorio de matrículas</p>
+        <div class="modal-matricula__contenedor__botones">
+            <button (click)="borrarMatricula(matriculaUser.id)" class="boton enviar">Aceptar</button>
+            <button (click)="cerrarBorrarModal(matriculaUser.id)" class="boton eliminar">Cancelar</button>
+        </div>
+    </div>
+</div>
+

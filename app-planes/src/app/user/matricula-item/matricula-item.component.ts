@@ -52,4 +52,39 @@ export class MatriculaItemComponent implements OnInit {
     const pdfBytes = await pdfDoc.save();
     console.log(pdfBytes);
   }
+
+  
+  abrirBorrarModal(id) {
+    const modal = document.getElementById(`modal-matricula-borrar-${id}`)
+    modal.style.display = "flex";
+    document.body.classList.add('stop-scrolling');
+  }
+
+  cerrarBorrarModal(id) {
+    const modal = document.getElementById(`modal-matricula-borrar-${id}`)
+    modal.style.display = "none";
+    document.body.classList.remove('stop-scrolling');
+  }
+
+  abrirEnviarModal(id) {
+    const modal = document.getElementById(`modal-matricula-enviar-${id}`)
+    modal.style.display = "flex";
+    document.body.classList.add('stop-scrolling');
+  }
+
+  cerrarEnviarModal(id) {
+    const modal = document.getElementById(`modal-matricula-enviar-${id}`)
+    modal.style.display = "none";
+    document.body.classList.remove('stop-scrolling');
+  }
+
+  enviarMatricula(id) {
+    this.cerrarEnviarModal(id);
+  }
+
+  borrarMatricula(id) {
+    this.cerrarBorrarModal(id);
+  }
+
+
 }

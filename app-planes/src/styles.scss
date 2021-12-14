@@ -225,6 +225,13 @@ input[type=submit] {
     }
 }
 
+.texto-aviso {
+    color: var(--color-warning);
+}
+.texto-primario {
+    color: var(--color-primary-hover);
+}
+
 .bloque {
     background-color: var(--color-light);
     padding: var(--spacer-8);
