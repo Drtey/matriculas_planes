@@ -809,7 +809,8 @@
             }
           },
           "enviada": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
           },
           "published_at": {
             "type": "string",
@@ -972,7 +973,8 @@
             "type": "string"
           },
           "enviada": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
           },
           "published_at": {
             "type": "string",

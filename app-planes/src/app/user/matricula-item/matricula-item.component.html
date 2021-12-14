@@ -19,8 +19,8 @@
     </div>
     <span class="matricula-item__id">Nº {{matriculaUser.id}}</span>
     <div class="matricula-item__botones">
-        <button (click)="openModal()" class="boton enviar" [ngClass]="{'apagado': enviada == true}">Enviar al centro</button>
+        <button (click)="openModal()" class="boton enviar" [ngClass]="{'apagado': matriculaUser.enviada == true}">Enviar al centro</button>
         <button class="boton">Descargar matrícula</button>
-        <button class="boton eliminar" [ngClass]="{'apagado': enviada == true}">Eliminar</button>
+        <button class="boton eliminar" [ngClass]="{'apagado': matriculaUser.enviada == true}">Eliminar</button>
     </div>
 </div>
