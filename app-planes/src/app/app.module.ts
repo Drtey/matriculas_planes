@@ -43,14 +43,14 @@ const rutas = [
   { path: 'signin', component: SigninComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'recover-password', component: RecoverPasswordComponent},
-  { path: '', redirectTo: '/signin', pathMatch:'full'},  
-  { path: 'main', component: MainComponent, canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'public' }, 
+  { path: '', redirectTo: '/signin', pathMatch:'full'},
+  { path: 'main', component: MainComponent, canActivate:[RoleGuard, AuthGuard], data: { expectedRole: 'publico' }, 
       children: [
       { path: 'user', component: UserComponent },
       { path: 'selector-matricula', component: SelectorMatriculaComponent},
       { path: 'matricula/:id', component: MatriculaComponent},
       { path: '', component: MatriculaComponent},
-      { path: 'adminpanel', component: AdminpanelComponent, canActivate: [AuthGuard, RoleGuard], data: {expectedRole: 'public'}}
+      { path: 'adminpanel', component: AdminpanelComponent, canActivate: [AuthGuard, RoleGuard], data: {expectedRole: 'admin'}}
     ]
   },
   ];

@@ -29,7 +29,8 @@ export class AuthService {
         this.cookie.set('jwt', response.data.jwt, {expires: 30 / 1440});
         this.cookie.set('user', response.data, {expires: 30 / 1440});
         this.cookie.set('id', response.data.user.id, {expires: 30 / 1440})
-        this.cookie.set('role', response.data.user.role.type, {expires: 30 / 1440})
+        this.cookie.set('role', response.data.user.role.name, {expires: 30 / 1440})
+        this.cookie.set('roleid', response.data.user.role.id, {expires: 30 / 1440})
         this.router.navigate(['main/user']);
       })
       .catch(error => {

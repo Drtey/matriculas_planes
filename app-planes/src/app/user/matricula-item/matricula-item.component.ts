@@ -20,6 +20,7 @@ export class MatriculaItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
   ngAfterViewInit() {
     const darkMode = <HTMLInputElement> document.getElementById('dark-mode');
     const bloques = document.querySelectorAll('.bloque');

@@ -42,7 +42,7 @@ export class HeaderComponent implements OnInit {
     document.body.classList.remove('stop-scrolling')
   }
   getRole() {
-    return this.cookie.get('role');
+    return this.cookie.get('roleid');
   }
   
 

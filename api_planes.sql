@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-12-2021 a las 18:35:43
--- Versión del servidor: 10.4.20-MariaDB
--- Versión de PHP: 8.0.9
+-- Tiempo de generación: 15-12-2021 a las 03:37:18
+-- Versión del servidor: 10.4.22-MariaDB
+-- Versión de PHP: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -345,8 +345,8 @@ CREATE TABLE `matriculas` (
 --
 
 INSERT INTO `matriculas` (`id`, `fecha`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`, `usuario`, `curso`, `user`, `nombre`, `papellido`, `sapellido`, `NIF`, `direccion`, `localidad`, `provincia`, `lugarNacimiento`, `provinciaNacimiento`, `tel`, `codigoPostal`, `fechaNac`, `nSSocial`, `nombreTutor1`, `papellidoTutor1`, `sapellidoTutor1`, `emailTutor1`, `telTutor1`, `nombreTutor2`, `papellidoTutor2`, `sapellidoTutor2`, `emailTutor2`, `telTutor2`, `nifTutor1`, `nifTutor2`, `faltasTutor1`, `faltasTutor2`, `imagenPermisos`, `enfermedades`, `salidaTutor1`, `salidaTutor2`, `datosPersonales`, `centroProcedencia`, `repite`, `valores`, `valoresTutor1`, `valoresTutor2`, `ordenOptativas`, `modalidad`, `enviada`) VALUES
-(18, NULL, '2021-12-13 21:41:30', NULL, NULL, '2021-12-13 20:41:30', '2021-12-13 20:41:30', NULL, 4, 1, 'javier', 'garcia ', 'garcia ', '49969538z', 'torresalinas', 'murcia', 'murcia', 'murcia', 'murcia', 655637291, 30010, '2021-12-04', 11111111, 'fuensanta', 'garcia ', 'aguilar', 'fuewn@gmailc.om', 655637291, 'pedro', 'garcia ', 'espin', 'pedro@gmail', 655637291, '49969538z', '49969538z', 0, NULL, 1, 1, 1, NULL, 1, 'torresalinas', 1, 'string', 0, 1, 'string', 4, 0),
-(20, NULL, '2021-12-13 22:30:30', NULL, 1, '2021-12-13 21:30:30', '2021-12-13 21:38:51', NULL, 1, 1, 'javier', 'garcia ', 'garcia ', '49969538z', 'camino albadel', 'murcia', 'murcia', 'murcia', 'murcia', 655637291, 30010, '1999-12-04', 1111111, 'fuensanta', 'garcia ', 'garcia ', 'santi@fwefw.com', 655637291, 'pedro', 'garcia ', 'espin', 'pedro@gmai.com', 655637291, '49969538z', '49969538z', 0, NULL, 1, 1, 1, NULL, 1, 'torresalinas', 1, 'string', 1, 0, 'string', 4, 1);
+(18, NULL, '2021-12-13 21:41:30', NULL, NULL, '2021-12-13 20:41:30', '2021-12-15 01:06:46', NULL, 4, 1, 'javier', 'garcia ', 'garcia ', '49969538z', 'torresalinas', 'murcia', 'murcia', 'murcia', 'murcia', 655637291, 30010, '2021-12-04', 11111111, 'fuensanta', 'garcia ', 'aguilar', 'fuewn@gmailc.om', 655637291, 'pedro', 'garcia ', 'espin', 'pedro@gmail', 655637291, '49969538z', '49969538z', 0, NULL, 1, 1, 1, NULL, 1, 'torresalinas', 1, 'string', 0, 1, 'string', 4, 1),
+(20, NULL, '2021-12-13 22:30:30', NULL, 1, '2021-12-13 21:30:30', '2021-12-15 01:06:46', NULL, 1, 1, 'javier', 'garcia ', 'garcia ', '49969538z', 'camino albadel', 'murcia', 'murcia', 'murcia', 'murcia', 655637291, 30010, '1999-12-04', 1111111, 'fuensanta', 'garcia ', 'garcia ', 'santi@fwefw.com', 655637291, 'pedro', 'garcia ', 'espin', 'pedro@gmai.com', 655637291, '49969538z', '49969538z', 0, NULL, 1, 1, 1, NULL, 1, 'torresalinas', 1, 'string', 1, 0, 'string', 4, 1);
 
 -- --------------------------------------------------------
 
@@ -784,7 +784,7 @@ INSERT INTO `optativas` (`id`, `nombre`, `optativa_cod`, `published_at`, `create
 (5, 'Oratoria y debate', 'ORA1E', '2021-12-11 12:06:16', 1, 1, '2021-12-11 10:40:26', '2021-12-11 12:27:25', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (6, 'Refuerzo de la competencia en comunicación lingüística', 'REFLIN1E', '2021-12-11 12:06:24', 1, 1, '2021-12-11 10:40:51', '2021-12-11 12:27:33', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (7, 'Francés', 'FRA1E', '2021-12-11 12:05:24', 1, 1, '2021-12-11 10:41:02', '2021-12-11 11:12:27', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(8, 'Alemán', 'ALE1E', '2021-12-11 12:02:39', 1, 1, '2021-12-11 10:41:13', '2021-12-12 21:08:54', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, 'Alemán', 'ALE1E', '2021-12-11 12:02:39', 1, 1, '2021-12-11 10:41:13', '2021-12-14 17:43:42', 3, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL),
 (9, 'Religión Católica', 'RELCAT1E', '2021-12-11 12:07:19', 1, 1, '2021-12-11 10:44:38', '2021-12-11 12:28:06', 3, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
 (10, 'Valores Éticos', 'VALET1E', '2021-12-11 12:07:41', 1, 1, '2021-12-11 10:45:05', '2021-12-11 12:28:34', 3, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
 (11, 'Religión Evangélica', 'RELEV1E', '2021-12-11 12:07:33', 1, 1, '2021-12-11 10:45:21', '2021-12-11 12:28:15', 3, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -988,21 +988,21 @@ INSERT INTO `strapi_permission` (`id`, `action`, `subject`, `properties`, `condi
 (2016, 'plugins::content-manager.explorer.create', 'application::cursos.cursos', '{\"fields\":[\"nombre\",\"curso_cod\",\"modalidades\",\"condiciones\",\"troncales\",\"optativas\",\"matriculas\"]}', '[]', 1, '2021-12-13 21:35:23', '2021-12-13 21:35:23'),
 (2017, 'plugins::content-manager.explorer.read', 'application::cursos.cursos', '{\"fields\":[\"nombre\",\"curso_cod\",\"modalidades\",\"condiciones\",\"troncales\",\"optativas\",\"matriculas\"]}', '[]', 1, '2021-12-13 21:35:23', '2021-12-13 21:35:23'),
 (2018, 'plugins::content-manager.explorer.update', 'application::cursos.cursos', '{\"fields\":[\"nombre\",\"curso_cod\",\"modalidades\",\"condiciones\",\"troncales\",\"optativas\",\"matriculas\"]}', '[]', 1, '2021-12-13 21:35:23', '2021-12-13 21:35:23'),
-(2049, 'plugins::content-manager.explorer.delete', 'application::condiciones.condiciones', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2050, 'plugins::content-manager.explorer.delete', 'application::cursos.cursos', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2051, 'plugins::content-manager.explorer.delete', 'application::matriculas.matriculas', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2052, 'plugins::content-manager.explorer.delete', 'application::modalidades.modalidades', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2053, 'plugins::content-manager.explorer.delete', 'application::optativas.optativas', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2054, 'plugins::content-manager.explorer.delete', 'application::troncales.troncales', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2055, 'plugins::content-manager.explorer.delete', 'application::usuarios.usuarios', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2056, 'plugins::content-manager.explorer.delete', 'plugins::users-permissions.user', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2057, 'plugins::content-manager.explorer.publish', 'application::condiciones.condiciones', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2058, 'plugins::content-manager.explorer.publish', 'application::cursos.cursos', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2059, 'plugins::content-manager.explorer.publish', 'application::matriculas.matriculas', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2060, 'plugins::content-manager.explorer.publish', 'application::modalidades.modalidades', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2061, 'plugins::content-manager.explorer.publish', 'application::optativas.optativas', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2062, 'plugins::content-manager.explorer.publish', 'application::troncales.troncales', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21'),
-(2063, 'plugins::content-manager.explorer.publish', 'application::usuarios.usuarios', '{}', '[]', 1, '2021-12-14 16:30:21', '2021-12-14 16:30:21');
+(2094, 'plugins::content-manager.explorer.delete', 'application::condiciones.condiciones', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2095, 'plugins::content-manager.explorer.delete', 'application::cursos.cursos', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2096, 'plugins::content-manager.explorer.delete', 'application::matriculas.matriculas', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2097, 'plugins::content-manager.explorer.delete', 'application::modalidades.modalidades', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2098, 'plugins::content-manager.explorer.delete', 'application::optativas.optativas', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2099, 'plugins::content-manager.explorer.delete', 'application::troncales.troncales', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2100, 'plugins::content-manager.explorer.delete', 'application::usuarios.usuarios', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2101, 'plugins::content-manager.explorer.delete', 'plugins::users-permissions.user', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2102, 'plugins::content-manager.explorer.publish', 'application::condiciones.condiciones', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2103, 'plugins::content-manager.explorer.publish', 'application::cursos.cursos', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2104, 'plugins::content-manager.explorer.publish', 'application::modalidades.modalidades', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2105, 'plugins::content-manager.explorer.publish', 'application::optativas.optativas', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2106, 'plugins::content-manager.explorer.publish', 'application::troncales.troncales', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2107, 'plugins::content-manager.explorer.publish', 'application::usuarios.usuarios', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24'),
+(2108, 'plugins::content-manager.explorer.publish', 'application::matriculas.matriculas', '{}', '[]', 1, '2021-12-15 01:25:24', '2021-12-15 01:25:24');
 
 -- --------------------------------------------------------
 
@@ -1523,7 +1523,152 @@ INSERT INTO `users-permissions_permission` (`id`, `type`, `controller`, `action`
 (287, 'application', 'condiciones', 'findone', 0, '', 1, NULL, NULL),
 (288, 'application', 'condiciones', 'findone', 1, 'isauthenticated', 2, NULL, NULL),
 (289, 'application', 'condiciones', 'update', 0, '', 1, NULL, NULL),
-(290, 'application', 'condiciones', 'update', 0, '', 2, NULL, NULL);
+(290, 'application', 'condiciones', 'update', 0, '', 2, NULL, NULL),
+(291, 'application', 'condiciones', 'find', 1, '', 3, NULL, NULL),
+(292, 'application', 'condiciones', 'count', 1, '', 3, NULL, NULL),
+(293, 'application', 'condiciones', 'create', 1, '', 3, NULL, NULL),
+(294, 'application', 'condiciones', 'update', 1, '', 3, NULL, NULL),
+(295, 'application', 'cursos', 'find', 1, '', 3, NULL, NULL),
+(296, 'application', 'cursos', 'findone', 1, '', 3, NULL, NULL),
+(297, 'application', 'condiciones', 'findone', 1, '', 3, NULL, NULL),
+(298, 'application', 'condiciones', 'delete', 1, '', 3, NULL, NULL),
+(299, 'application', 'cursos', 'count', 1, '', 3, NULL, NULL),
+(300, 'application', 'cursos', 'create', 1, '', 3, NULL, NULL),
+(301, 'application', 'cursos', 'update', 1, '', 3, NULL, NULL),
+(302, 'application', 'cursos', 'delete', 1, '', 3, NULL, NULL),
+(303, 'application', 'matriculas', 'findone', 1, '', 3, NULL, NULL),
+(304, 'application', 'matriculas', 'find', 1, '', 3, NULL, NULL),
+(305, 'application', 'matriculas', 'count', 1, '', 3, NULL, NULL),
+(306, 'application', 'matriculas', 'create', 1, '', 3, NULL, NULL),
+(307, 'application', 'matriculas', 'update', 1, '', 3, NULL, NULL),
+(308, 'application', 'modalidades', 'findone', 1, '', 3, NULL, NULL),
+(309, 'application', 'matriculas', 'delete', 1, '', 3, NULL, NULL),
+(310, 'application', 'modalidades', 'find', 1, '', 3, NULL, NULL),
+(311, 'application', 'modalidades', 'count', 1, '', 3, NULL, NULL),
+(312, 'application', 'modalidades', 'create', 1, '', 3, NULL, NULL),
+(313, 'application', 'modalidades', 'update', 1, '', 3, NULL, NULL),
+(314, 'application', 'modalidades', 'delete', 1, '', 3, NULL, NULL),
+(315, 'application', 'optativas', 'find', 1, '', 3, NULL, NULL),
+(316, 'application', 'optativas', 'findone', 1, '', 3, NULL, NULL),
+(317, 'application', 'optativas', 'count', 1, '', 3, NULL, NULL),
+(318, 'application', 'optativas', 'update', 1, '', 3, NULL, NULL),
+(319, 'application', 'optativas', 'create', 1, '', 3, NULL, NULL),
+(320, 'application', 'optativas', 'delete', 1, '', 3, NULL, NULL),
+(321, 'application', 'troncales', 'find', 1, '', 3, NULL, NULL),
+(322, 'application', 'troncales', 'findone', 1, '', 3, NULL, NULL),
+(323, 'application', 'troncales', 'count', 1, '', 3, NULL, NULL),
+(324, 'application', 'troncales', 'create', 1, '', 3, NULL, NULL),
+(325, 'application', 'troncales', 'update', 1, '', 3, NULL, NULL),
+(326, 'application', 'troncales', 'delete', 1, '', 3, NULL, NULL),
+(327, 'application', 'usuarios', 'find', 1, '', 3, NULL, NULL),
+(328, 'application', 'usuarios', 'findone', 1, '', 3, NULL, NULL),
+(329, 'application', 'usuarios', 'create', 1, '', 3, NULL, NULL),
+(330, 'application', 'usuarios', 'count', 1, '', 3, NULL, NULL),
+(331, 'application', 'usuarios', 'update', 1, '', 3, NULL, NULL),
+(332, 'application', 'usuarios', 'delete', 1, '', 3, NULL, NULL),
+(333, 'config-sync', 'config', 'exportall', 0, '', 3, NULL, NULL),
+(334, 'content-manager', 'collection-types', 'find', 0, '', 3, NULL, NULL),
+(335, 'config-sync', 'config', 'importall', 0, '', 3, NULL, NULL),
+(336, 'config-sync', 'config', 'getdiff', 0, '', 3, NULL, NULL),
+(337, 'content-manager', 'collection-types', 'findone', 0, '', 3, NULL, NULL),
+(338, 'content-manager', 'collection-types', 'create', 0, '', 3, NULL, NULL),
+(339, 'content-manager', 'collection-types', 'update', 0, '', 3, NULL, NULL),
+(340, 'content-manager', 'collection-types', 'delete', 0, '', 3, NULL, NULL),
+(341, 'content-manager', 'collection-types', 'publish', 0, '', 3, NULL, NULL),
+(342, 'content-manager', 'collection-types', 'unpublish', 0, '', 3, NULL, NULL),
+(343, 'content-manager', 'collection-types', 'bulkdelete', 0, '', 3, NULL, NULL),
+(344, 'content-manager', 'collection-types', 'previewmanyrelations', 0, '', 3, NULL, NULL),
+(345, 'content-manager', 'components', 'findcomponentconfiguration', 0, '', 3, NULL, NULL),
+(346, 'content-manager', 'components', 'findcomponents', 0, '', 3, NULL, NULL),
+(347, 'content-manager', 'components', 'updatecomponentconfiguration', 0, '', 3, NULL, NULL),
+(348, 'content-manager', 'content-types', 'findcontenttypes', 0, '', 3, NULL, NULL),
+(349, 'content-manager', 'content-types', 'findcontenttypessettings', 0, '', 3, NULL, NULL),
+(350, 'content-manager', 'content-types', 'findcontenttypeconfiguration', 0, '', 3, NULL, NULL),
+(351, 'content-manager', 'content-types', 'updatecontenttypeconfiguration', 0, '', 3, NULL, NULL),
+(352, 'content-manager', 'relations', 'find', 0, '', 3, NULL, NULL),
+(353, 'content-manager', 'single-types', 'find', 0, '', 3, NULL, NULL),
+(354, 'content-manager', 'single-types', 'createorupdate', 0, '', 3, NULL, NULL),
+(355, 'content-manager', 'single-types', 'publish', 0, '', 3, NULL, NULL),
+(356, 'content-manager', 'single-types', 'delete', 0, '', 3, NULL, NULL),
+(357, 'content-manager', 'uid', 'generateuid', 0, '', 3, NULL, NULL),
+(358, 'content-manager', 'single-types', 'unpublish', 0, '', 3, NULL, NULL),
+(359, 'content-manager', 'uid', 'checkuidavailability', 0, '', 3, NULL, NULL),
+(360, 'content-type-builder', 'builder', 'getreservednames', 0, '', 3, NULL, NULL),
+(361, 'content-type-builder', 'componentcategories', 'editcategory', 0, '', 3, NULL, NULL),
+(362, 'content-type-builder', 'componentcategories', 'deletecategory', 0, '', 3, NULL, NULL),
+(363, 'content-type-builder', 'components', 'getcomponents', 0, '', 3, NULL, NULL),
+(364, 'content-type-builder', 'components', 'createcomponent', 0, '', 3, NULL, NULL),
+(365, 'content-type-builder', 'components', 'getcomponent', 0, '', 3, NULL, NULL),
+(366, 'content-type-builder', 'components', 'deletecomponent', 0, '', 3, NULL, NULL),
+(367, 'content-type-builder', 'components', 'updatecomponent', 0, '', 3, NULL, NULL),
+(368, 'content-type-builder', 'connections', 'getconnections', 0, '', 3, NULL, NULL),
+(369, 'content-type-builder', 'contenttypes', 'getcontenttypes', 0, '', 3, NULL, NULL),
+(370, 'content-type-builder', 'contenttypes', 'getcontenttype', 0, '', 3, NULL, NULL),
+(371, 'content-type-builder', 'contenttypes', 'createcontenttype', 0, '', 3, NULL, NULL),
+(372, 'content-type-builder', 'contenttypes', 'updatecontenttype', 0, '', 3, NULL, NULL),
+(373, 'content-type-builder', 'contenttypes', 'deletecontenttype', 0, '', 3, NULL, NULL),
+(374, 'documentation', 'documentation', 'getinfos', 0, '', 3, NULL, NULL),
+(375, 'documentation', 'documentation', 'index', 0, '', 3, NULL, NULL),
+(376, 'documentation', 'documentation', 'loginview', 0, '', 3, NULL, NULL),
+(377, 'documentation', 'documentation', 'login', 0, '', 3, NULL, NULL),
+(378, 'documentation', 'documentation', 'updatesettings', 0, '', 3, NULL, NULL),
+(379, 'documentation', 'documentation', 'regeneratedoc', 0, '', 3, NULL, NULL),
+(380, 'documentation', 'documentation', 'deletedoc', 0, '', 3, NULL, NULL),
+(381, 'email', 'email', 'send', 0, '', 3, NULL, NULL),
+(382, 'email', 'email', 'test', 0, '', 3, NULL, NULL),
+(383, 'email', 'email', 'getsettings', 0, '', 3, NULL, NULL),
+(384, 'entity-relationship-chart', 'entity-relationship-chart', 'index', 0, '', 3, NULL, NULL),
+(385, 'entity-relationship-chart', 'entity-relationship-chart', 'geterdata', 0, '', 3, NULL, NULL),
+(386, 'i18n', 'content-types', 'getnonlocalizedattributes', 0, '', 3, NULL, NULL),
+(387, 'i18n', 'iso-locales', 'listisolocales', 0, '', 3, NULL, NULL),
+(388, 'i18n', 'locales', 'listlocales', 0, '', 3, NULL, NULL),
+(389, 'i18n', 'locales', 'createlocale', 0, '', 3, NULL, NULL),
+(390, 'i18n', 'locales', 'updatelocale', 0, '', 3, NULL, NULL),
+(391, 'i18n', 'locales', 'deletelocale', 0, '', 3, NULL, NULL),
+(392, 'raw-query', 'raw-query', 'execute', 0, '', 3, NULL, NULL),
+(393, 'sync-roles-permissions', 'sync-roles-permissions', 'getroles', 0, '', 3, NULL, NULL),
+(394, 'sync-roles-permissions', 'sync-roles-permissions', 'index', 0, '', 3, NULL, NULL),
+(395, 'sync-roles-permissions', 'sync-roles-permissions', 'updateroles', 0, '', 3, NULL, NULL),
+(396, 'testing', 'my-plugin', 'index', 0, '', 3, NULL, NULL),
+(397, 'upload', 'upload', 'find', 0, '', 3, NULL, NULL),
+(398, 'upload', 'upload', 'findone', 0, '', 3, NULL, NULL),
+(399, 'upload', 'upload', 'count', 0, '', 3, NULL, NULL),
+(400, 'upload', 'upload', 'destroy', 0, '', 3, NULL, NULL),
+(401, 'upload', 'upload', 'updatesettings', 0, '', 3, NULL, NULL),
+(402, 'upload', 'upload', 'getsettings', 0, '', 3, NULL, NULL),
+(403, 'upload', 'upload', 'upload', 0, '', 3, NULL, NULL),
+(404, 'upload', 'upload', 'search', 0, '', 3, NULL, NULL),
+(405, 'users-permissions', 'auth', 'resetpassword', 1, '', 3, NULL, NULL),
+(406, 'users-permissions', 'auth', 'callback', 1, '', 3, NULL, NULL),
+(407, 'users-permissions', 'auth', 'connect', 1, '', 3, NULL, NULL),
+(408, 'users-permissions', 'auth', 'forgotpassword', 1, '', 3, NULL, NULL),
+(409, 'users-permissions', 'auth', 'register', 1, '', 3, NULL, NULL),
+(410, 'users-permissions', 'auth', 'emailconfirmation', 1, '', 3, NULL, NULL),
+(411, 'users-permissions', 'auth', 'sendemailconfirmation', 1, '', 3, NULL, NULL),
+(412, 'users-permissions', 'user', 'create', 1, '', 3, NULL, NULL),
+(413, 'users-permissions', 'user', 'update', 1, '', 3, NULL, NULL),
+(414, 'users-permissions', 'user', 'find', 1, '', 3, NULL, NULL),
+(415, 'users-permissions', 'user', 'count', 1, '', 3, NULL, NULL),
+(416, 'users-permissions', 'user', 'findone', 1, '', 3, NULL, NULL),
+(417, 'users-permissions', 'user', 'destroy', 1, '', 3, NULL, NULL),
+(418, 'users-permissions', 'user', 'destroyall', 1, '', 3, NULL, NULL),
+(419, 'users-permissions', 'user', 'me', 1, '', 3, NULL, NULL),
+(420, 'users-permissions', 'userspermissions', 'createrole', 1, '', 3, NULL, NULL),
+(421, 'users-permissions', 'userspermissions', 'deleterole', 1, '', 3, NULL, NULL),
+(422, 'users-permissions', 'userspermissions', 'getpermissions', 1, '', 3, NULL, NULL),
+(423, 'users-permissions', 'userspermissions', 'getpolicies', 1, '', 3, NULL, NULL),
+(424, 'users-permissions', 'userspermissions', 'getrole', 1, '', 3, NULL, NULL),
+(425, 'users-permissions', 'userspermissions', 'getroles', 1, '', 3, NULL, NULL),
+(426, 'users-permissions', 'userspermissions', 'index', 1, '', 3, NULL, NULL),
+(427, 'users-permissions', 'userspermissions', 'getroutes', 1, '', 3, NULL, NULL),
+(428, 'users-permissions', 'userspermissions', 'searchusers', 1, '', 3, NULL, NULL),
+(429, 'users-permissions', 'userspermissions', 'updaterole', 1, '', 3, NULL, NULL),
+(430, 'users-permissions', 'userspermissions', 'getemailtemplate', 1, '', 3, NULL, NULL),
+(431, 'users-permissions', 'userspermissions', 'updateemailtemplate', 1, '', 3, NULL, NULL),
+(432, 'users-permissions', 'userspermissions', 'getadvancedsettings', 1, '', 3, NULL, NULL),
+(433, 'users-permissions', 'userspermissions', 'updateadvancedsettings', 1, '', 3, NULL, NULL),
+(434, 'users-permissions', 'userspermissions', 'getproviders', 1, '', 3, NULL, NULL),
+(435, 'users-permissions', 'userspermissions', 'updateproviders', 1, '', 3, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1546,7 +1691,8 @@ CREATE TABLE `users-permissions_role` (
 
 INSERT INTO `users-permissions_role` (`id`, `name`, `description`, `type`, `created_by`, `updated_by`) VALUES
 (1, 'Authenticated', 'Default role given to authenticated user.', 'authenticated', NULL, NULL),
-(2, 'publico', 'Usuario normal', 'public', NULL, NULL);
+(2, 'publico', 'Usuario normal', 'public', NULL, NULL),
+(3, 'publico', 'superuser', 'admin', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1581,8 +1727,9 @@ CREATE TABLE `users-permissions_user` (
 --
 
 INSERT INTO `users-permissions_user` (`id`, `username`, `email`, `provider`, `password`, `resetPasswordToken`, `confirmationToken`, `confirmed`, `blocked`, `role`, `created_by`, `updated_by`, `created_at`, `updated_at`, `tel`, `DNI`, `Nombre`, `Papellido`, `Sapellido`) VALUES
-(1, 'javigg', 'javiggv99@gmail.com', 'local', '$2a$10$dfDbln5Gr3RxGf4qpXuvtObSZ0DM5KdKsP.Ig7pOUE31UU07YCxO6', NULL, NULL, 1, 0, 2, 1, 1, '2021-11-10 18:01:52', '2021-12-12 14:35:31', 655637291, '49969538z', 'Javier', 'García ', 'García'),
-(13, '', 'hamsterminini7@gmail.com', 'local', '$2a$10$cSeUDQTDsESxnhrSILrp1O975m1dkQJsW5HHIcPBVw/r/wteDWlhS', NULL, NULL, 1, NULL, 2, NULL, NULL, '2021-12-12 21:25:45', '2021-12-12 21:25:45', NULL, NULL, NULL, NULL, NULL);
+(1, 'javigg', 'javiggv99@gmail.com', 'local', '$2a$10$dfDbln5Gr3RxGf4qpXuvtObSZ0DM5KdKsP.Ig7pOUE31UU07YCxO6', NULL, NULL, 1, 0, 3, 1, 1, '2021-11-10 18:01:52', '2021-12-15 01:06:46', 655637291, '49969538z', 'Javier', 'García ', 'García'),
+(20, 'drtey12341', 'vicente@gmail.com', 'local', '$2a$10$NZczxl7wfjS.CBeyXiYGEuAFB5Sls/locXzGkFZMPYbnWcBQiAy66', NULL, NULL, 1, 0, 2, 1, 1, '2021-12-15 00:45:12', '2021-12-15 00:45:12', 0, NULL, NULL, NULL, NULL),
+(22, 'wefqwf', 'vicentewq@gmail.com', 'local', '$2a$10$ScqcONN4BmT3J6hEWNGp9eufseTRrUJhW6Y4emy/99mH5BTwGpcka', NULL, NULL, 1, NULL, 2, NULL, NULL, '2021-12-15 00:47:31', '2021-12-15 00:47:31', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1831,7 +1978,7 @@ ALTER TABLE `i18n_locales`
 -- AUTO_INCREMENT de la tabla `matriculas`
 --
 ALTER TABLE `matriculas`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `matriculas_modalidades__modalidades_matriculas`
@@ -1879,7 +2026,7 @@ ALTER TABLE `strapi_administrator`
 -- AUTO_INCREMENT de la tabla `strapi_permission`
 --
 ALTER TABLE `strapi_permission`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2064;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2109;
 
 --
 -- AUTO_INCREMENT de la tabla `strapi_role`
@@ -1921,19 +2068,19 @@ ALTER TABLE `upload_file_morph`
 -- AUTO_INCREMENT de la tabla `users-permissions_permission`
 --
 ALTER TABLE `users-permissions_permission`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=291;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=436;
 
 --
 -- AUTO_INCREMENT de la tabla `users-permissions_role`
 --
 ALTER TABLE `users-permissions_role`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `users-permissions_user`
 --
 ALTER TABLE `users-permissions_user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

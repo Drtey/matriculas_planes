@@ -7,7 +7,7 @@
     </ng-container>
     
     <ul class="header__nav">
-        <li *ngIf="getRole() == 'public'"><a routerLink="/main/adminpanel" routerLinkActive="active">Administrador</a></li>
+        <li *ngIf="getRole() == '3'"><a routerLink="/main/adminpanel" routerLinkActive="active">Administrador</a></li>
         <li><a routerLink="/main/user" routerLinkActive="active">Perfil</a></li>
         <li><a (click)="abrirModal()">Cerrar Sesión</a></li>
     </ul>
