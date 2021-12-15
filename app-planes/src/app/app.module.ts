@@ -35,6 +35,7 @@ import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { DataTablesModule } from 'angular-datatables';
 import { SelectorMatriculaComponent } from './selector-matricula/selector-matricula.component';
 import { RecoverPasswordComponent } from './signin/recover-password/recover-password.component';
+import { MatriculafilledComponent } from './matriculafilled/matriculafilled.component';
 
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 
@@ -51,7 +52,9 @@ const rutas = [
       { path: 'selector-matricula', component: SelectorMatriculaComponent},
       { path: 'matricula/:id', component: MatriculaComponent},
       { path: '', component: MatriculaComponent},
-      { path: 'adminpanel', component: AdminpanelComponent, canActivate: [RolePanelGuard], data: {adminRole: '3'}}
+      { path: 'adminpanel', component: AdminpanelComponent, canActivate: [RolePanelGuard], data: {adminRole: '3'}},
+      { path: 'matriculafilled/:id', component: MatriculafilledComponent, canActivate: [RolePanelGuard], data: {adminRole: '3'}},
+    
     ]
   },
   ];
@@ -79,6 +82,7 @@ const rutas = [
     AdminpanelComponent,
     SelectorMatriculaComponent,
     RecoverPasswordComponent,
+    MatriculafilledComponent
   ],
   imports: [
     BrowserModule,
