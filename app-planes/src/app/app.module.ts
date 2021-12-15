@@ -26,6 +26,7 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 
 import { AuthGuard } from './guard/auth.guard';
 import { RoleGuard } from './guard/role.guard';
+import { RolePanelGuard } from './guard/role-panel.guard';
 import { AutorizacionSalidaComponent } from './matricula/autorizacion-salida/autorizacion-salida.component';
 import { MatriculaItemComponent } from './user/matricula-item/matricula-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -50,7 +51,7 @@ const rutas = [
       { path: 'selector-matricula', component: SelectorMatriculaComponent},
       { path: 'matricula/:id', component: MatriculaComponent},
       { path: '', component: MatriculaComponent},
-      { path: 'adminpanel', component: AdminpanelComponent, canActivate: [AuthGuard, RoleGuard], data: {expectedRole: 'admin'}}
+      { path: 'adminpanel', component: AdminpanelComponent, canActivate: [RolePanelGuard], data: {adminRole: '3'}}
     ]
   },
   ];
