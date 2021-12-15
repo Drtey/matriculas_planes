@@ -1,0 +1,287 @@
+<div class="matricula">
+    <h1 class="matricula__titulo">{{matricula[0].modalidad.nombre}}</h1>
+    
+    <form ngNativeValidate>
+
+            <div class="bloque datos-alumno primero">
+
+                <h1>Datos personales del alumno, alumna</h1>
+            
+                <label class="campo datos-alumno__label" for="papellido"><strong>Primer apellido</strong></label>
+                <input class="campo datos-alumno__input campo-50" type="text" name="papellido" id="papellido" disabled value={{matricula[0].papellido}}>
+            
+                <label class="campo datos-alumno__label" for="sapellido"><strong>Segundo apellido</strong></label>
+                <input class="campo datos-alumno__input campo-50" type="text" name="sapellido" id="sapellido" required disabled value={{matricula[0].sapellido}}>
+            
+                <label class="campo datos-alumno__label" for="nombre"><strong>Nombre</strong></label>
+                <input class="campo datos-alumno__input campo-50" type="text" name="nombre" id="nombre" disabled value={{matricula[0].nombre}} required>
+            
+                <label class="campo datos-alumno__label" for="nif"><strong>NIF/NIE <i class="fas fa-question-circle pc" data-toggle="tooltip" title="Número de Identificación Fiscal / Número de Identificación de Extranjero"></i></strong> <span class="movil">(Número de Identificación Fiscal / Número de Identificación de Extranjero)</span></label>
+                <input class="campo datos-alumno__input campo-25" type="text" name="nif" id="nif" required disabled value={{matricula[0].NIF}}>
+            
+                <label class="campo datos-alumno__label" for="direccion"><strong>Dirección</strong></label>
+                <input class="campo datos-alumno__input campo-50" type="text" name="direccion" id="direccion" disabled value={{matricula[0].direccion}}required >
+            
+                <label class="campo datos-alumno__label" for="localidad"><strong>Localidad</strong></label>
+                <input class="campo datos-alumno__input campo-50" type="text" name="localidad" id="localidad" disabled value={{matricula[0].localidad}} required >
+            
+                <label class="campo datos-alumno__label" for="provincia"><strong>Provincia</strong></label>
+                <input class="campo datos-alumno__input campo-50" type="text" name="provincia" id="provincia" required disabled value={{matricula[0].provincia}}>
+            
+                <label class="campo datos-alumno__label" for="cp"><strong>CP<i class="fas fa-question-circle pc" data-toggle="tooltip" title="Código Postal"></i></strong> <span class="movil">(Código Postal)</span></label>
+                <input class="campo datos-alumno__input campo-25" type="text" name="cp" id="cp" disabled value={{matricula[0].codigoPostal}} required >
+            
+                <label class="campo datos-alumno__label" for="telef"><strong>Teléfono</strong></label>
+                <input class="campo datos-alumno__input campo-25" type="text" name="telef" id="telef" disabled value={{matricula[0].tel}} required >
+            
+                <label class="campo datos-alumno__label" for="fechaNac"><strong>Fecha de nacimiento</strong></label>
+                <input class="campo datos-alumno__input campo-25" type="date" name="fechaNac" id="fechaNac" disabled value={{matricula[0].fechaNac}}  required >
+            
+                <label class="campo datos-alumno__label" for="lugarNac"><strong>Lugar de nacimiento</strong></label>
+                <input class="campo datos-alumno__input campo-50" type="text" name="lugarNac" id="lugarNac" disabled value={{matricula[0].lugarNacimiento}} required >
+            
+                <label class="campo datos-alumno__label" for="provinciaNac"><strong>Provincia de nacimiento</strong></label>
+                <input class="campo datos-alumno__input campo-50" type="text" name="provinciaNac" id="provinciaNac" disabled value={{matricula[0].provinciaNacimiento}} required >
+            
+                <label class="campo datos-alumno__label" for="email"><strong>Correo Electrónico</strong></label>
+                <input class="campo datos-alumno__input campo-50" type="text" name="email" id="email" disabled value={{matricula[0].user.email}} required >
+            
+                <label class="campo datos-alumno__label" for="nuss"><strong>NUSS <i class="fas fa-question-circle pc" data-toggle="tooltip" title="Número de la Seguridad Social"></i></strong> <span class="movil">(Número de la Seguridad Social)</span></label>
+                <input class="campo datos-alumno__input campo-25" type="text" name="nuss" id="nuss" disabled value={{matricula[0].nSSocial}}>
+            
+            </div>
+
+            <div class="bloque datos-familiares">
+
+                <h1>Datos familiares</h1>
+            
+                <div class="tutor1 grupo">
+                    <h3>Tutor 1</h3>
+            
+                    <label class="campo datos-familiares__label" for="papellidoTutor1"><strong>Primer apellido</strong></label>
+                    <input class="campo datos-familiares__input  campo-50" type="text" name="papellidoTutor1" id="papellidoTutor1" disabled value={{matricula[0].papellidoTutor1}}required >
+
+                    <label class="campo datos-familiares__label" for="sapellidoTutor1"><strong>Segundo apellido</strong></label>
+                    <input class="campo datos-familiares__input  campo-50" type="text" name="sapellidoTutor1" id="sapellidoTutor1" disabled value={{matricula[0].sapellidoTutor1}}required >
+                    
+                    <label class="campo datos-familiares__label" for="nombreTutor1"><strong>Nombre</strong></label>
+                    <input class="campo datos-familiares__input  campo-50" type="text" name="nombreTutor1" id="nombreTutor1" disabled value={{matricula[0].nombreTutor1}}required >
+            
+                    <label class="campo datos-familiares__label" for="emailTutor1"><strong>Correo Electrónico</strong></label>
+                    <input class="campo datos-familiares__input  campo-50" type="text" name="emailTutor1" id="emailTutor1" disabled value={{matricula[0].emailTutor1}}required >
+                    
+                    <label class="campo datos-familiares__label" for="nifTutor1"><strong>NIF/NIE <i class="fas fa-question-circle pc" data-toggle="tooltip" title="Número de Identificación Fiscal / Número de Identificación de Extranjero"></i></strong> <span class="movil">(Número de Identificación Fiscal / Número de Identificación de Extranjero)</span></label>
+                    <input class="campo datos-familiares__input  campo-25" type="text" name="nifTutor1" id="nifTutor1" disabled value={{matricula[0].nifTutor1}}required >
+            
+                    <label class="campo datos-familiares__label" for="telefTutor1"><strong>Teléfono</strong></label>
+                    <input class="campo datos-familiares__input  campo-25" type="text" name="telefTutor1" id="telefTutor1" required disabled value={{matricula[0].telTutor1}}>
+                </div>
+            
+                <div class="tutor2 grupo">
+                    <h3>Tutor 2</h3>
+            
+                    <label class="campo datos-familiares__label" for="papellidoTutor2"><strong>Primer apellido</strong></label>
+                    <input class="campo datos-familiares__input  campo-50" type="text" name="papellidoTutor2" id="papellidoTutor2" disabled value={{matricula[0].papellidoTutor2}} >
+
+                    <label class="campo datos-familiares__label" for="sapellidoTutor2"><strong>Segundo apellido</strong></label>
+                    <input class="campo datos-familiares__input  campo-50" type="text" name="sapellidoTutor2" id="sapellidoTutor2"disabled value={{matricula[0].sapellidoTutor2}} >
+                    
+                    <label class="campo datos-familiares__label" for="nombreTutor2"><strong>Nombre</strong></label>
+                    <input class="campo datos-familiares__input campo-50" type="text" name="nombreTutor2" id="nombreTutor2" disabled value={{matricula[0].nombreTutor2}} >
+            
+                    <label class="campo datos-familiares__label" for="emailTutor2"><strong>Correo Electrónico</strong></label>
+                    <input class="campo datos-familiares__input campo-50" type="text" name="emailTutor2" id="emailTutor2" disabled value={{matricula[0].emailTutor2}}>
+                    
+                    <label class="campo datos-familiares__label" for="nifTutor2"><strong>NIF/NIE <i class="fas fa-question-circle pc" data-toggle="tooltip" title="Número de Identificación Fiscal / Número de Identificación de Extranjero"></i></strong> <span class="movil">(Número de Identificación Fiscal / Número de Identificación de Extranjero)</span></label>
+                    <input class="campo datos-familiares__input campo-25" type="text" name="nifTutor2" id="nifTutor2" disabled value={{matricula[0].nifTutor2}}>
+            
+                    <label class="campo datos-familiares__label" for="telefTutor2"><strong>Teléfono</strong></label>
+                    <input class="campo datos-familiares__input campo-25" type="text" name="telefTutor2" id="telefTutor2" disabled value={{matricula[0].telTutor2}}>
+                </div>
+            
+                    <label class="campo datos-familiares__label" for="telefFaltas"><strong>Teléfono móvil para control de faltas</strong></label>
+                    <div class="datos-familiares__radio radio">
+                        <input type="radio" id="tutor1" name="tutor" value="tutor1" required disabled value={{matricula[0].valoresTutor1}}> 
+                        <label for="tutor1">Tutor 1</label>
+                    </div>
+                    <div class="datos-familiares__radio radio">
+                        <input type="radio" id="tutor2" name="tutor" value="tutor2" required disabled value={{matricula[0].faltasTutor2}}>
+                        <label for="tutor1">Tutor 2</label>
+                    </div>  
+                
+            </div>
+
+            <div class="bloque datos-academicos" >
+
+                <h1>Datos académicos</h1>
+            
+                <label class="campo datos-academicos__label" for="centroProced"><strong>Centro de procedencia</strong></label>
+                <input class="campo datos-academicos__input  campo-75" type="text" name="centroProced" id="centroProced" required disabled value={{matricula[0].centroProcedencia}}>
+            
+                <div class="datos-academicos__repite ">
+                    <label class="campo datos-academicos__label"><strong>Repite:</strong><label *ngIf="matricula[0].repite == true" for="siRepite">Sí</label><label *ngIf="matricula[0].repite == false" for="noRepite">No</label></label>
+                    <div class= "datos-academicos__radio radio">
+                        
+                        
+                    </div>
+                    <div class="datos-academicos__radio radio">
+                        
+                        
+                    </div>
+                </div>
+                
+                <div class="grupo" *ngIf="this.religion">
+                    <h3 style="margin-top: 0;">Expreso mi deseo de que mi hijo, hija curse enseñanzas de:</h3>
+                    <div class="datos-academicos__radio radio">
+                        <input type="radio" id="religion" name="optativaEnse" value="religion">
+                        <label for="religion">Religión Católica</label>
+                    </div>
+                    <div class="datos-academicos__radio radio">
+                        <input type="radio" id="valores" name="optativaEnse" value="valores">
+                        <label for="valores">Valores Éticos</label>
+                    </div>
+                    <div class="datos-academicos__radio radio">
+                        <input type="radio" id="religionEvang" name="optativaEnse" value="religionEvang">
+                        <label for="religionEvang">Religión Evangélica</label>
+                    </div>
+                    <div class="datos-academicos__radio radio">
+                        <input type="radio" id="religionIslam" name="optativaEnse" value="religionIslam">
+                        <label for="religionIslam">Religión Islámica</label>
+                    </div>
+                
+                    <label>Autorizan:</label>
+                    <div class="datos-academicos__checkbox checkbox">    
+                        <input type="checkbox" id="tutor1Autoriza" name="autorizaOptativa" value="tutor1Autoriza" >
+                        <label for="tutor1Autoriza">Tutor 1</label>
+                    </div>
+                    <div class="datos-academicos__checkbox checkbox">    
+                        <input type="checkbox" id="tutor2Autoriza" name="autorizaOptativa" value="tutor2Autoriza" >
+                        <label for="tutor2Autoriza">Tutor 2</label>
+                    </div>
+                </div>
+                
+                
+                <div class="datos-academicos__contenedor-materias">
+                    <div class="datos-academicos__contenedor-materias__half">
+                        <h4>Materias que cursan</h4>
+                        <ul class="materias-cursa" >
+                            <li *ngFor="let troncales of troncales">
+                                {{this.troncales.nombre}}
+                            </li>
+                        </ul>
+                        <!-- SOLO SI LO REQUIERE MATES -->
+                        <div>
+                            <div class= "datos-academicos__radio radio">
+                                <input type="radio" id="matesAcad" name="mates" value="matesAcad">
+                                <label for="matesAcad"><strong>Mates Académicas</strong></label>
+                            </div>
+                            <label style="margin: 0;">(Orientadas a Bachiller)</label>
+                            <div class="datos-academicos__radio radio">
+                                <input type="radio" id="matesApli" name="mates" value="matesApli">
+                                <label for="matesApli"><strong>Mates Aplicadas</strong></label>
+                            </div>
+                            <label style="margin: 0;">(Orientadas a Formación Profesional)</label>
+                        </div>
+                        <!-- FIN DE SOLO SI LO REQUIERE MATES -->
+                        <div class="datos-academicos__separator" >
+                            <h4>Segunda Lengua Extranjera</h4>
+                            <div class="datos-academicos__radio radio">
+                                <input type="checkbox" id="lengua-extranjera" name="lengua-extranjera" value="lengua-extranjera" required>
+                                <label for="lengua-extranjera">Alemán (SELE Plurilingüe)</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="datos-academicos__contenedor-materias__half sorter">
+                    <!--  <ul>
+                            <li draggable="true" class="sortable-bulk">Creación y expresión musical<img src="../../../assets/img/svg/sorter_icon.svg" class="datos-academicos__contenedor-materias__half__sorter-icon" draggable="false"/></li>
+                            <li draggable="true" class="sortable-bulk">Iniciación a al Investigación<img src="../../../assets/img/svg/sorter_icon.svg" class="datos-academicos__contenedor-materias__half__sorter-icon" draggable="false"/></li>
+                            <li draggable="true" class="sortable-bulk">Teatro I: Teatro de creación<img src="../../../assets/img/svg/sorter_icon.svg" class="datos-academicos__contenedor-materias__half__sorter-icon" draggable="false"/></li>
+                            <li draggable="true" class="sortable-bulk">Oratoria y debate<img src="../../../assets/img/svg/sorter_icon.svg" class="datos-academicos__contenedor-materias__half__sorter-icon" draggable="false"/></li>
+                            <li draggable="true" class="sortable-bulk">Refuerzo de la competencia en comunicación lingüistica<img src="../../../assets/img/svg/sorter_icon.svg" class="datos-academicos__contenedor-materias__half__sorter-icon" draggable="false"/></li>
+                            <li draggable="true" class="sortable-bulk">Francés<img src="../../../assets/img/svg/sorter_icon.svg" class="datos-academicos__contenedor-materias__half__sorter-icon" draggable="false"/></li>
+                            <li draggable="true" class="sortable-bulk">Alemán<img src="../../../assets/img/svg/sorter_icon.svg" class="datos-academicos__contenedor-materias__half__sorter-icon" draggable="false"/></li>
+                        </ul> -->
+                        <!-- <ul class="order-list" id="draggable-list">
+            
+                        </ul> -->
+                        <h4>Optativa</h4>
+                        <h6>Numerar <strong>TODAS</strong> por orden de prioridad. Se cursará <strong>UNA</strong>:</h6>
+                        <ul class="materias-optativas">
+                            <li *ngFor="let optativas of optativas">
+                                <input type="number" class="order-input">
+                                <label>{{ this.optativas.nombre }}</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            
+            
+            </div> 
+
+            <div class="bloque autoriza-imagen">
+
+                <h1>Autorización de imagen</h1>
+            
+                            
+                <div class="autoriza-imagen__radios">
+                    <div class="radio">
+                        <input class="autoriza-imagen__input" type="radio" id="si" name="autoriza-imagen" checked value="true"><label class="autoriza-imagen__label" for="si">AUTORIZO</label>
+                    </div>
+                    <div class="radio">
+                        <input class="autoriza-imagen__input" type="radio" id="no" name="autoriza-imagen" value="false"><label class="autoriza-imagen__label" for="no">NO AUTORIZO</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloque enfermedades">
+
+                <h1>Enfermedades*</h1>
+            
+                <label class="campo enfermedades__label"><strong>¿Padece su hijo, hija de alguna enfermedad que pueda desencadenar algún tipo de incidencia clínica durante el horario escolar?</strong></label>
+            
+                <div style="display: flex; margin-top: var(--spacer-2);">
+                    <div class="radio">
+                        <input type="radio" id="siEnfermedad" name="enfermedad" value="true" checked>
+                        <label for="siEnfermedad">Sí</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" id="noEnfermedad" name="enfermedad" value="false">
+                        <label for="noEnfermedad">No</label>
+                    </div>
+                </div>
+            
+                <label>En caso de haber contestado SI rogamos soliciten en Conserjería los anexos I, II y III. Dicha información será tratada con la máxima discreción.</label>
+            </div>
+
+            <div class="bloque autorizacion-salida">
+                <h1>Autorización de salida</h1>
+            
+                <p><strong>Modelo de autorización para la salida del centro a las 13:20 horas (final de quinta hora) en caso de ausencia del profesor de la última clase de la mañana</strong></p>
+            
+                <p><strong>Doy mi autorización</strong> para que mi hijo o hija abandone el centro a las 13:20 horas sólo y exclusivamente en el caso de ausencia del profesor de la última clase.</p>
+            
+            
+                <div class="autorizacion-salida__bloque">
+                    <label for="tutorAutorizaSalida">Autorizan:</label>
+            
+                    <div class="autorizacion-salida__checkbox checkbox">
+                        <input type="checkbox" id="tutor1AutorizaSalida" name="autorizaSalida" value="tutor1AutorizaSalida" checked>                       <label for="tutorAutorizaSalida">Tutor 1</label>
+                    </div>
+            
+                    <div class="autorizacion-salida__checkbox checkbox">
+                        <input type="checkbox" id="tutor2AutorizaSalida" name="autorizaSalida" value="tutor2AutorizaSalida"checked>                       <label for="tutorAutorizaSalida">Tutor 2</label>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="autorizacion-datos-personales bloque">
+                <label>Autorizo la <strong>incorporación de datos personales</strong> de mi hijo, hija al fichero de datos de la biblioteca escolar del IES José Planes para la gestión de préstamos de ejemplares bibliográficos. Los derechos que mantiene sobre esos datos se recogen en el Título III de la Ley Orgánica 3/2018, de 5 de diciembre.</label>
+                <div class="checkbox" style="display: flex;">  
+                    <input id="autorizacionDatosPersonales" type="checkbox" name="autorizarDatosPersonales" role="switch" value="true"checked>
+                    <label for="autorizacionDatosPersonales" required >AUTORIZO</label>
+                </div>
+            </div>            
+    </form>
+</div>
