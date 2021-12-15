@@ -26,7 +26,6 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 
 import { AuthGuard } from './guard/auth.guard';
 import { RoleGuard } from './guard/role.guard';
-import { RolePanelGuard } from './guard/role-panel.guard';
 import { AutorizacionSalidaComponent } from './matricula/autorizacion-salida/autorizacion-salida.component';
 import { MatriculaItemComponent } from './user/matricula-item/matricula-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,8 +35,8 @@ import { DataTablesModule } from 'angular-datatables';
 import { SelectorMatriculaComponent } from './selector-matricula/selector-matricula.component';
 import { RecoverPasswordComponent } from './signin/recover-password/recover-password.component';
 import { MatriculafilledComponent } from './matriculafilled/matriculafilled.component';
-
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { MatriculafilledComponent } from './matriculafilled/matriculafilled.component';
 
 
 const rutas = [ 
@@ -52,9 +51,8 @@ const rutas = [
       { path: 'selector-matricula', component: SelectorMatriculaComponent},
       { path: 'matricula/:id', component: MatriculaComponent},
       { path: '', component: MatriculaComponent},
-      { path: 'adminpanel', component: AdminpanelComponent, canActivate: [RolePanelGuard], data: {adminRole: '3'}},
-      { path: 'matriculafilled/:id', component: MatriculafilledComponent, canActivate: [RolePanelGuard], data: {adminRole: '3'}},
-    
+      { path: 'adminpanel', component: AdminpanelComponent, canActivate: [AuthGuard, RoleGuard], data: {expectedRole: 'public'}},
+      { path: 'matriculafilled/:id', component: MatriculafilledComponent, canActivate: [AuthGuard, RoleGuard], data: {expectedRole: 'public'}},
     ]
   },
   ];
