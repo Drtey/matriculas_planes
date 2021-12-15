@@ -18,11 +18,8 @@ export class MatriculaItemComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.modifyPdf();
-    console.log("MATRICULA USER: "+this.matriculaUser)
   }
 
-  
   ngAfterViewInit() {
     const darkMode = <HTMLInputElement> document.getElementById('dark-mode');
     const bloques = document.querySelectorAll('.bloque');
@@ -44,35 +41,6 @@ export class MatriculaItemComponent implements OnInit {
       });
     }
   }
-  async modifyPdf() {
-
-    //Fetch de un PDF que existe 
-    const url = '../../../assets/pdf/1ESO_Ordinario.pdf'
-    const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
-  
-    //Plantilla de PDF
-    const pdfDoc = await PDFDocument.load(existingPdfBytes)
-    const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica)
-  
-    //Coge la la primera página
-    const pages = pdfDoc.getPages()
-    const firstPage = pages[0]
-
-    //Coge el ancho y el alto de la primera página
-    const { width, height } = firstPage.getSize()
-    firstPage.drawText('This text was added with JavaScript!', {
-      x: 5,
-      y: height / 2 + 300,
-      size: 50,
-      font: helveticaFont,
-      color: rgb(0.95, 0.1, 0.1),
-      rotate: degrees(-45),
-    })
-  
-    const pdfBytes = await pdfDoc.save();
-    console.log(pdfBytes);
-  }
-
   
   abrirBorrarModal(id) {
     const modal = document.getElementById(`modal-matricula-borrar-${id}`)

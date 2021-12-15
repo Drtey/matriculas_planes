@@ -9,12 +9,6 @@ import { DataTableDirective } from 'angular-datatables';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { right } from '@popperjs/core';
 
-  
-    
-
-
-
-
 @Component({
   selector: 'app-adminpanel',
   templateUrl: './adminpanel.component.html',
@@ -95,8 +89,7 @@ export class AdminpanelComponent implements OnInit {
     axios
       .get(`${this.db.url}/matriculas`)
       .then((response) => {
-        this.matriculas = response.data;
-        console.log(this.matriculas);        
+        this.matriculas = response.data;       
       })
       .catch((error) => {
         console.log(error);
