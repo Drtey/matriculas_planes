@@ -48,7 +48,7 @@ export class AuthService {
     axios 
       .post(`${this.url}/auth/local/register`, {
         email: email,
-        user: username,
+        username: username,
         password: password,
       })
       .then(response => {
