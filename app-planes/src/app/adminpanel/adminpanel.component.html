@@ -1,7 +1,7 @@
 
 <div class="adminpanel">
 
-  <ng2-smart-table [settings]="settings" [source]="matriculas"></ng2-smart-table>
+  
   <h1>PANEL DE ADMINISTRADOR</h1>
   
   <div class="adminpanel__select-container">
@@ -16,7 +16,12 @@
     </select>
     <button class="boton" alt="Ver matrícula" (click)="resetFilters()">Reset filters</button>
   </div>
-  <div class="adminpanel__tabla">
+  <ng2-smart-table [settings]="settings" [source]="matriculas"></ng2-smart-table>
+  <!-- 
+    
+    // TABLA DESHABILITADA(datatable), NO SE PUEDE ACCEDER A ELLA
+    
+    <div class="adminpanel__tabla">
   
     <table
       datatable
@@ -44,6 +49,6 @@
     </table>
   </div>
   
-</div> 
+</div>  -->
 
 

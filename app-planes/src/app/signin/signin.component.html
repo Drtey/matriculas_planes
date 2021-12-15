@@ -1,7 +1,7 @@
 <div class="sign">
 
     <div class="sign__container">
-        <div class="sign__content">
+        <div class="sign__content" *ngIf="matriculaciones">
             <h2>Inicio de sesión</h2>
 
             <label for="email" id="email">Correo electrónico</label>
@@ -21,6 +21,15 @@
                 <span>¿Aún no tienes cuenta?</span>
                 <span>Haz click <a class="sign__container__sign-link__link" href="/signup">aquí</a> para registrarte</span>
             </div>
+        </div>
+        <div class="sign__disabled" *ngIf="!matriculaciones">
+            <h1>Matriculación no disponible</h1>
+
+            <label>Las matriculaciones se encuentran deshabilitadas hasta el 30 de Febrero.</label>
+    
+            
+           
+            
         </div>
         
         

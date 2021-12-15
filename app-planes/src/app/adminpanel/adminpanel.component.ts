@@ -52,35 +52,34 @@ export class AdminpanelComponent implements OnInit {
     columns: {      
       id: {
         title: 'Nº Matrícula',
-        filter: false,
+        
       },
       nombre: {
         title: 'Nombre',
-        filter: false,
+        
       },
       papellido: {
         title: '1º Apellido',
-        filter: false,
+        
       },
       sapellido:{
         title:'2º Apellido',
-        filter: false,
+        
       },
       NIF:{
         title:'NIF/NIE',
-        filter: false,
+        
       },
       tel:{
         title:'Teléfono',
-        filter: false,
+        
       },
       nSSocial:{
         title:'Nº Seguridad Social',
-        filter:false,
+        
       },       
       enviada:{
-        title:'Enviada',
-        filter: false,
+        title:'Enviada',        
       }
       
     },
