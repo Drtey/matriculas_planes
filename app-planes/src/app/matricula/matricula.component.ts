@@ -17,13 +17,13 @@ export class MatriculaComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,private router: Router, private authService: AuthService, private cookie: CookieService) {}
 
-  optativas = [];
+  optativas;
   curso;
   troncales;
   modalidad;
   id = this.route.snapshot.paramMap.get('id');
   user;
-  religion;
+  religion = [];
 
   alumno = {
     papellido: "",
@@ -109,9 +109,6 @@ export class MatriculaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-/*     window.addEventListener('beforeunload', (event) => {
-      event.returnValue = `Are you sure you want to leave?`;
-    }); */
     this.getModalidad();
     this.getUser();
   }
@@ -121,13 +118,10 @@ export class MatriculaComponent implements OnInit {
       .get(`${this.authService.url}/modalidades/${this.id}`)
       .then(response => {
         this.modalidad = response.data;
-        console.log(this.modalidad);
         this.curso = response.data.curso;
-        console.log(this.curso.id);
         this.troncales = response.data.troncales;
         this.optativas = response.data.optativas;
         this.religion = response.data.optativas[0].Religion;
-        console.log(this.religion);
       })
       .catch(error => {
         console.log(error);
@@ -140,7 +134,6 @@ export class MatriculaComponent implements OnInit {
       .get(`${this.authService.url}/users/${id}`)
       .then(response => {
         this.user = response.data;
-        console.log(this.user);
       })
       .catch(error => {
         console.log(error);
@@ -202,14 +195,6 @@ export class MatriculaComponent implements OnInit {
 
       });
   }  
-
-  buscarReligion() {
-   let filtros = this.optativas.filter(function(){
-     return this.optativas.id = 11
-   })
-   console.log(filtros);
-  }
-
   
   abrirModal() {
     const modal = document.getElementById('modal-matricula');

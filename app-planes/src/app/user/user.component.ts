@@ -94,7 +94,6 @@ export class UserComponent implements OnInit {
       .get(`${this.authService.url}/matriculas?user=${id}`)
       .then(response => {
         this.matriculaUser = response.data;
-        console.log(this.matriculaUser[0].modalidad.nombre);
       })
       .catch(error => {
         console.log(error);
@@ -130,7 +129,6 @@ export class UserComponent implements OnInit {
       .get(`${this.authService.url}/users/${id}`)
       .then(response => {
         this.user = response.data;
-        console.log(this.user.email);
       })
       .catch(error => {
         console.log(error);

@@ -30,7 +30,6 @@ export class AuthService {
         this.cookie.set('user', response.data, {expires: 30 / 1440});
         this.cookie.set('id', response.data.user.id, {expires: 30 / 1440})
         this.cookie.set('role', response.data.user.role.type, {expires: 30 / 1440})
-        console.log(this.cookie.get('role'));
         this.router.navigate(['main/user']);
       })
       .catch(error => {

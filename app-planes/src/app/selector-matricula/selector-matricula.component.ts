@@ -49,7 +49,6 @@ export class SelectorMatriculaComponent implements OnInit {
       .get(`${this.authService.url}/cursos`)
       .then(response => {
         this.cursos = response.data;
-        console.log(this.cursos);
       })
       .catch(error => {
         console.log(error);
@@ -66,7 +65,6 @@ export class SelectorMatriculaComponent implements OnInit {
       .get(`${this.authService.url}/modalidades?curso=${idCurso}`)
       .then(response => {
         this.modalidades = response.data;
-        console.log(this.modalidades);
       })
       .catch(error => {
         console.log(error);
