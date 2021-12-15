@@ -8,6 +8,7 @@ import { DataTableDirective } from 'angular-datatables';
     
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { right } from '@popperjs/core';
+import { MatriculafilledComponent } from '../matriculafilled/matriculafilled.component';
 
 @Component({
   selector: 'app-adminpanel',
@@ -21,8 +22,8 @@ export class AdminpanelComponent implements OnInit {
   cursos;
   modal;
   modalidades;
-  selectedOption;
-  selectedOption2;
+  selectedOption='0';
+  selectedOption2='0';
 
   @ViewChild(DataTableDirective)
   dtElement: DataTableDirective;
@@ -34,14 +35,8 @@ export class AdminpanelComponent implements OnInit {
       position:'right',
       edit:false,
       add:false,
-      delete:false,
-      custom:[
-        {
-          name:'view',
-          title:'<i class="fa fa-eye"></i>'
-        },
-      ],
-      columnTitle:'Acciones',
+      delete:false,      
+      
     },    
     columns: {      
       id: {
@@ -74,6 +69,15 @@ export class AdminpanelComponent implements OnInit {
       },       
       enviada:{
         title:'Enviada',        
+      },
+      Enlace:{
+        title:'Ver',
+        filter:false,
+        type:'html',
+        valuePrepareFunction:(cell,row)=>{
+          return `<a href="/main/matriculafilled/${row.id}"><i class="fa fa-eye"></i></a>`
+        }
+
       }
       
     },

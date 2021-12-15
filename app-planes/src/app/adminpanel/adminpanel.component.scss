@@ -56,3 +56,18 @@
         color: var(--color-font-light);
     }
 }
+
+select {
+    
+    font-size: 90%;
+    height: 40px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px;
+  }

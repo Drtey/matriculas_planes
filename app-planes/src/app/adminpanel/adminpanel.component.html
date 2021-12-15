@@ -5,11 +5,12 @@
   <h1>PANEL DE ADMINISTRADOR</h1>
   
   <div class="adminpanel__select-container">
-    <h3>Filtrar:</h3>
-    <select name="" id="cursoid" (change)="getModalidadesByCurso()" [(ngModel)]="selectedOption" >
-      <option value="" disabled selected >Cursos</option>
+    <h3>Filtrar por curso:</h3>
+    
+    <select name="" id="cursoid" (change)="getModalidadesByCurso()" [(ngModel)]="selectedOption" >      
       <option *ngFor="let curso of cursos" value="{{ curso.id }}">{{ curso.nombre }}</option>
     </select>
+    <h3>Filtrar por modalidad:</h3>
     <select name="" id="" (change)="filtrarMatriculas()" [(ngModel)]="selectedOption2" >
       <option value="" disabled selected>Modalidades</option>
       <option *ngFor="let modalidad of modalidades" value="{{ modalidad.id }}">{{ modalidad.nombre }}</option>

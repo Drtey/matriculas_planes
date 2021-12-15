@@ -1,0 +1,227 @@
+.matricula {
+    margin: auto;
+    width: 100%;
+    &__indicacion {
+        margin: var(--spacer-8);
+        margin-left: var(--spacer-10);
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: 18px;
+        @media (max-width: 970px) {
+            margin: 0;
+            text-align: center;
+        }
+    }
+    &__titulo {
+        font-size: 4em;
+        text-align: center;
+        margin: var(--spacer-6);
+    }
+    &__aviso {
+    background-color: var(--color-warning-soft);
+    padding: var(--spacer-5);
+    padding-bottom: var(--spacer-4);
+    margin: var(--spacer-8);
+    border-radius: var(--border-radius);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: max-content;
+    }
+}
+
+
+
+@media (min-width: 970px) { 
+    .matricula {
+        width: 1000px;
+    }
+
+}
+
+@media (max-width: 970px) { 
+    .guardar-matricula-boton {
+        width: 15rem;
+    }
+}
+
+//Datos familiares
+
+.datos-familiares {
+    &__radio {
+        margin-top: var(--spacer-1);
+    }
+}
+
+//Datos academicos
+
+.datos-academicos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    &__contenedor-materias {
+        margin-top: var(--spacer-5);
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        display:block;
+
+        height: 100%;
+        &__half{
+            
+
+            &__sorter-icon {
+                width: 20px;
+                float: right;
+            }
+        }
+        
+    }
+    
+    &__separator {
+        margin-top: var(--spacer-4);
+    }
+    &__radio {
+        margin-top: var(--spacer-1);
+    }
+    h3 {
+        margin-top: var(--spacer-8);
+    }
+    @media (max-width: 970px) { 
+        &__contenedor-materias {
+            grid-template-rows: 50% 50%;
+            grid-template-columns: unset;
+        }
+    }
+}
+.sorter {
+    margin-top: var(--spacer-8);
+}
+.order-input {
+    width: 30px;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    -moz-appearance:textfield;
+}
+.materias-optativas {
+    li {
+        list-style: none;
+    }
+    padding: 0;
+}
+
+.materias-cursa {
+    margin-bottom: var(--spacer-6);
+}
+/* 
+.draggable-list {
+    border: 1px solid var(--color-dark);
+    color: var(--color-font-dark);
+    padding: 0;
+    list-style-type: none;
+
+}
+.draggable-list li {
+    background-color: var(--color-light);
+    display: flex;
+    flex: 1;
+}
+.draggable-list li:not(:last-of-type) {
+    border-bottom: 1px solid var(--color-dark);
+}
+.numero-materia {
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    font-size: 28px;
+}
+
+.draggable-list .nombre-materia {
+    margin: 0 20px 0 0;
+}
+
+.draggable {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex: 1;
+} */
+
+//Autorizacion imagen
+.autoriza-imagen {
+    &__radios {
+        display: flex;
+        margin-bottom: var(--spacer-1);
+    }
+}
+
+//Autorizacion salida 
+.autorizacion-salida {
+    &__bloque {
+        label {
+            display:block;
+        }
+    }
+    &__bloque + &__bloque {
+        margin-top: var(--spacer-7);
+    }
+}
+
+.subir-archivo {
+    @media (max-width: 680px) {
+        font-size: 0.8em;
+    }
+}
+
+.modal-matricula {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 1000000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    &__contenedor {
+        padding: var(--spacer-6);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--color-light);
+        width: 400px;
+        min-height: 300px;
+        border-radius: var(--border-radius);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        &__botones {
+            margin-top: var(--spacer-3);
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            button {
+                width: 7rem;
+            }
+        }
+        @media (max-width: 970px) {
+            position: fixed;
+            justify-content: space-between;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            min-height: 30%;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            p {
+                margin-bottom: auto;
+            }
+        }
+    }
+}
