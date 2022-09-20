@@ -1,40 +1,42 @@
-# MatriculaPlanes
+## Run project
 
-To install Angular on your local system, you need [Nodejs](https://nodejs.org/en/about/releases/) & [npm](https://docs.npmjs.com/about-npm)
-
-Then, install the Angular CLI
+Inside the app folder 
 
 ```
-$ npm install -g @angular/cli
+$ uvicorn app.main:app --reload
 ```
 
-## Angular project installation 
+## Documentation by Swagger UI
 
-Inside the app-planes folder
+To check the REST API Documentation
 
+## Dependencies
 ```
-$ npm i @angular-devkit/build-angular
-$ ng update @angular/cli @angular/core 
-```
-
-Install dependencies needed
-```
-$ npm install
-```
-## Strapi installation
-
-Inside the api-planes folder
-
-```
-$ npm install
-```
-Export api_planes.sql database
-
-app-planes folder
-```
-ng serve 
-```
-api-planes folder
-```
-npm run develop
+anyio==3.6.1
+bcrypt==4.0.0       
+cffi==1.15.1        
+click==8.1.3        
+colorama==0.4.5     
+cryptography==38.0.1
+dnspython==2.2.1
+ecdsa==0.18.0
+email-validator==1.3.0
+fastapi==0.85.0
+greenlet==1.1.3
+h11==0.13.0
+idna==3.4
+passlib==1.7.4
+psycopg2==2.9.3
+pyasn1==0.4.8
+pycparser==2.21
+pydantic==1.10.2
+python-jose==3.3.0
+python-multipart==0.0.5
+rsa==4.9
+six==1.16.0
+sniffio==1.3.0
+SQLAlchemy==1.4.41
+starlette==0.20.4
+typing_extensions==4.3.0
+uvicorn==0.18.3
 ```
